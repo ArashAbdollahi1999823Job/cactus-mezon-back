@@ -1,4 +1,5 @@
-﻿using Application.Dto.Inventory;
+﻿using Application.Common.Messages;
+using Application.Dto.Inventory;
 using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
@@ -6,7 +7,6 @@ using Domain.Entities.InventoryEntity;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
-
 namespace Infrastructure.Persistence.Contract.Repository;
 public class InventoryRepository:IInventoryRepository
 {
@@ -50,6 +50,48 @@ public class InventoryRepository:IInventoryRepository
         }
         var inventories =await query.ToListAsync(cancellationToken);
         return _mapper.Map<IEnumerable<InventoryDto>>(inventories);
+    }
+    #endregion
+
+    #region InventoryGetByIdAsync
+    public async Task<Inventory> InventoryGetByIdAsync(long id,CancellationToken cancellationToken)
+    {
+        var inventory = await _context.Inventories.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
+        if (inventory == null) throw new NotFoundEntityException(ApplicationMessages.InventoryNotFound);
+        return inventory;
+    }
+    #endregion
+    
+    #region InventoryDeleteAsync
+    public async Task<bool> InventoryDeleteAsync(long id,CancellationToken cancellationToken)
+    {
+        var check=await _context.Inventories.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
+        if (check >0) return true;
+        throw new BadRequestEntityException(ApplicationMessages.InventoryFailedDelete);
+    }
+    #endregion
+    
+    #region InventoryEditAsync
+    public async Task<bool> InventoryEditAsync(InventoryEditDto inventoryEditDto,CancellationToken cancellationToken)
+    {
+        var check = await _context.Inventories
+            .Where(x => x.Id == inventoryEditDto.Id)
+            .ExecuteUpdateAsync(x => x
+                    .SetProperty(x => x.Name , inventoryEditDto.Name)
+                    .SetProperty(x=>x.IsActive,inventoryEditDto.IsActive)
+                    .SetProperty(x=>x.LastModified,DateTime.Now)
+                , cancellationToken: cancellationToken);
+        if (check > 0) return true;
+        throw new BadRequestEntityException(ApplicationMessages.InventoryFailedEdit);
+    }
+    #endregion
+    
+    #region InventoryExistAsync
+    public async Task<bool> InventoryExistAsync(long id, CancellationToken cancellationToken)
+    {
+        var check = await _context.Inventories.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
+        if (!check) throw new NotFoundEntityException(ApplicationMessages.InventoryNotFound);
+        return true;
     }
     #endregion
 }

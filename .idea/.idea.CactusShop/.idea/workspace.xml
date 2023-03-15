@@ -5,11 +5,24 @@
     <projectFile profileName="WebApi">Src/Presentation/WebApi/WebApi.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="" />
+    <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryEdit/InventoryEditCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryEdit/StoreEditCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IInventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IInventoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Inventory/InventoryAdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Inventory/InventoryAdminController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MzF6gjbVg7ekhYRAVtyDzIjq3A" />
   <component name="ProjectViewState">
@@ -22,6 +35,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver.localdb"
+    ],
+    "rider.external.source.directories": [
+      "C:\\Users\\Arash\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Arash\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Arash\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApi">
@@ -64,7 +87,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678762333710</updated>
-      <workItem from="1678762337638" duration="1187000" />
+      <workItem from="1678762337638" duration="1733000" />
+      <workItem from="1678774621456" duration="3710000" />
     </task>
     <servers />
   </component>
