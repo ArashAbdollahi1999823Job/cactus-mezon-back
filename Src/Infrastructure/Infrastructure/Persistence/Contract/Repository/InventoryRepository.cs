@@ -30,7 +30,7 @@ public class InventoryRepository:IInventoryRepository
         {
             return true;
         }
-        throw new BadRequestEntityException("ApplicationMessages.InventoryAddFailed");
+        throw new BadRequestEntityException(ApplicationMessages.InventoryAddFailed);
     }
     #endregion
 

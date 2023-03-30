@@ -1,5 +1,4 @@
 ﻿namespace Application.Common.Messages;
-
 public static class ApplicationMessages
 {
     public const string RecordNotfound = "رکورد یافت نشد";
@@ -9,14 +8,21 @@ public static class ApplicationMessages
     public const string BasketNotFound = "سبد خرید شما یافت نشد!";
 
     #endregion
-
-
+    
     public const string FailedOperation = "عملیات موفقیت امیز نبود!";
     public const string FailedUploadPicture = "اپود عکس انجام نشد";
+
+    #region Product
+    public const string ProductAddFailed = "محصول ساخته نشد! ";
+    public const string ProductAddFailedOnHandle = "محصول ساخته نشد! HandelError";
+    #endregion
+   
+    
 
     #region Inventory
 
     public const string InventoryNotFound = "انبار پیدا نشد!";
+    public const string InventoryAddFailed = "انبار ساخته نشد!";
     public const string InventoryFailedDelete = "انبار حذف نشد!";
     public const string InventoryFailedEdit = "انبار ادیت نشد!";
     public const string InventoryFailedDeleteOnHandle = "انبار ادیت نشد!HendleError";
@@ -46,7 +52,7 @@ public static class ApplicationMessages
 
     #endregion
 
-    #region Typoe
+    #region Type
 
     public const string TypeFailedEdit = "حذف دسته انجام نشد !";
     public const string TypeFailedEditOnHandle = "حذف دسته انجام نشد ! HandleError";

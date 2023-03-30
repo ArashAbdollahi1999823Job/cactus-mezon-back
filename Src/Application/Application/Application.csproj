@@ -29,8 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Products\Commands" />
-    <Folder Include="Features\Products\Validators" />
+    <Folder Include="Features\Product\Validators" />
   </ItemGroup>
 
 </Project>

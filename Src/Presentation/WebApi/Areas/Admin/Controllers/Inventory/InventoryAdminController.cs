@@ -11,8 +11,7 @@ namespace WebApi.Areas.Admin.Controllers.Inventory
 {
     public class InventoryAdminController : BaseAdminController
     {
-        private readonly IInventoryRepository _inventoryRepository;
-        
+
         #region InventoryGetAllAsync
         [HttpGet("InventoryGetAll")]
         public async Task<ActionResult> InventoryGetAllAsync([FromQuery] InventoryGetAllQuery inventoryGetAllQuery,CancellationToken cancellationToken)
@@ -22,10 +21,6 @@ namespace WebApi.Areas.Admin.Controllers.Inventory
         #endregion
         
         #region InventoryAddAsync
-        public InventoryAdminController(IInventoryRepository inventoryRepository)
-        {
-            _inventoryRepository = inventoryRepository;
-        }
         [HttpPost("InventoryAdd")]
         public async Task<ActionResult<bool>> InventoryAddAsync([FromBody] InventoryAddCommand inventoryAddCommand,CancellationToken cancellationToken)
         {

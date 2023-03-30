@@ -2,7 +2,6 @@
 using Domain.Entities.InventoryEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.StoreEntity;
-
 namespace Domain.Entities.ProductEntity;
 public class Product :BaseEntity.BaseEntity
 {
@@ -20,10 +19,24 @@ public class Product :BaseEntity.BaseEntity
     public int Count { get; set; }
     #endregion
 
+
+    public Product(string name, string slug, string description, string metaDescription, decimal price, string summary, long inventoryId,  long typeId, long? brandId)
+    {
+        Name = name;
+        Slug = slug;
+        Description = description;
+        MetaDescription = metaDescription;
+        Price = price;
+        Summary = summary;
+        InventoryId = inventoryId;
+        TypeId = typeId;
+        BrandId = brandId;
+    }
+
     #region Rilations
     // has one off
     public Off Off { get; set; }
-    public long OffId { get; set; }
+    public long? OffId { get; set; }
     // has one inventory
     public long InventoryId { get; set; }
     public Inventory Inventory { get; set; }
@@ -31,7 +44,7 @@ public class Product :BaseEntity.BaseEntity
     public long TypeId { get; set; }
     public Type Type { get; set; }
     //has one brand
-    public long BrandId { get; set; }
+    public long? BrandId { get; set; }
     public Brand Brand { get; set; }
     //has few pictures
     public List<ProductPicture> ProductPictures { get; set; }
