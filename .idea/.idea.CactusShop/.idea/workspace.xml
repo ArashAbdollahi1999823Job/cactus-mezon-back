@@ -6,38 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductEditDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductSearchDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductEdit/ProductEditCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductEdit/ProductEditCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/ProductGetAll/ProductGetAllQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/ProductGetAll/ProductGetAllQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Brand/BrandAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Brand/BrandDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Brand/BrandEditDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Brand/BrandSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Command/BrandAdd/BrandAddCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Command/BrandAdd/BrandAddCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Command/BrandDelete/BrandDeleteCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Command/BrandDelete/BrandDeleteCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Command/BrandEdit/BrandEditCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Command/BrandEdit/BrandEditCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Query/BrandGetAll/BrandGetAllQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Brand/Query/BrandGetAll/BrandGetAllQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IBrandRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/BrandRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Brand/BrandAdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/AutoMapping/Resolvers/ProductPictureThumbnailResolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/AutoMapping/Resolvers/ProductPictureThumbnailResolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/CommonDto/CommandDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Common/CommandDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/IdentityDto/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Identity/AddressDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/IdentityDto/RoleDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Identity/RoleDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductDto/ProductAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductAddDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductDto/ProductDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductAdd/ProductAddCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductAdd/ProductAddCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductAdd/ProductAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductAdd/ProductAddCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetAll/GetAllProductsQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetAll/GetAllProductsQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetAll/GetAllProductsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetAll/GetAllProductsQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductById/GetProductByIdQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductById/GetProductByIdQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductById/GetProductByIdQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductById/GetProductByIdQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductBySlug/GetProductBySlugQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductBySlug/GetProductBySlugQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductBySlug/GetProductBySlugQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/GetProductBySlug/GetProductBySlugQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/BaseEntity/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/BaseEntity/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Product/ProductAdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Product/ProductAdminController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Brand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Brand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +107,7 @@
       <workItem from="1679991986956" duration="338000" />
       <workItem from="1680064609705" duration="9138000" />
       <workItem from="1680171485813" duration="11418000" />
-      <workItem from="1680423060421" duration="8952000" />
+      <workItem from="1680423060421" duration="12436000" />
     </task>
     <servers />
   </component>

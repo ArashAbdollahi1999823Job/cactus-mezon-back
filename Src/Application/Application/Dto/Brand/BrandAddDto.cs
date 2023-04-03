@@ -1,14 +1,13 @@
-﻿namespace Domain.Entities.ProductEntity;
-public class Brand:BaseEntity.BaseEntity
+﻿namespace Application.Dto.Brand;
+
+public class BrandAddDto
 {
-    #region Properties
     public string Name { get; set; }
     public string Description { get; set; }
     public string MetaDescription { get; set; }
     public string Summary { get; set; }
-    #endregion
 
-    public Brand(string name, string description, string metaDescription, string summary)
+    public BrandAddDto(string name, string description, string metaDescription, string summary)
     {
         Name = name;
         Description = description;
@@ -16,9 +15,8 @@ public class Brand:BaseEntity.BaseEntity
         Summary = summary;
     }
 
-    #region Relations
-
-    public List<Product> Products { get; set; }
-    #endregion
+    public BrandAddDto()
+    {
+        
+    }
 }
-

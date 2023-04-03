@@ -89,6 +89,7 @@ public static class ConfigureServices
         #endregion
         services.AddScoped<IInventoryRepository, InventoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IBrandRepository, BrandRepository>();
         services.AddScoped<IStoreUserRepository, StoreUserRepository>();
         services.AddScoped<IStoreUserPictureRepository, StoreUserPictureRepository>();
         services.AddScoped<IBasketRepository, BasketRepository>();
