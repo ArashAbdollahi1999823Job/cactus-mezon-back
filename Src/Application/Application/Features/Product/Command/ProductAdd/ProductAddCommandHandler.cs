@@ -1,4 +1,5 @@
 ﻿using Application.Common.Messages;
+using Application.Dto.Product;
 using Application.Dto.ProductDto;
 using Application.IContracts.IRepository;
 using Domain.Exceptions;

@@ -1,6 +1,4 @@
-﻿#region UsignAndNamespace
-namespace Domain.Entities.BaseEntity;
-#endregion
+﻿namespace Domain.Entities.BaseEntity;
 public abstract class BaseEntity
 {
     public long Id { get; set; }

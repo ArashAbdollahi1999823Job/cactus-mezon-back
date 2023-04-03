@@ -12,9 +12,7 @@ public class Product :BaseEntity.BaseEntity
     public string MetaDescription { get; set; }
     public decimal Price { get; set; }
     public string Summary { get; set; }
-
- 
-
+    
     public long Score { get; set; }
     public int Count { get; set; }
     #endregion

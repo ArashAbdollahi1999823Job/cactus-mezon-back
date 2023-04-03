@@ -1,4 +1,4 @@
-﻿namespace Application.Dto.ProductDto;
+﻿namespace Application.Dto.Product;
 
 public class ProductAddDto
 {

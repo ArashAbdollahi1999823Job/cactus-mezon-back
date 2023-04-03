@@ -9,7 +9,6 @@ using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Type = Domain.Entities.ProductEntity.Type;
-
 namespace Infrastructure.Persistence.Contract.Repository;
 public class TypeRepository : ITypeRepository
 {

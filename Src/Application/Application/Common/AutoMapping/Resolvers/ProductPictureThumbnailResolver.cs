@@ -1,6 +1,7 @@
 ﻿#region UsignAndNamespace
 
-using Application.Dto.ProductsDto;
+using Application.Dto.Product;
+using Application.Dto.ProductDto;
 using AutoMapper;
 using Domain.Entities;
 using Domain.Entities.ProductEntity;

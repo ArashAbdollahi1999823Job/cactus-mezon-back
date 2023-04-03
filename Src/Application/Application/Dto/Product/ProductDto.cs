@@ -1,10 +1,10 @@
 ﻿using Application.Common.AutoMapping;
 using Application.Dto.Off;
 using AutoMapper;
-using Domain.Entities.ProductEntity;
-namespace Application.Dto.ProductDto;
 
-public class ProductDto:IMapFrom<Product>
+namespace Application.Dto.Product;
+
+public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
 {
     public long Id { get; set; }
     public string Name { get; set; }
@@ -19,8 +19,12 @@ public class ProductDto:IMapFrom<Product>
     public string Store { get; set; }
     
     public string Type { get; set; }
+    public long TypeId { get; set; }
+
     public string Brand { get; set; }
     public string Inventory { get; set; }
+    public long InventoryId { get; set; }
+
     public OffDto Off { get; set; }
 
 
@@ -28,7 +32,7 @@ public class ProductDto:IMapFrom<Product>
     #region MappingProductDto
     public void Mapping(Profile profile)
     {
-        profile.CreateMap<Product, ProductDto>()
+        profile.CreateMap<Domain.Entities.ProductEntity.Product, ProductDto>()
             .ForMember(x => x.Store, c => c.MapFrom(v => v.Inventory.Store.Name))
             .ForMember(x => x.Inventory, c => c.MapFrom(v => v.Inventory.Name))
             .ForMember(x => x.Brand, c => c.MapFrom(v => v.Brand.Name))

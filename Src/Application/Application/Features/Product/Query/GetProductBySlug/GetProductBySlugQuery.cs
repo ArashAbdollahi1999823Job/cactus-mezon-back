@@ -1,6 +1,7 @@
 ﻿#region UsingAndNamespace
 
-using Application.Dto.ProductsDto;
+using Application.Dto.Product;
+using Application.Dto.ProductDto;
 using MediatR;
 namespace Application.Features.Products.Queries.GetProductBySlug;
 #endregion

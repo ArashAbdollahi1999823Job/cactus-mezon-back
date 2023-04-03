@@ -1,11 +1,15 @@
-﻿using Application.Common.Messages;
+﻿using Application.Common.Enums;
+using Application.Common.Messages;
+using Application.Dto.Base;
+using Application.Dto.Product;
 using Application.Dto.ProductDto;
+using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
 using Domain.Entities.ProductEntity;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
-
+using Microsoft.EntityFrameworkCore;
 namespace Infrastructure.Persistence.Contract.Repository;
 public class ProductRepository:IProductRepository
 {
@@ -18,6 +22,52 @@ public class ProductRepository:IProductRepository
         _mapper = mapper;
     }
     #endregion
+
+    #region ProductGetAllAsync
+    public async Task<PaginationDto<ProductDto>> ProductGetAllAsync(ProductSearchDto productSearchDto, CancellationToken cancellationToken)
+    {
+        var query = _context.Products.AsQueryable();
+        if (!String.IsNullOrEmpty(productSearchDto.Name)) query = query.Where(x => x.Name.Contains(productSearchDto.Name));
+        if (!String.IsNullOrEmpty(productSearchDto.Slug)) query = query.Where(x => x.Slug.Contains(productSearchDto.Slug));
+        if (productSearchDto.InventoryId != 0) query = query.Where(x => x.InventoryId == productSearchDto.InventoryId);
+        if (productSearchDto.BrandId != 0) query = query.Where(x => x.BrandId == productSearchDto.BrandId);
+        if (productSearchDto.Off != -1) query = query.Where(x => x.Off.OffPercent >= productSearchDto.Off);
+        if (productSearchDto.Price != 0) query = query.Where(x => x.Price == productSearchDto.Price);
+        if (productSearchDto.StoreId != 0) query = query.Where(x => x.Inventory.StoreId == productSearchDto.StoreId);
+
+        if (productSearchDto.IsActive != 0)
+        {
+            if (productSearchDto.IsActive == ActiveType.Active) query = query.Where(x => x.IsActive == true);
+            if (productSearchDto.IsActive == ActiveType.NotActive) query = query.Where(x => x.IsActive == false);
+        }
+        if (productSearchDto.Id > 0) query = query.Where(x => x.Id ==productSearchDto.Id);
+        if (productSearchDto.TypeId != -1)
+        {
+            if (productSearchDto.TypeId != 0) query = query.Where(x => x.TypeId == productSearchDto.TypeId);
+        }
+
+        var count = await query.CountAsync(cancellationToken);
+        if (productSearchDto.SortType == SortType.Desc)
+        {
+            query = query.OrderByDescending(x => x.Id);
+        }
+        else
+        {
+            query = query.OrderBy(x => x.Id);
+        }
+        query = query
+            .Include(x=>x.Type)
+            .Include(x=>x.Brand)
+            .Include(x=>x.Off)
+            .Include(x=>x.Inventory)
+            .ThenInclude(x=>x.Store);
+        var result = await query.Skip((productSearchDto.PageIndex - 1) * productSearchDto.PageSize).Take(productSearchDto.PageSize).ToListAsync(cancellationToken);
+        var data = _mapper.Map<List<ProductDto>>(result);
+        return new PaginationDto<ProductDto>(productSearchDto.PageIndex, productSearchDto.PageSize, count, data);
+    }
+    #endregion
+    
+    #region ProductAddAsync
     public async Task<bool> ProductAddAsync(ProductAddDto productAddDto, CancellationToken cancellationToken)
     {
         var product = new Product(productAddDto.Name,productAddDto.Slug,productAddDto.Description,
@@ -31,4 +81,46 @@ public class ProductRepository:IProductRepository
         }
         throw new BadRequestEntityException(ApplicationMessages.ProductAddFailed);
     }
+    #endregion
+    
+    #region ProductEditAsync
+    public async Task<bool> ProductEditAsync(ProductEditDto productEditDto, CancellationToken cancellationToken)
+    {
+        var check = await _context.Products
+            .Where(x => x.Id == productEditDto.Id)
+            .ExecuteUpdateAsync(x => x
+                    .SetProperty(x => x.Name , productEditDto.Name)
+                    .SetProperty(x => x.Price , productEditDto.Price)
+                    .SetProperty(x => x.Slug , productEditDto.Slug)
+                    .SetProperty(x=>x.Description,productEditDto.Description)
+                    .SetProperty(x=>x.MetaDescription,productEditDto.MetaDescription)
+                    .SetProperty(x=>x.Summary,productEditDto.Summary)
+                    .SetProperty(x=>x.IsActive,productEditDto.IsActive)
+                    .SetProperty(x=>x.LastModified,DateTime.Now)
+                    .SetProperty(x=>x.TypeId,productEditDto.TypeId)
+                    .SetProperty(x=>x.InventoryId,productEditDto.InventoryId)
+                    .SetProperty(x=>x.BrandId,productEditDto.BrandId ==0 ? null:productEditDto.BrandId)
+                , cancellationToken: cancellationToken);
+        if (check > 0) return true;
+        throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
+    }
+    #endregion
+    
+    #region ProductExistAsync
+    public async Task<bool> ProductExistAsync(long id, CancellationToken cancellationToken)
+    {
+        var check = await _context.Products.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
+        if (!check) throw new NotFoundEntityException(ApplicationMessages.ProductNotFound);
+        return true;
+    }
+    #endregion
+    
+    #region ProductDeleteAsync
+    public async Task<bool> ProductDeleteAsync(long id, CancellationToken cancellationToken)
+    {
+        var check = await _context.Products.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
+        if (check > 0) return true;
+        throw new BadRequestEntityException(ApplicationMessages.ProductDeleteFailed);
+    }
+    #endregion
 }

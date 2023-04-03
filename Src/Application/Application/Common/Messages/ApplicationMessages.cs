@@ -4,20 +4,21 @@ public static class ApplicationMessages
     public const string RecordNotfound = "رکورد یافت نشد";
 
     #region Bakset
-
     public const string BasketNotFound = "سبد خرید شما یافت نشد!";
-
     #endregion
     
     public const string FailedOperation = "عملیات موفقیت امیز نبود!";
     public const string FailedUploadPicture = "اپود عکس انجام نشد";
 
     #region Product
+    public const string ProductDeleteFailed = "محصول حذف نشد! ";
+    public const string ProductFailedDeleteOnHandle = "محصول حذف نشد! HandelError";
+    public const string ProductEditFailed = "محصول ادیت نشد! ";
+    public const string ProductNotFound = "محصول یافت نشد! ";
     public const string ProductAddFailed = "محصول ساخته نشد! ";
     public const string ProductAddFailedOnHandle = "محصول ساخته نشد! HandelError";
+    public const string ProductEditFailedOnHandle = "محصول اذیت نشد! HandelError";
     #endregion
-   
-    
 
     #region Inventory
 
