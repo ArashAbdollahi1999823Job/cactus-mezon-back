@@ -123,4 +123,13 @@ public class ProductRepository:IProductRepository
         throw new BadRequestEntityException(ApplicationMessages.ProductDeleteFailed);
     }
     #endregion
+    
+    #region ProductGetByIdAsync
+    public async Task<Product> ProductGetByIdAsync(long id,CancellationToken cancellationToken)
+    {
+        var product = await _context.Products.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
+        if (product == null) throw new NotFoundEntityException(ApplicationMessages.ProductNotFound);
+        return product;
+    }
+    #endregion
 }

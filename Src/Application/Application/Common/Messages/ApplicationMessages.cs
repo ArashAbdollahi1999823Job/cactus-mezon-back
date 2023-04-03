@@ -67,13 +67,23 @@ public static class ApplicationMessages
     #endregion
 
     #region TypePicture
-    public const string TypePictureFailedEdit = "ادیت عکس دسته انجان نشد !";
+    public const string TypePictureFailedEdit = "ادیت عکس دسته انجام نشد !";
     public const string TypePictureFailedEditOnHandle = "ادیت عکس دسته انجان نشد ! HandleError";
     public const string TypePictureNotFound = "عکس دسته بندی یافت نشد!";
     public const string TypePictureFailedAdd = "عکس دسته بندی اضاف  نشد!";
     public const string TypePictureFailedAddOnHandle = "عکس دسته بندی اضاف نشد!";
     public const string TypePictureFailedDelete = "عکس دسته بندی حذف نشد!";
     public const string TypePictureFailedDeleteOnHandle = "عکس دسته بندی حذف نشد!HandleError";
+    #endregion
+    
+    #region ProductPicture
+    public const string ProductPictureEditFailed = "ادیت عکس محصول انجام نشد !";
+    public const string ProductPictureEditFailedOnHandle = "ادیت عکس محصول انجام نشد ! HandleError";
+    public const string ProductPictureNotFound = "عکس  محصول یافت نشد!";
+    public const string ProductPictureAddFailed= "عکس  محصول اضاف  نشد!";
+    public const string ProductPictureAddFailedOnHandle = "عکس  محصول اضاف نشد!";
+    public const string ProductPictureDeleteFailed = "عکس  محصول حذف نشد!";
+    public const string ProductPictureDeleteFailedOnHandle = "عکس  محصول حذف نشد!HandleError";
     #endregion
     
     #region User

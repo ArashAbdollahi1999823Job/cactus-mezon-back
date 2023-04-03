@@ -96,6 +96,7 @@ public static class ConfigureServices
         services.AddScoped<IStoreRepository, StoreRepository>();
         services.AddScoped<ITypeRepository, TypeRepository>();
         services.AddScoped<ITypePictureRepository, TypePictureRepository>();
+        services.AddScoped<IProductPictureRepository, ProductPictureRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddTransient<ITokenService, TokenService>();
 
