@@ -15,8 +15,9 @@ public class ProductEditDto
     public long BrandId { get; set; } = 0;
     public long TypeId { get; set; }
     public long InventoryId { get; set; }
+    public long OffId { get; set; }
 
-    public ProductEditDto(string name, string slug, string description, string metaDescription, decimal price, string summary, long id, bool isActive, long brandId, long typeId, long inventoryId)
+    public ProductEditDto(string name, string slug, string description, string metaDescription, decimal price, string summary, long id, bool isActive, long brandId, long typeId, long inventoryId, long offId)
     {
         Name = name;
         Slug = slug;
@@ -29,10 +30,11 @@ public class ProductEditDto
         BrandId = brandId;
         TypeId = typeId;
         InventoryId = inventoryId;
+        OffId = offId;
     }
 
     public ProductEditDto()
     {
-        
+      
     }
 }

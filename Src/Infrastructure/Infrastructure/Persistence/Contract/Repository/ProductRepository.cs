@@ -99,6 +99,7 @@ public class ProductRepository:IProductRepository
                     .SetProperty(x=>x.LastModified,DateTime.Now)
                     .SetProperty(x=>x.TypeId,productEditDto.TypeId)
                     .SetProperty(x=>x.InventoryId,productEditDto.InventoryId)
+                    .SetProperty(x=>x.OffId,productEditDto.OffId ==0 ?null:productEditDto.OffId)
                     .SetProperty(x=>x.BrandId,productEditDto.BrandId ==0 ? null:productEditDto.BrandId)
                 , cancellationToken: cancellationToken);
         if (check > 0) return true;

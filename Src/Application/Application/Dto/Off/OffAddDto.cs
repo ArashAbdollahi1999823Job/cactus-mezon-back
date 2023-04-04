@@ -1,22 +1,17 @@
-﻿using Domain.Entities.ProductEntity;
-namespace Domain.Entities.StoreEntity;
-public class Off:BaseEntity.BaseEntity
+﻿namespace Application.Dto.Off;
+
+public class OffAddDto
 {
     public string Name { get; set; }
     public string Description { get; set; }
     public int OffPercent { get; set; }
     
-
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-
-
-    public Store Store { get; set; }
-    public long  StoreId { get; set; }
     
-    public List<Product> Products { get; set; }
+    public long  StoreId { get; set; }
 
-    public Off(string name, string description, int offPercent, DateTime startDate, DateTime endDate, long storeId)
+    public OffAddDto(string name, string description, int offPercent, DateTime startDate, DateTime endDate, long storeId)
     {
         Name = name;
         Description = description;
@@ -24,5 +19,10 @@ public class Off:BaseEntity.BaseEntity
         StartDate = startDate;
         EndDate = endDate;
         StoreId = storeId;
+    }
+
+    public OffAddDto()
+    {
+        
     }
 }

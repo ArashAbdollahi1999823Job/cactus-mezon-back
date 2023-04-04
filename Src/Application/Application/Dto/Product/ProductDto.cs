@@ -26,6 +26,7 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
     public long InventoryId { get; set; }
 
     public OffDto Off { get; set; }
+    public long OffId { get; set; }
 
 
 

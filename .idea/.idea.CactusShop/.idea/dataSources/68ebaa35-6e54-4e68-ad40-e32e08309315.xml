@@ -16888,7 +16888,7 @@
     </schema>
     <schema id="5575" parent="5510" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-03-14.13:32:48.863</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-04-04.00:14:48.097</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5576" parent="5510" name="guest">
@@ -16904,7 +16904,7 @@
     </table>
     <table id="5579" parent="5575" name="Brands">
       <CreatedTimestamp>2023-02-25.09:39:21.050</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.14:10:04.047</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-03-29.15:50:57.670</ModifiedTimestamp>
       <ObjectId>1477580302</ObjectId>
     </table>
     <table id="5580" parent="5575" name="Comment">
@@ -16914,12 +16914,12 @@
     </table>
     <table id="5581" parent="5575" name="Inventories">
       <CreatedTimestamp>2023-02-25.09:39:38.967</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.13:32:50.780</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:00:28.600</ModifiedTimestamp>
       <ObjectId>82099333</ObjectId>
     </table>
     <table id="5582" parent="5575" name="InventoryOperations">
       <CreatedTimestamp>2023-02-25.09:39:40.360</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.13:32:49.870</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:00:28.597</ModifiedTimestamp>
       <ObjectId>258099960</ObjectId>
     </table>
     <table id="5583" parent="5575" name="Item">
@@ -16939,17 +16939,17 @@
     </table>
     <table id="5586" parent="5575" name="Offs">
       <CreatedTimestamp>2023-02-25.09:39:38.970</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.13:32:49.850</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:14:36.410</ModifiedTimestamp>
       <ObjectId>130099504</ObjectId>
     </table>
     <table id="5587" parent="5575" name="ProductPictures">
       <CreatedTimestamp>2023-02-25.09:39:22.157</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.13:39:36.233</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-03.19:40:53.660</ModifiedTimestamp>
       <ObjectId>1509580416</ObjectId>
     </table>
     <table id="5588" parent="5575" name="Products">
       <CreatedTimestamp>2023-02-25.09:39:19.957</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.14:10:04.043</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-03-29.15:56:39.390</ModifiedTimestamp>
       <ObjectId>1237579447</ObjectId>
     </table>
     <table id="5589" parent="5575" name="Role">
@@ -16969,7 +16969,7 @@
     </table>
     <table id="5592" parent="5575" name="Stores">
       <CreatedTimestamp>2023-02-25.12:11:05.420</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-27.13:32:49.320</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:14:36.413</ModifiedTimestamp>
       <ObjectId>882102183</ObjectId>
     </table>
     <table id="5593" parent="5575" name="TypePictures">
@@ -17004,7 +17004,7 @@
     </table>
     <table id="5599" parent="5575" name="Users">
       <CreatedTimestamp>2023-02-25.09:39:28.477</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-25.12:11:05.433</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:00:27.370</ModifiedTimestamp>
       <ObjectId>1653580929</ObjectId>
     </table>
     <table id="5600" parent="5575" name="__EFMigrationsHistory">
@@ -17419,16 +17419,7 @@
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1362103893</ObjectId>
     </default>
-    <foreign-key id="5673" parent="5582" name="FK_InventoryOperations_Users_UserId">
-      <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2023-02-25.09:39:49.200</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-25.09:39:49.200</ModifiedTimestamp>
-      <ObjectId>738101670</ObjectId>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1653580929</RefTableId>
-      <RefTableName>Users</RefTableName>
-    </foreign-key>
-    <foreign-key id="5674" parent="5582" name="FK_InventoryOperations_Products_ProductId">
+    <foreign-key id="5673" parent="5582" name="FK_InventoryOperations_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2023-02-25.09:39:40.367</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:40.367</ModifiedTimestamp>
@@ -17437,116 +17428,111 @@
       <RefTableId>1237579447</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <foreign-key id="5675" parent="5582" name="FK_InventoryOperations_Inventories_InventoryId">
+    <foreign-key id="5674" parent="5582" name="FK_InventoryOperations_Inventories_InventoryId">
       <ColNames>InventoryId</ColNames>
-      <CreatedTimestamp>2023-02-25.09:39:40.367</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-25.09:39:40.367</ModifiedTimestamp>
-      <ObjectId>306100131</ObjectId>
-      <OnDelete>cascade</OnDelete>
+      <CreatedTimestamp>2023-04-04.00:00:28.597</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:00:28.597</ModifiedTimestamp>
+      <ObjectId>126623494</ObjectId>
       <RefColNames>Id</RefColNames>
       <RefTableId>82099333</RefTableId>
       <RefTableName>Inventories</RefTableName>
     </foreign-key>
-    <index id="5676" parent="5582" name="PK_InventoryOperations">
+    <index id="5675" parent="5582" name="PK_InventoryOperations">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5677" parent="5582" name="IX_InventoryOperations_InventoryId">
+    <index id="5676" parent="5582" name="IX_InventoryOperations_InventoryId">
       <ColNames>InventoryId</ColNames>
       <Position>2</Position>
     </index>
-    <index id="5678" parent="5582" name="IX_InventoryOperations_ProductId">
+    <index id="5677" parent="5582" name="IX_InventoryOperations_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>3</Position>
     </index>
-    <index id="5679" parent="5582" name="IX_InventoryOperations_UserId">
-      <ColNames>UserId</ColNames>
-      <Position>4</Position>
-    </index>
-    <key id="5680" parent="5582" name="PK_InventoryOperations">
+    <key id="5678" parent="5582" name="PK_InventoryOperations">
       <CreatedTimestamp>2023-02-25.09:39:40.363</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:40.363</ModifiedTimestamp>
       <ObjectId>274100017</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_InventoryOperations</UnderlyingIndexName>
     </key>
-    <column id="5681" parent="5583" name="Id">
+    <column id="5679" parent="5583" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5682" parent="5583" name="Name">
+    <column id="5680" parent="5583" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5683" parent="5583" name="Value">
+    <column id="5681" parent="5583" name="Value">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5684" parent="5583" name="IsDelete">
+    <column id="5682" parent="5583" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5685" parent="5583" name="CreationDate">
+    <column id="5683" parent="5583" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <DefaultConstraintId>1330103779</DefaultConstraintId>
       <DefaultConstraintName>DF__Item__CreationDa__4F47C5E3</DefaultConstraintName>
     </column>
-    <column id="5686" parent="5583" name="IsActive">
+    <column id="5684" parent="5583" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <DefaultConstraintId>1346103836</DefaultConstraintId>
       <DefaultConstraintName>DF__Item__IsActive__503BEA1C</DefaultConstraintName>
     </column>
-    <column id="5687" parent="5583" name="LastModified">
+    <column id="5685" parent="5583" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>7</Position>
     </column>
-    <default id="5688" parent="5583" name="DF__Item__CreationDa__4F47C5E3">
+    <default id="5686" parent="5583" name="DF__Item__CreationDa__4F47C5E3">
       <ColNames>CreationDate</ColNames>
       <DefaultExpression>&apos;0001-01-01T00:00:00.0000000&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-27.13:32:49.853</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1330103779</ObjectId>
     </default>
-    <default id="5689" parent="5583" name="DF__Item__IsActive__503BEA1C">
+    <default id="5687" parent="5583" name="DF__Item__IsActive__503BEA1C">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>CONVERT([bit],0)</DefaultExpression>
       <ModifiedTimestamp>2023-02-27.13:32:49.857</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1346103836</ObjectId>
     </default>
-    <index id="5690" parent="5583" name="PK_Item">
+    <index id="5688" parent="5583" name="PK_Item">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5691" parent="5583" name="PK_Item">
+    <key id="5689" parent="5583" name="PK_Item">
       <CreatedTimestamp>2023-02-25.09:39:48.197</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:48.197</ModifiedTimestamp>
       <ObjectId>546100986</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Item</UnderlyingIndexName>
     </key>
-    <column id="5692" parent="5584" name="ItemsId">
+    <column id="5690" parent="5584" name="ItemsId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5693" parent="5584" name="ProductsId">
+    <column id="5691" parent="5584" name="ProductsId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="5694" parent="5584" name="FK_ItemProduct_Item_ItemsId">
+    <foreign-key id="5692" parent="5584" name="FK_ItemProduct_Item_ItemsId">
       <ColNames>ItemsId</ColNames>
       <CreatedTimestamp>2023-02-25.09:39:48.200</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:48.200</ModifiedTimestamp>
@@ -17556,7 +17542,7 @@
       <RefTableId>530100929</RefTableId>
       <RefTableName>Item</RefTableName>
     </foreign-key>
-    <foreign-key id="5695" parent="5584" name="FK_ItemProduct_Products_ProductsId">
+    <foreign-key id="5693" parent="5584" name="FK_ItemProduct_Products_ProductsId">
       <ColNames>ProductsId</ColNames>
       <CreatedTimestamp>2023-02-25.09:39:48.200</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:48.200</ModifiedTimestamp>
@@ -17566,35 +17552,35 @@
       <RefTableId>1237579447</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <index id="5696" parent="5584" name="PK_ItemProduct">
+    <index id="5694" parent="5584" name="PK_ItemProduct">
       <Clustering>1</Clustering>
       <ColNames>ItemsId
 ProductsId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5697" parent="5584" name="IX_ItemProduct_ProductsId">
+    <index id="5695" parent="5584" name="IX_ItemProduct_ProductsId">
       <ColNames>ProductsId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5698" parent="5584" name="PK_ItemProduct">
+    <key id="5696" parent="5584" name="PK_ItemProduct">
       <CreatedTimestamp>2023-02-25.09:39:48.200</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:48.200</ModifiedTimestamp>
       <ObjectId>578101100</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ItemProduct</UnderlyingIndexName>
     </key>
-    <column id="5699" parent="5585" name="ItemsId">
+    <column id="5697" parent="5585" name="ItemsId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5700" parent="5585" name="TypesId">
+    <column id="5698" parent="5585" name="TypesId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="5701" parent="5585" name="FK_ItemType_Item_ItemsId">
+    <foreign-key id="5699" parent="5585" name="FK_ItemType_Item_ItemsId">
       <ColNames>ItemsId</ColNames>
       <CreatedTimestamp>2023-02-26.11:20:19.467</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-26.11:20:19.467</ModifiedTimestamp>
@@ -17604,7 +17590,7 @@ ProductsId</ColNames>
       <RefTableId>530100929</RefTableId>
       <RefTableName>Item</RefTableName>
     </foreign-key>
-    <foreign-key id="5702" parent="5585" name="FK_ItemType_Types_TypesId">
+    <foreign-key id="5700" parent="5585" name="FK_ItemType_Types_TypesId">
       <ColNames>TypesId</ColNames>
       <CreatedTimestamp>2023-02-26.11:20:19.470</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-26.11:20:19.470</ModifiedTimestamp>
@@ -17614,149 +17600,177 @@ ProductsId</ColNames>
       <RefTableId>1058102810</RefTableId>
       <RefTableName>Types</RefTableName>
     </foreign-key>
-    <index id="5703" parent="5585" name="PK_ItemType">
+    <index id="5701" parent="5585" name="PK_ItemType">
       <Clustering>1</Clustering>
       <ColNames>ItemsId
 TypesId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5704" parent="5585" name="IX_ItemType_TypesId">
+    <index id="5702" parent="5585" name="IX_ItemType_TypesId">
       <ColNames>TypesId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5705" parent="5585" name="PK_ItemType">
+    <key id="5703" parent="5585" name="PK_ItemType">
       <CreatedTimestamp>2023-02-26.11:20:19.463</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-26.11:20:19.463</ModifiedTimestamp>
       <ObjectId>1122103038</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ItemType</UnderlyingIndexName>
     </key>
-    <column id="5706" parent="5586" name="Id">
+    <column id="5704" parent="5586" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5707" parent="5586" name="Name">
+    <column id="5705" parent="5586" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5708" parent="5586" name="Description">
+    <column id="5706" parent="5586" name="Description">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5709" parent="5586" name="OffPercent">
+    <column id="5707" parent="5586" name="OffPercent">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5710" parent="5586" name="StartDate">
+    <column id="5708" parent="5586" name="StartDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5711" parent="5586" name="EndDate">
+    <column id="5709" parent="5586" name="EndDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5712" parent="5586" name="IsDelete">
+    <column id="5710" parent="5586" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5713" parent="5586" name="CreationDate">
+    <column id="5711" parent="5586" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <DefaultConstraintId>1298103665</DefaultConstraintId>
       <DefaultConstraintName>DF__Offs__CreationDa__4D5F7D71</DefaultConstraintName>
     </column>
-    <column id="5714" parent="5586" name="IsActive">
+    <column id="5712" parent="5586" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
       <DefaultConstraintId>1314103722</DefaultConstraintId>
       <DefaultConstraintName>DF__Offs__IsActive__4E53A1AA</DefaultConstraintName>
     </column>
-    <column id="5715" parent="5586" name="LastModified">
+    <column id="5713" parent="5586" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>10</Position>
     </column>
-    <default id="5716" parent="5586" name="DF__Offs__CreationDa__4D5F7D71">
+    <column id="5714" parent="5586" name="StoreId">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <DefaultConstraintId>142623551</DefaultConstraintId>
+      <DefaultConstraintName>DF__Offs__StoreId__0880433F</DefaultConstraintName>
+    </column>
+    <default id="5715" parent="5586" name="DF__Offs__CreationDa__4D5F7D71">
       <ColNames>CreationDate</ColNames>
       <DefaultExpression>&apos;0001-01-01T00:00:00.0000000&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-27.13:32:49.840</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1298103665</ObjectId>
     </default>
-    <default id="5717" parent="5586" name="DF__Offs__IsActive__4E53A1AA">
+    <default id="5716" parent="5586" name="DF__Offs__IsActive__4E53A1AA">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>CONVERT([bit],0)</DefaultExpression>
       <ModifiedTimestamp>2023-02-27.13:32:49.843</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1314103722</ObjectId>
     </default>
-    <index id="5718" parent="5586" name="PK_Offs">
+    <default id="5717" parent="5586" name="DF__Offs__StoreId__0880433F">
+      <ColNames>StoreId</ColNames>
+      <DefaultExpression>CONVERT([bigint],0)</DefaultExpression>
+      <ModifiedTimestamp>2023-04-04.00:14:36.370</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>142623551</ObjectId>
+    </default>
+    <foreign-key id="5718" parent="5586" name="FK_Offs_Stores_StoreId">
+      <ColNames>StoreId</ColNames>
+      <CreatedTimestamp>2023-04-04.00:14:36.410</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-04.00:14:36.410</ModifiedTimestamp>
+      <ObjectId>158623608</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>882102183</RefTableId>
+      <RefTableName>Stores</RefTableName>
+    </foreign-key>
+    <index id="5719" parent="5586" name="PK_Offs">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5719" parent="5586" name="PK_Offs">
+    <index id="5720" parent="5586" name="IX_Offs_StoreId">
+      <ColNames>StoreId</ColNames>
+      <Position>2</Position>
+    </index>
+    <key id="5721" parent="5586" name="PK_Offs">
       <CreatedTimestamp>2023-02-25.09:39:38.973</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:38.973</ModifiedTimestamp>
       <ObjectId>146099561</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Offs</UnderlyingIndexName>
     </key>
-    <column id="5720" parent="5587" name="Id">
+    <column id="5722" parent="5587" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5721" parent="5587" name="PictureTitle">
+    <column id="5723" parent="5587" name="PictureTitle">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5722" parent="5587" name="PictureAlt">
+    <column id="5724" parent="5587" name="PictureAlt">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5723" parent="5587" name="PictureUrl">
+    <column id="5725" parent="5587" name="PictureUrl">
       <DasType>nvarchar(500 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5724" parent="5587" name="IsActive">
+    <column id="5726" parent="5587" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5725" parent="5587" name="IsDelete">
+    <column id="5727" parent="5587" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5726" parent="5587" name="ProductId">
+    <column id="5728" parent="5587" name="ProductId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5727" parent="5587" name="CreationDate">
+    <column id="5729" parent="5587" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="5728" parent="5587" name="LastModified">
+    <column id="5730" parent="5587" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>12</Position>
     </column>
-    <foreign-key id="5729" parent="5587" name="FK_ProductPictures_Products_ProductId">
+    <foreign-key id="5731" parent="5587" name="FK_ProductPictures_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2023-02-25.09:39:22.160</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:22.160</ModifiedTimestamp>
@@ -17766,225 +17780,211 @@ TypesId</ColNames>
       <RefTableId>1237579447</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <index id="5730" parent="5587" name="PK_ProductPictures">
+    <index id="5732" parent="5587" name="PK_ProductPictures">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5731" parent="5587" name="IX_ProductPictures_ProductId">
+    <index id="5733" parent="5587" name="IX_ProductPictures_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5732" parent="5587" name="PK_ProductPictures">
+    <key id="5734" parent="5587" name="PK_ProductPictures">
       <CreatedTimestamp>2023-02-25.09:39:22.160</CreatedTimestamp>
       <ModifiedTimestamp>2023-02-25.09:39:22.160</ModifiedTimestamp>
       <ObjectId>1525580473</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ProductPictures</UnderlyingIndexName>
     </key>
-    <column id="5733" parent="5588" name="Id">
+    <column id="5735" parent="5588" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5734" parent="5588" name="CreationDate">
+    <column id="5736" parent="5588" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <DefaultConstraintId>1285579618</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Creati__4CA06362</DefaultConstraintName>
     </column>
-    <column id="5735" parent="5588" name="Description">
+    <column id="5737" parent="5588" name="Description">
       <DasType>nvarchar(500 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <DefaultConstraintId>1301579675</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Descri__4D94879B</DefaultConstraintName>
     </column>
-    <column id="5736" parent="5588" name="IsActive">
+    <column id="5738" parent="5588" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <DefaultConstraintId>1317579732</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__IsActi__4E88ABD4</DefaultConstraintName>
     </column>
-    <column id="5737" parent="5588" name="IsDelete">
+    <column id="5739" parent="5588" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <DefaultConstraintId>1333579789</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__IsDele__4F7CD00D</DefaultConstraintName>
     </column>
-    <column id="5738" parent="5588" name="LastModified">
+    <column id="5740" parent="5588" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5739" parent="5588" name="MetaDescription">
+    <column id="5741" parent="5588" name="MetaDescription">
       <DasType>nvarchar(200 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
       <DefaultConstraintId>1365579903</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__MetaDe__5165187F</DefaultConstraintName>
     </column>
-    <column id="5740" parent="5588" name="Price">
+    <column id="5742" parent="5588" name="Price">
       <DasType>decimal(18,2)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
       <DefaultConstraintId>1397580017</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Price__534D60F1</DefaultConstraintName>
     </column>
-    <column id="5741" parent="5588" name="BrandId">
+    <column id="5743" parent="5588" name="BrandId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>13</Position>
       <DefaultConstraintId>1413580074</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Produc__5441852A</DefaultConstraintName>
     </column>
-    <column id="5742" parent="5588" name="TypeId">
+    <column id="5744" parent="5588" name="TypeId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>14</Position>
       <DefaultConstraintId>1429580131</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Produc__5535A963</DefaultConstraintName>
     </column>
-    <column id="5743" parent="5588" name="Summary">
+    <column id="5745" parent="5588" name="Summary">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>15</Position>
       <DefaultConstraintId>1445580188</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Summar__5629CD9C</DefaultConstraintName>
     </column>
-    <column id="5744" parent="5588" name="Name">
+    <column id="5746" parent="5588" name="Name">
       <DasType>nvarchar(30 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>16</Position>
       <DefaultConstraintId>1461580245</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Title__571DF1D5</DefaultConstraintName>
     </column>
-    <column id="5745" parent="5588" name="Slug">
+    <column id="5747" parent="5588" name="Slug">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>17</Position>
     </column>
-    <column id="5746" parent="5588" name="Count">
+    <column id="5748" parent="5588" name="Count">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>18</Position>
       <DefaultConstraintId>2021582240</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__OffPer__787EE5A0</DefaultConstraintName>
     </column>
-    <column id="5747" parent="5588" name="Score">
+    <column id="5749" parent="5588" name="Score">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>20</Position>
       <DefaultConstraintId>2037582297</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__score__797309D9</DefaultConstraintName>
     </column>
-    <column id="5748" parent="5588" name="OffId">
+    <column id="5750" parent="5588" name="OffId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>21</Position>
       <DefaultConstraintId>2069582411</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__ShopSe__7B5B524B</DefaultConstraintName>
     </column>
-    <column id="5749" parent="5588" name="InventoryId">
+    <column id="5751" parent="5588" name="InventoryId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>22</Position>
       <DefaultConstraintId>2133582639</DefaultConstraintId>
       <DefaultConstraintName>DF__Products__Invent__7F2BE32F</DefaultConstraintName>
     </column>
-    <default id="5750" parent="5588" name="DF__Products__Creati__4CA06362">
+    <default id="5752" parent="5588" name="DF__Products__Creati__4CA06362">
       <ColNames>CreationDate</ColNames>
       <DefaultExpression>&apos;0001-01-01T00:00:00.0000000&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:20.350</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1285579618</ObjectId>
     </default>
-    <default id="5751" parent="5588" name="DF__Products__Descri__4D94879B">
+    <default id="5753" parent="5588" name="DF__Products__Descri__4D94879B">
       <ColNames>Description</ColNames>
       <DefaultExpression>N&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:20.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1301579675</ObjectId>
     </default>
-    <default id="5752" parent="5588" name="DF__Products__IsActi__4E88ABD4">
+    <default id="5754" parent="5588" name="DF__Products__IsActi__4E88ABD4">
       <ColNames>IsActive</ColNames>
       <DefaultExpression>CONVERT([bit],0)</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:20.353</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1317579732</ObjectId>
     </default>
-    <default id="5753" parent="5588" name="DF__Products__IsDele__4F7CD00D">
+    <default id="5755" parent="5588" name="DF__Products__IsDele__4F7CD00D">
       <ColNames>IsDelete</ColNames>
       <DefaultExpression>CONVERT([bit],0)</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:20.357</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1333579789</ObjectId>
     </default>
-    <default id="5754" parent="5588" name="DF__Products__MetaDe__5165187F">
+    <default id="5756" parent="5588" name="DF__Products__MetaDe__5165187F">
       <ColNames>MetaDescription</ColNames>
       <DefaultExpression>N&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:21.033</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1365579903</ObjectId>
     </default>
-    <default id="5755" parent="5588" name="DF__Products__Price__534D60F1">
+    <default id="5757" parent="5588" name="DF__Products__Price__534D60F1">
       <ColNames>Price</ColNames>
       <DefaultExpression>0.0</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:21.037</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1397580017</ObjectId>
     </default>
-    <default id="5756" parent="5588" name="DF__Products__Produc__5441852A">
-      <ColNames>BrandId</ColNames>
-      <DefaultExpression>CONVERT([bigint],0)</DefaultExpression>
-      <ModifiedTimestamp>2023-02-25.09:39:21.040</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1413580074</ObjectId>
-    </default>
-    <default id="5757" parent="5588" name="DF__Products__Produc__5535A963">
+    <default id="5758" parent="5588" name="DF__Products__Produc__5535A963">
       <ColNames>TypeId</ColNames>
       <DefaultExpression>CONVERT([bigint],0)</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:21.043</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1429580131</ObjectId>
     </default>
-    <default id="5758" parent="5588" name="DF__Products__Summar__5629CD9C">
+    <default id="5759" parent="5588" name="DF__Products__Summar__5629CD9C">
       <ColNames>Summary</ColNames>
       <DefaultExpression>N&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:21.047</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1445580188</ObjectId>
     </default>
-    <default id="5759" parent="5588" name="DF__Products__Title__571DF1D5">
+    <default id="5760" parent="5588" name="DF__Products__Title__571DF1D5">
       <ColNames>Name</ColNames>
       <DefaultExpression>N&apos;&apos;</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:21.047</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1461580245</ObjectId>
     </default>
-    <default id="5760" parent="5588" name="DF__Products__OffPer__787EE5A0">
+    <default id="5761" parent="5588" name="DF__Products__OffPer__787EE5A0">
       <ColNames>Count</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:34.890</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2021582240</ObjectId>
     </default>
-    <default id="5761" parent="5588" name="DF__Products__score__797309D9">
+    <default id="5762" parent="5588" name="DF__Products__score__797309D9">
       <ColNames>Score</ColNames>
       <DefaultExpression>CONVERT([bigint],0)</DefaultExpression>
       <ModifiedTimestamp>2023-02-25.09:39:34.893</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>2037582297</ObjectId>
-    </default>
-    <default id="5762" parent="5588" name="DF__Products__ShopSe__7B5B524B">
-      <ColNames>OffId</ColNames>
-      <DefaultExpression>CONVERT([bigint],0)</DefaultExpression>
-      <ModifiedTimestamp>2023-02-25.09:39:35.707</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>2069582411</ObjectId>
     </default>
     <default id="5763" parent="5588" name="DF__Products__Invent__7F2BE32F">
       <ColNames>InventoryId</ColNames>
@@ -17995,10 +17995,9 @@ TypesId</ColNames>
     </default>
     <foreign-key id="5764" parent="5588" name="FK_Products_Brands_BrandId">
       <ColNames>BrandId</ColNames>
-      <CreatedTimestamp>2023-02-26.11:34:23.500</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-26.11:34:23.500</ModifiedTimestamp>
-      <ObjectId>1234103437</ObjectId>
-      <OnDelete>cascade</OnDelete>
+      <CreatedTimestamp>2023-03-29.15:50:57.670</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-29.15:50:57.670</ModifiedTimestamp>
+      <ObjectId>1938105945</ObjectId>
       <RefColNames>Id</RefColNames>
       <RefTableId>1477580302</RefTableId>
       <RefTableName>Brands</RefTableName>
@@ -18015,10 +18014,9 @@ TypesId</ColNames>
     </foreign-key>
     <foreign-key id="5766" parent="5588" name="FK_Products_Offs_OffId">
       <ColNames>OffId</ColNames>
-      <CreatedTimestamp>2023-02-25.09:39:42.790</CreatedTimestamp>
-      <ModifiedTimestamp>2023-02-25.09:39:42.790</ModifiedTimestamp>
-      <ObjectId>354100302</ObjectId>
-      <OnDelete>cascade</OnDelete>
+      <CreatedTimestamp>2023-03-29.15:56:39.390</CreatedTimestamp>
+      <ModifiedTimestamp>2023-03-29.15:56:39.390</ModifiedTimestamp>
+      <ObjectId>1954106002</ObjectId>
       <RefColNames>Id</RefColNames>
       <RefTableId>130099504</RefTableId>
       <RefTableName>Offs</RefTableName>

@@ -19,7 +19,7 @@ public class ProductEditCommandHandler:IRequestHandler<ProductEditCommand,bool>
         if (check)
         {
             var productEditDto = new ProductEditDto(req.Name, req.Slug, req.Description, req.MetaDescription, req.Price,
-                req.Summary, req.Id, req.IsActive, req.BrandId, req.TypeId, req.InventoryId);
+                req.Summary, req.Id, req.IsActive, req.BrandId, req.TypeId, req.InventoryId,req.OffId);
             return await _productRepository.ProductEditAsync(productEditDto, cancellationToken);
         }
 

@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Brand\Validators" />
+    <Folder Include="Features\Off\Validators" />
     <Folder Include="Features\Product\Validators" />
   </ItemGroup>
 

@@ -4,6 +4,7 @@ namespace Application.Dto.Off;
 
 public class OffDto:IMapFrom<Domain.Entities.StoreEntity.Off>
 {
+    public long Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public int OffPercent { get; set; }

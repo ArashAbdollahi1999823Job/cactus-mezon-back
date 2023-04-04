@@ -29,6 +29,16 @@ public static class ApplicationMessages
     public const string BrandAddFailedOnHandle = "برند ساخته نشد! HandelError";
     public const string BrandEditFailedOnHandle = "برند اذیت نشد! HandelError";
     #endregion
+    
+    #region Off
+    public const string OffDeleteFailed = "تخفیف حذف نشد! ";
+    public const string OffFailedDeleteOnHandle = "تخفیف حذف نشد! HandelError";
+    public const string OffEditFailed = "تخفیف ادیت نشد! ";
+    public const string OffNotFound = "تخفیف یافت نشد! ";
+    public const string OffAddFailed = "تخفیف ساخته نشد! ";
+    public const string OffAddFailedOnHandle = "تخفیف ساخته نشد! HandelError";
+    public const string OffEditFailedOnHandle = "تخفیف اذیت نشد! HandelError";
+    #endregion
 
     #region Inventory
     public const string InventoryNotFound = "انبار پیدا نشد!";
