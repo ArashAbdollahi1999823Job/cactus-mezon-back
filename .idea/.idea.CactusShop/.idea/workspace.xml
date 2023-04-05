@@ -6,30 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffEditDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffSearchDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Command/OffAdd/OffAddCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Command/OffAdd/OffAddCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Command/OffDelete/OffDeleteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Command/OffDelete/OffDeleteCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Command/OffEdit/OffEditCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Command/OffEdit/OffEditCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Query/OffGetAll/OffGetAllQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Off/Query/OffGetAll/OffGetAllQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IOffRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Off/OffAdminController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Query/InventoryOperationGetAll/InventoryOperationGetAllQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Query/InventoryOperationGetAll/InventoryOperationGetAllQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IInventoryOperationRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryOperationRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/InventoryOperation/InventoryOperationAdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductEditDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductEdit/ProductEditCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductEdit/ProductEditCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/InventoryEntity/InventoryOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/InventoryEntity/InventoryOperation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Off.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Off.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Enums/InventoryOperationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Enums/InventoryOperationType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
@@ -114,7 +107,7 @@
       <workItem from="1679991986956" duration="338000" />
       <workItem from="1680064609705" duration="9138000" />
       <workItem from="1680171485813" duration="11418000" />
-      <workItem from="1680423060421" duration="27497000" />
+      <workItem from="1680423060421" duration="44200000" />
     </task>
     <servers />
   </component>

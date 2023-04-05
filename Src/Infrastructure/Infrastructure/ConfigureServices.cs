@@ -95,6 +95,7 @@ public static class ConfigureServices
         services.AddScoped<IStoreUserPictureRepository, StoreUserPictureRepository>();
         services.AddScoped<IBasketRepository, BasketRepository>();
         services.AddScoped<IStoreRepository, StoreRepository>();
+        services.AddScoped<IInventoryOperationRepository, InventoryOperationRepository>();
         services.AddScoped<ITypeRepository, TypeRepository>();
         services.AddScoped<ITypePictureRepository, TypePictureRepository>();
         services.AddScoped<IProductPictureRepository, ProductPictureRepository>();

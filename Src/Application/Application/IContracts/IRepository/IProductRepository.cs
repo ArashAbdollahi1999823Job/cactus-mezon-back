@@ -2,6 +2,7 @@
 using Application.Dto.Product;
 using Application.Dto.ProductDto;
 using Domain.Entities.ProductEntity;
+using Domain.Enums;
 
 namespace Application.IContracts.IRepository;
 public interface IProductRepository
@@ -12,5 +13,8 @@ public interface IProductRepository
     public Task<bool> ProductExistAsync(long id, CancellationToken cancellationToken);
     public Task<bool> ProductDeleteAsync(long id, CancellationToken cancellationToken);
     public Task<Product> ProductGetByIdAsync(long id, CancellationToken cancellationToken);
+
+    public Task<bool> ProductChangeCountAsync(int count, string inventoryOperationType, long productId,
+        CancellationToken cancellationToken);
 
 }

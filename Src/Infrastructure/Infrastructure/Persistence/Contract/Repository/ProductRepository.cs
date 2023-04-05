@@ -7,6 +7,7 @@ using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
 using Domain.Entities.ProductEntity;
+using Domain.Enums;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -132,5 +133,35 @@ public class ProductRepository:IProductRepository
         if (product == null) throw new NotFoundEntityException(ApplicationMessages.ProductNotFound);
         return product;
     }
+
+
+
+    #endregion
+
+    #region ProductChangeCountAsync
+
+    public async Task<bool> ProductChangeCountAsync(int count, string inventoryOperationType, long productId,
+        CancellationToken cancellationToken)
+    {
+        if (inventoryOperationType == "1" || inventoryOperationType == "4")
+        {
+            var check = await _context.Products
+                .Where(x => x.Id == productId)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.Count,a=>a.Count+count), cancellationToken);
+            if (check > 0) return true;
+            throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
+        }
+        else
+        {
+            var check = await _context.Products
+                .Where(x => x.Id == productId)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.Count,a=>a.Count-count), cancellationToken);
+            if (check > 0) return true;
+            throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
+        }
+                
+                
+    }
+
     #endregion
 }

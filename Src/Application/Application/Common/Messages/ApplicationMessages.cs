@@ -66,6 +66,16 @@ public static class ApplicationMessages
     public const string StoreFailedDeleteOnHandle = "مغازه پاک نشد! HandleError";
     public const string StoreNotFound = "مغازه یافت نشد!";
     #endregion
+    
+    #region InventoryOperation
+    public const string InventoryOperationDeleteFailed = "گزارش حذف نشد! ";
+    public const string InventoryOperationFailedDeleteOnHandle = "گزارش حذف نشد! HandelError";
+    public const string InventoryOperationEditFailed = "گزارش ادیت نشد! ";
+    public const string InventoryOperationNotFound = "گزارش یافت نشد! ";
+    public const string InventoryOperationAddFailed = "گزارش ساخته نشد! ";
+    public const string InventoryOperationAddFailedOnHandle = "گزارش ساخته نشد! HandelError";
+    public const string InventoryOperationEditFailedOnHandle = "گزارش اذیت نشد! HandelError";
+    #endregion
 
     #region Type
     public const string TypeFailedEdit = "حذف دسته انجام نشد !";
