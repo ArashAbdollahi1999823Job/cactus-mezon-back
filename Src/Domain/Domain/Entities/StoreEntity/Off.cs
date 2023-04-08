@@ -12,11 +12,11 @@ public class Off:BaseEntity.BaseEntity
 
 
     public Store Store { get; set; }
-    public long  StoreId { get; set; }
+    public Guid  StoreId { get; set; }
     
     public List<Product> Products { get; set; }
 
-    public Off(string name, string description, int offPercent, DateTime startDate, DateTime endDate, long storeId)
+    public Off(string name, string description, int offPercent, DateTime startDate, DateTime endDate, Guid storeId)
     {
         Name = name;
         Description = description;

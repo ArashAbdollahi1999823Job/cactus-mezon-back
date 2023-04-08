@@ -11,7 +11,7 @@ public class StorePicture:BaseEntity.BaseEntity
     public int Sort { get; set; }
     #endregion
 
-    public StorePicture(string pictureTitle, string pictureAlt, string pictureUrl, int sort, long storeId)
+    public StorePicture(string pictureTitle, string pictureAlt, string pictureUrl, int sort, Guid storeId)
     {
         PictureTitle = pictureTitle;
         PictureAlt = pictureAlt;
@@ -22,6 +22,6 @@ public class StorePicture:BaseEntity.BaseEntity
 
     #region Relation
     public Store Store { get; set; }
-    public long StoreId { get; set; }
+    public Guid StoreId { get; set; }
     #endregion
 }

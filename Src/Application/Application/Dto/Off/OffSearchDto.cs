@@ -2,9 +2,9 @@
 public class OffSearchDto
 {
     public long Id { get; set; }
-    public long StoreId { get; set; }
+    public Guid StoreId { get; set; }
 
-    public OffSearchDto(long id, long storeId)
+    public OffSearchDto(long id, Guid storeId)
     {
         Id = id;
         StoreId = storeId;

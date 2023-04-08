@@ -7,9 +7,9 @@ public class StoreUserPictureAddDto
     public IFormFile PictureUrl { get; set; }
     public string PictureUrlString { get; set; }
     public int Sort { get; set; }
-    public long StoreId { get; set; }
+    public Guid StoreId { get; set; }
 
-    public StoreUserPictureAddDto(string pictureTitle, string pictureAlt, string pictureUrlString, int sort,long storeId)
+    public StoreUserPictureAddDto(string pictureTitle, string pictureAlt, string pictureUrlString, int sort,Guid storeId)
     {
         PictureTitle = pictureTitle;
         PictureAlt = pictureAlt;

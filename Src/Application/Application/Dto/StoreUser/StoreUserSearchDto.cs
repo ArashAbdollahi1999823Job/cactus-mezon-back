@@ -1,11 +1,11 @@
 ﻿namespace Application.Dto.StoreUser;
 public class StoreUserSearchDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string UserId { get; set; }
 
 
-    public StoreUserSearchDto(long id, string userId)
+    public StoreUserSearchDto(Guid id, string userId)
     {
         Id = id;
         UserId = userId;

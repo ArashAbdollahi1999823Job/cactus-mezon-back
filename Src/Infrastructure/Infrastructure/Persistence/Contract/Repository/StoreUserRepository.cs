@@ -24,7 +24,7 @@ public class StoreUserRepository:IStoreUserRepository
     public async Task<StoreUserDto> StoreUserGetAsync(StoreUserSearchDto storeUserSearchDto, CancellationToken cancellationToken)
     {
        var query = _context.Stores.AsNoTracking().AsQueryable();
-       if (storeUserSearchDto.Id != 0) query = query.Where(x => x.Id == storeUserSearchDto.Id);
+       if (storeUserSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id == storeUserSearchDto.Id);
        if (!String.IsNullOrEmpty(storeUserSearchDto.UserId)) query = query.Where(x => x.UserId == storeUserSearchDto.UserId);
        var storeUser = await query.Include(x=>x.User).ToListAsync(cancellationToken);
        return _mapper.Map<Store, StoreUserDto>(storeUser.FirstOrDefault());

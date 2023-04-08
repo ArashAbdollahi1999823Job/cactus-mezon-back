@@ -25,7 +25,7 @@ public class StoreUserPictureRepository : IStoreUserPictureRepository
     {
         var query = _context.StorePictures.AsQueryable();
         if(storeUserPictureSearchDto.Id>0)query = query.Where(x => x.Id == storeUserPictureSearchDto.Id);
-        if(storeUserPictureSearchDto.StoreId>0)query = query.Where(x => x.StoreId == storeUserPictureSearchDto.StoreId);
+        if(storeUserPictureSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.StoreId == storeUserPictureSearchDto.StoreId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<StoreUserPictureDto>>(result);
     }

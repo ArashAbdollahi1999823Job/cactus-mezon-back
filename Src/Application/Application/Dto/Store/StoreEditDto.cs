@@ -2,7 +2,7 @@
 
 public class StoreEditDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string PhoneNumber { get; set; }
@@ -13,7 +13,7 @@ public class StoreEditDto
     
     public string UserId { get; set; }
 
-    public StoreEditDto(long id, string name, string address, string phoneNumber, string mobileNumber, string description, string userId,bool isActive)
+    public StoreEditDto(Guid id, string name, string address, string phoneNumber, string mobileNumber, string description, string userId,bool isActive)
     {
         Id = id;
         Name = name;

@@ -81,7 +81,7 @@ public static class ConfigureServices
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(x =>
             {
-                x.SaveToken = true;
+                x.SaveToken = true; 
                 x.TokenValidationParameters = OptionsTokenValidationParameters(configuration);
                 x.Events = JwtOptionsEvents();
                 

@@ -42,7 +42,7 @@ public class InventoryRepository:IInventoryRepository
 
         if (!String.IsNullOrEmpty(inventorySearchDto.Name)) query = query.Where(x => x.Name.Contains(inventorySearchDto.Name));
         if (inventorySearchDto.Id!=0) query = query.Where(x => x.Id==inventorySearchDto.Id);
-        if (inventorySearchDto.StoreId!=0) query = query.Where(x => x.StoreId==inventorySearchDto.StoreId);
+        if (inventorySearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.StoreId==inventorySearchDto.StoreId);
         if (inventorySearchDto.IsActive != 0)
         {
             if (inventorySearchDto.IsActive == ActiveType.Active) query = query.Where(x => x.IsActive == true);

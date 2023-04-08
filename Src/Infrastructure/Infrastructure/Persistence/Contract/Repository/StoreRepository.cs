@@ -37,7 +37,7 @@ public class StoreRepository:IStoreRepository
         if (!String.IsNullOrEmpty(storeSearchDto.PhoneNumber)) query = query.Where(x => x.PhoneNumber.Contains(storeSearchDto.PhoneNumber));
         
         if (!String.IsNullOrEmpty(storeSearchDto.UserId)) query = query.Where(x => x.UserId==storeSearchDto.UserId);
-        if (storeSearchDto.Id!=0) query = query.Where(x => x.Id==storeSearchDto.Id);
+        if (storeSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id==storeSearchDto.Id);
         if (storeSearchDto.SortType == SortType.Desc) query = query.OrderByDescending(x => x.Id);
         if (storeSearchDto.SortType == SortType.Asc) query = query.OrderBy(x => x.Id);
         var count =await query.CountAsync(cancellationToken);
@@ -48,7 +48,7 @@ public class StoreRepository:IStoreRepository
     #endregion
 
     #region StoreGetByIdAsync
-    public async Task<Store> StoreGetByIdAsync(long id,CancellationToken cancellationToken)
+    public async Task<Store> StoreGetByIdAsync(Guid id,CancellationToken cancellationToken)
     {
         var store = await _context.Stores.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
         if (store == null) throw new NotFoundEntityException(ApplicationMessages.StoreNotFound);
@@ -57,7 +57,7 @@ public class StoreRepository:IStoreRepository
     #endregion
 
     #region StoreDeleteAsync
-    public async Task<bool> StoreDeleteAsync(long id,CancellationToken cancellationToken)
+    public async Task<bool> StoreDeleteAsync(Guid id,CancellationToken cancellationToken)
     {
         var check=await _context.Stores.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -77,7 +77,6 @@ public class StoreRepository:IStoreRepository
                     .SetProperty(x=>x.MobileNumber,storeEditDto.MobileNumber)
                     .SetProperty(x=>x.PhoneNumber,storeEditDto.PhoneNumber)
                     .SetProperty(x=>x.IsActive,storeEditDto.IsActive)
-                    .SetProperty(x=>x.IsDelete,storeEditDto.IsDelete)
                     .SetProperty(x=>x.LastModified,DateTime.Now)
                     .SetProperty(x=>x.UserId,storeEditDto.UserId)
                 , cancellationToken: cancellationToken);
@@ -101,7 +100,7 @@ public class StoreRepository:IStoreRepository
     #endregion
     
     #region StoreExistAsync
-    public async Task<bool> StoreExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> StoreExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Stores.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.StoreNotFound);

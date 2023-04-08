@@ -50,6 +50,9 @@
     <_ContentIncludedByDefault Remove="wwwroot\Picture\Store\مانگو\2023-03-11-07-16-55-store22.jpg" />
     <_ContentIncludedByDefault Remove="wwwroot\Picture\Store\مانگو\2023-03-11-07-16-59-store33.jpg" />
     <_ContentIncludedByDefault Remove="wwwroot\Picture\Store\مانگو\2023-03-11-08-01-43-store33.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\پوتین\2023-04-03-17-37-23-خرید-بوت-مردانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\استوکدار\2023-04-07-16-32-47-کفش استوک.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\پوتین مردانه\2023-04-07-15-51-34-بوت-مردانه.jpg" />
   </ItemGroup>
 
 </Project>

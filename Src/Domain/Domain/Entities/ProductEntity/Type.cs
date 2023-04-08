@@ -33,5 +33,8 @@ public class Type:BaseEntity.BaseEntity
     // has one type
     public Type ParentType { get; set; }
     public long? ParentTypeId { get; set; }
+
+    public List<Type> ChildTypes { get; set; }
+    
     #endregion
 }

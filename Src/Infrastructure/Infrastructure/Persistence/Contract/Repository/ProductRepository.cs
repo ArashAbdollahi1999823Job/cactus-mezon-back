@@ -7,7 +7,6 @@ using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
 using Domain.Entities.ProductEntity;
-using Domain.Enums;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -34,7 +33,7 @@ public class ProductRepository:IProductRepository
         if (productSearchDto.BrandId != 0) query = query.Where(x => x.BrandId == productSearchDto.BrandId);
         if (productSearchDto.Off != -1) query = query.Where(x => x.Off.OffPercent >= productSearchDto.Off);
         if (productSearchDto.Price != 0) query = query.Where(x => x.Price == productSearchDto.Price);
-        if (productSearchDto.StoreId != 0) query = query.Where(x => x.Inventory.StoreId == productSearchDto.StoreId);
+        if (productSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Inventory.StoreId == productSearchDto.StoreId);
 
         if (productSearchDto.IsActive != 0)
         {
@@ -44,7 +43,12 @@ public class ProductRepository:IProductRepository
         if (productSearchDto.Id > 0) query = query.Where(x => x.Id ==productSearchDto.Id);
         if (productSearchDto.TypeId != -1)
         {
-            if (productSearchDto.TypeId != 0) query = query.Where(x => x.TypeId == productSearchDto.TypeId);
+            if (productSearchDto.TypeId != 0) query = query
+                .Where(x => x.Type.Id == productSearchDto.TypeId
+                            ||x.Type.ParentType.Id==productSearchDto.TypeId
+                            || x.Type.ParentType.ParentType.Id==productSearchDto.TypeId
+                            || x.Type.ParentType.ParentType.Id==productSearchDto.TypeId
+                            || x.Type.ParentType.ParentType.ParentType.Id==productSearchDto.TypeId);
         }
 
         var count = await query.CountAsync(cancellationToken);

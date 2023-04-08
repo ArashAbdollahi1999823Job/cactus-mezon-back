@@ -9,9 +9,9 @@ public class OffAddDto
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     
-    public long  StoreId { get; set; }
+    public Guid  StoreId { get; set; }
 
-    public OffAddDto(string name, string description, int offPercent, DateTime startDate, DateTime endDate, long storeId)
+    public OffAddDto(string name, string description, int offPercent, DateTime startDate, DateTime endDate, Guid storeId)
     {
         Name = name;
         Description = description;

@@ -36,7 +36,12 @@ public class TypeRepository : ITypeRepository
         if (typeSearchDto.ParentTypeId != -1)
         {
             if (typeSearchDto.ParentTypeId == 0) query = query.Where(x => x.ParentTypeId == null);
-            if (typeSearchDto.ParentTypeId != 0) query = query.Where(x => x.ParentTypeId == typeSearchDto.ParentTypeId);
+            if (typeSearchDto.ParentTypeId != 0) query = query
+                .Where(x => x.Id == typeSearchDto.ParentTypeId 
+                            ||x.ParentType.Id==typeSearchDto.ParentTypeId 
+                            || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
+                            || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
+                            || x.ParentType.ParentType.ParentType.Id==typeSearchDto.ParentTypeId );
         }
         var count = await query.CountAsync(cancellationToken);
         if (typeSearchDto.SortType == SortType.Desc)

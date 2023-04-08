@@ -28,6 +28,7 @@ public class ProductPictureRepository : IProductPictureRepository
     {
         var query = _context.ProductPictures.Include(x => x.Product).AsQueryable();
         if(productPictureSearchDto.Id>0)query = query.Where(x => x.Id == productPictureSearchDto.Id);
+        if(productPictureSearchDto.Sort>0)query = query.Where(x => x.Sort == productPictureSearchDto.Sort);
         if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<ProductPictureDto>>(result);

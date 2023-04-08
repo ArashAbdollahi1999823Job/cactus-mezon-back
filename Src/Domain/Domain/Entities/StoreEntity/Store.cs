@@ -1,9 +1,16 @@
-﻿using Domain.Entities.IdentityEntity;
+﻿using System.ComponentModel.DataAnnotations;
+using Domain.Entities.IdentityEntity;
 using Domain.Entities.InventoryEntity;
 using Domain.Entities.PictureEntity;
 namespace Domain.Entities.StoreEntity;
-public class Store : BaseEntity.BaseEntity
+public class Store 
 {
+    
+    public bool IsActive { get; set; } = true;
+    public DateTime? LastModified { get; set; }
+    public DateTime CreationDate { get; set; }
+    
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string PhoneNumber { get; set; }

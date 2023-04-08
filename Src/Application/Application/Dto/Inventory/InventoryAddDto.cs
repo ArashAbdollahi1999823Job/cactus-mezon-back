@@ -4,9 +4,9 @@ public class InventoryAddDto
     
     public string Name { get; set; }
 
-    public long StoreId { get; set; }
+    public Guid StoreId { get; set; }
 
-    public InventoryAddDto(string name, long storeId)
+    public InventoryAddDto(string name, Guid storeId)
     {
         Name = name;
         StoreId = storeId;

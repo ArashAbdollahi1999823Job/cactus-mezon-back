@@ -5,7 +5,7 @@ namespace Application.Dto.Store;
 #endregion
 public class StoreSearchDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public int PageIndex { get; set; } = 1;
     public int PageSize { get; set; } = 10;
     public string Name { get; set; }
@@ -15,7 +15,7 @@ public class StoreSearchDto
     public string UserId { get; set; } 
     public SortType SortType { get; set; } = SortType.Desc;
     
-    public StoreSearchDto(long id, int pageIndex, int pageSize, string name, string phoneNumber, string mobileNumber, ActiveType activeType, string userId, SortType sortType)
+    public StoreSearchDto(Guid id, int pageIndex, int pageSize, string name, string phoneNumber, string mobileNumber, ActiveType activeType, string userId, SortType sortType)
     {
         Id = id;
         PageIndex = pageIndex;

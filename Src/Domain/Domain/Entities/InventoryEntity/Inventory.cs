@@ -14,10 +14,10 @@ public class Inventory:BaseEntity.BaseEntity
     // has few product
     public List<Product> Products { get; set; }
     //has one shop
-    public long StoreId { get; set; }
+    public Guid StoreId { get; set; }
     public Store Store { get; set; }
     
-    public Inventory(string name,long storeId)
+    public Inventory(string name,Guid storeId)
     {
         Name = name;
         StoreId = storeId;

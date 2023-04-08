@@ -1,12 +1,10 @@
-﻿#region UsingAndNamespace
-using MediatR;
+﻿using MediatR;
 namespace Application.Features.Store.Command.StoreDelete;
-#endregion
 public class StoreDeleteCommand:IRequest<bool>
 {
-    public StoreDeleteCommand(long id)
+    public StoreDeleteCommand(Guid id)
     {
         Id = id;
     }
-    public long Id { get; }
+    public Guid Id { get; }
 }

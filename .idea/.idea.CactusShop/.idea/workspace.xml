@@ -6,26 +6,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationSearchDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Query/InventoryOperationGetAll/InventoryOperationGetAllQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Query/InventoryOperationGetAll/InventoryOperationGetAllQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IInventoryOperationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryOperationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/InventoryOperation/InventoryOperationAdminController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Product/ProductUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/ProductPicture/ProductPictureUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Type/TypeUserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/InventoryEntity/InventoryOperation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/InventoryEntity/InventoryOperation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Enums/InventoryOperationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Enums/InventoryOperationType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Inventory/InventoryAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Inventory/InventoryAddDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Inventory/InventorySearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Inventory/InventorySearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/InventoryOperation/InventoryOperationSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffAddDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Off/OffSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductPicture/ProductPictureSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductPicture/ProductPictureSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreEditDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserEditDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUserPicture/StoreUserPictureAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUserPicture/StoreUserPictureAddDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUserPicture/StoreUserPictureSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUserPicture/StoreUserPictureSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/ProductPicture/Query/ProductPictureGetAll/ProductPictureGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductPicture/Query/ProductPictureGetAll/ProductPictureGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Command/StoreDelete/StoreDeleteCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Command/StoreDelete/StoreDeleteCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IStoreRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IStoreRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/InventoryEntity/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/InventoryEntity/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/PictureEntity/StorePicture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/PictureEntity/StorePicture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Type.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Type.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Off.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Off.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Store.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221126065501_Initial-0.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221126065501_Initial-0.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221126111351_AddEntityProductTypeProductBrandProductPicture-1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221126111351_AddEntityProductTypeProductBrandProductPicture-1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221126113241_NullableBaseAuditableEntity-2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221126113241_NullableBaseAuditableEntity-2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221128111825_changeProductPictureThumbnailUrl-3.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221128111825_changeProductPictureThumbnailUrl-3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221227040608_addProductSlug.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20221227040608_addProductSlug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230102035754_addIdentity-5.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230102035754_addIdentity-5.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230103062659_modifiedIdentiry-5.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230103062659_modifiedIdentiry-5.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230118032132_updateProductEntity.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230118032132_updateProductEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230118050331_deleteDoubleKey.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230118050331_deleteDoubleKey.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230119044104_addAllInitialEntity.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230119044104_addAllInitialEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230121013557_UpdateIdentityTable.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230121013557_UpdateIdentityTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230123015058_adIsActiveToShopSeller.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230123015058_adIsActiveToShopSeller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230225051034_storeRefactor.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230225051034_storeRefactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230225063919_storePictureRefactor.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230225063919_storePictureRefactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226040720_typePictureRefactor.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226040720_typePictureRefactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226041956_typeRefactor.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226041956_typeRefactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226043037_brandRefactor.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226043037_brandRefactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226043356_brandRename.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230226043356_brandRename.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227043551_BaseEntityRefactor.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227043551_BaseEntityRefactor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227063406_refactorProduct.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227063406_refactorProduct.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227063915_refactorPicturesEntity.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227063915_refactorPicturesEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227064058_refactorTypeAndBrand.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227064058_refactorTypeAndBrand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227070941_refactorProductBrandType.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230227070941_refactorProductBrandType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230228022920_refactorTypePicture.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230228022920_refactorTypePicture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230311025941_addSortToStore.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230311025941_addSortToStore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230329075012_productNullableBrandId.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230329075012_productNullableBrandId.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230329075607_productNullableOffId.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230329075607_productNullableOffId.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230403114011_addSortToProductPicture.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230403114011_addSortToProductPicture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230403155958_refactorInventoryOperation.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230403155958_refactorInventoryOperation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230403161401_refactorOff.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230403161401_refactorOff.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230404094751_refactorInventoryOperation2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230404094751_refactorInventoryOperation2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230404143610_refactorOperation3.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/20230404143610_refactorOperation3.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryOperationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryOperationRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductPictureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductPictureRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserPictureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserPictureRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Store/StoreAdminController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Store/StoreAdminController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پوتین/2023-04-03-17-37-23-خرید-بوت-مردانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-03-05-07-49-38-مردانه ۱.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-03-05-07-49-57-مردانه ۲.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-03-05-07-50-08-مردانه ۳.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-03-05-07-50-22-مردانه ۴.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-03-05-07-51-10-مردانه ۵.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/کفش مردانه/2023-03-05-07-22-51-کفش مردانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/کفش مردانه/2023-03-05-07-23-11-کفش مردانه ۲.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/کفش مردانه/2023-03-05-07-30-29-کفش مردانه ۳.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/کفش مردانه/2023-03-05-07-30-45-کفش مردانه ۴.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/کفش مردانه/2023-03-06-08-40-22-کفش مردانه ۵.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +145,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -108,6 +205,10 @@
       <workItem from="1680064609705" duration="9138000" />
       <workItem from="1680171485813" duration="11418000" />
       <workItem from="1680423060421" duration="44200000" />
+      <workItem from="1680676822533" duration="1917000" />
+      <workItem from="1680780956185" duration="18534000" />
+      <workItem from="1680889618632" duration="4708000" />
+      <workItem from="1680941704057" duration="1203000" />
     </task>
     <servers />
   </component>

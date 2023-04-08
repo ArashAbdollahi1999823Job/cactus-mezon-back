@@ -31,7 +31,7 @@ public class OffRepository:IOffRepository
     {
         var query = _context.Offs.AsQueryable();
         if (offSearchDto.Id > 0) query = query.Where(x => x.Id ==offSearchDto.Id);
-        if (offSearchDto.StoreId > 0) query = query.Where(x => x.StoreId ==offSearchDto.StoreId);
+        if (offSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.StoreId ==offSearchDto.StoreId);
 
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<OffDto>>(result);

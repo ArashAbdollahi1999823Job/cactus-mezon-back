@@ -15,10 +15,10 @@ public class ProductSearchDto
     public long BrandId { get; set; } = 0;
     public int Off { get; set; } = -1;
     public SortType SortType { get; set; } = SortType.Desc;
-    public long StoreId { get; set; } = 0;
+    public Guid StoreId { get; set; } 
 
     public ProductSearchDto(int pageIndex, int pageSize, long id, ActiveType isActive, string name, string slug
-        , decimal price, long inventoryId, long typeId, long brandId, int off, SortType sortType,long storeId)
+        , decimal price, long inventoryId, long typeId, long brandId, int off, SortType sortType,Guid storeId)
     {
         PageIndex = pageIndex;
         PageSize = pageSize;

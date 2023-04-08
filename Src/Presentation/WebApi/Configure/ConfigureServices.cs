@@ -1,4 +1,5 @@
-﻿using Application;
+﻿using System.Text.Json.Serialization;
+using Application;
 using Application.IContracts.IServices;
 using Domain.Exceptions;
 using Infrastructure;
@@ -15,6 +16,11 @@ public static class ConfigureServices
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerDocumentation();
+        builder.Services.AddControllers().AddJsonOptions(options => 
+        { 
+            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+            options.JsonSerializerOptions.WriteIndented = true;
+        });
         #region SettingCorsPolicy
         builder.Services.AddCors(x =>
         {

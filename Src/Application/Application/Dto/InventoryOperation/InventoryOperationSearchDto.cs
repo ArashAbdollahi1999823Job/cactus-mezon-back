@@ -12,9 +12,9 @@ public class InventoryOperationSearchDto
     public long ProductId { get; set; }
     public long InventoryId { get; set; }
     public SortType SortType { get; set; } = SortType.Desc;
-    public long StoreId { get; set; }
+    public Guid StoreId { get; set; }
 
-    public InventoryOperationSearchDto(long id, int pageIndex, int pageSize, long price, int count, InventoryOperationType inventoryOperationType, long productId, long inventoryId, SortType sortType, long storeId)
+    public InventoryOperationSearchDto(long id, int pageIndex, int pageSize, long price, int count, InventoryOperationType inventoryOperationType, long productId, long inventoryId, SortType sortType, Guid storeId)
     {
         Id = id;
         PageIndex = pageIndex;

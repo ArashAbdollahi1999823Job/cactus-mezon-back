@@ -41,7 +41,7 @@ public class InventoryOperationRepository:IInventoryOperationRepository
                 query = query.Where(x => x.InventoryOperationType=="4");
         }
 
-        if (inventoryOperationSearchDto.StoreId != 0)
+        if (inventoryOperationSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000")
             query = query.Where(x => x.Product.Inventory.StoreId == inventoryOperationSearchDto.StoreId);
         if (inventoryOperationSearchDto.Id!=0) query = query.Where(x => x.Id==inventoryOperationSearchDto.Id);
         if (inventoryOperationSearchDto.ProductId!=0) query = query.Where(x => x.ProductId==inventoryOperationSearchDto.ProductId);
@@ -61,16 +61,7 @@ public class InventoryOperationRepository:IInventoryOperationRepository
  
 
     #endregion
-
-    /*#region StoreGetByIdAsync
-    public async Task<Store> StoreGetByIdAsync(long id,CancellationToken cancellationToken)
-    {
-        var store = await _context.Stores.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
-        if (store == null) throw new NotFoundEntityException(ApplicationMessages.StoreNotFound);
-        return store;
-    }
-    #endregion*/
-
+    
     #region InventoryOperationDeleteAsync
     public async Task<bool> InventoryOperationDeleteAsync(long id,CancellationToken cancellationToken)
     {
@@ -79,27 +70,6 @@ public class InventoryOperationRepository:IInventoryOperationRepository
         throw new BadRequestEntityException(ApplicationMessages.InventoryOperationDeleteFailed);
     }
     #endregion
-
-    /*#region StoreEditAsync
-    public async Task<bool> StoreEditAsync(StoreEditDto storeEditDto,CancellationToken cancellationToken)
-    {
-        var check = await _context.Stores
-            .Where(x => x.Id == storeEditDto.Id)
-            .ExecuteUpdateAsync(x => x
-                    .SetProperty(x => x.Name , storeEditDto.Name)
-                    .SetProperty(x=>x.Description,storeEditDto.Description)
-                    .SetProperty(x=>x.Address,storeEditDto.Address)
-                    .SetProperty(x=>x.MobileNumber,storeEditDto.MobileNumber)
-                    .SetProperty(x=>x.PhoneNumber,storeEditDto.PhoneNumber) 
-                    .SetProperty(x=>x.IsActive,storeEditDto.IsActive)
-                    .SetProperty(x=>x.IsDelete,storeEditDto.IsDelete)
-                    .SetProperty(x=>x.LastModified,DateTime.Now)
-                    .SetProperty(x=>x.UserId,storeEditDto.UserId)
-                , cancellationToken: cancellationToken);
-        if (check > 0) return true;
-        throw new BadRequestEntityException(ApplicationMessages.StoreFailedEdit);
-    }
-    #endregion*/
 
     #region InventoryOperationAddAsync
     public async Task<bool> InventoryOperationAddAsync(InventoryOperationAddDto inventoryOperationAddDto,CancellationToken cancellationToken)
