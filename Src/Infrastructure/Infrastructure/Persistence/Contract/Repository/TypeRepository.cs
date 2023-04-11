@@ -62,7 +62,7 @@ public class TypeRepository : ITypeRepository
     #region TypeAddAsync
     public async Task<bool> TypeAddAsync(TypeAddDto typeAddDto, CancellationToken cancellationToken)
     {
-        var type = new Type(typeAddDto.Name, typeAddDto.Description, typeAddDto.MetaDescription, typeAddDto.Summary, typeAddDto.ParentTypeId == 0 ? null : typeAddDto.ParentTypeId);
+        var type = new Type(typeAddDto.Name, typeAddDto.Description, typeAddDto.MetaDescription, typeAddDto.Summary, typeAddDto.ParentTypeId == 0 ? null : typeAddDto.ParentTypeId,typeAddDto.Slug);
         await _context.Types.AddAsync(type, cancellationToken);
         var check = await _context.SaveChangesAsync(cancellationToken);
         if (check > 0) return true;
@@ -82,6 +82,7 @@ public class TypeRepository : ITypeRepository
                     .SetProperty(x=>x.Summary,typeEditDto.Summary)
                     .SetProperty(x=>x.IsActive,typeEditDto.IsActive)
                     .SetProperty(x=>x.IsDelete,typeEditDto.IsDelete)
+                    .SetProperty(x=>x.Slug,typeEditDto.Slug)
                     .SetProperty(x=>x.LastModified,DateTime.Now)
                     .SetProperty(x=>x.ParentTypeId,typeEditDto.ParentTypeId==0 ? null : typeEditDto.ParentTypeId)
                 , cancellationToken: cancellationToken);

@@ -1,29 +1,21 @@
-﻿#region UsignAndNamespace
-
-using Domain.Entities.BaseEntity;
-using Domain.Entities.BaseEntity.Command;
-using Domain.Entities.PictureEntity;
-
+﻿using Domain.Entities.PictureEntity;
 namespace Domain.Entities.ProductEntity;
-#endregion
 public class Type:BaseEntity.BaseEntity
 {
-    #region Properties
     public string Name { get; set; }
     public string Description { get; set; }
     public string MetaDescription { get; set; }
     public string Summary { get; set; }
-    #endregion
-    public Type(string name, string description, string metaDescription, string summary, long? parentTypeId)
+    public string Slug { get; set; }
+    public Type(string name, string description, string metaDescription, string summary, long? parentTypeId, string slug)
     {
         Name = name;
         Description = description;
         MetaDescription = metaDescription;
         Summary = summary;
         ParentTypeId = parentTypeId;
+        Slug = slug;
     }
-
-    #region Relations
     //has few product
     public List<Product> Products { get; set; }
     //has few items
@@ -35,6 +27,4 @@ public class Type:BaseEntity.BaseEntity
     public long? ParentTypeId { get; set; }
 
     public List<Type> ChildTypes { get; set; }
-    
-    #endregion
 }

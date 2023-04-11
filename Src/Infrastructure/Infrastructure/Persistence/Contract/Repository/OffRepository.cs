@@ -1,14 +1,7 @@
-﻿using Application.Common.Enums;
-using Application.Common.Messages;
-using Application.Dto.Base;
-using Application.Dto.Brand;
+﻿using Application.Common.Messages;
 using Application.Dto.Off;
-using Application.Dto.Product;
-using Application.Dto.ProductDto;
-using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
-using Domain.Entities.ProductEntity;
 using Domain.Entities.StoreEntity;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
@@ -88,4 +81,5 @@ public class OffRepository:IOffRepository
         throw new BadRequestEntityException(ApplicationMessages.OffDeleteFailed);
     }
     #endregion
+    
 }

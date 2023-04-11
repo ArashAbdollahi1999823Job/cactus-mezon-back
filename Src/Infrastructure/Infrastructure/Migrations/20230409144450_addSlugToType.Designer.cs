@@ -4,6 +4,7 @@ using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230409144450_addSlugToType")]
+    partial class addSlugToType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,7 +65,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comment", (string)null);
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("Domain.Entities.IdentityEntity.Address", b =>
@@ -106,7 +109,7 @@ namespace Infrastructure.Migrations
                         .IsUnique()
                         .HasFilter("[UserId] IS NOT NULL");
 
-                    b.ToTable("Addresses", (string)null);
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("Domain.Entities.IdentityEntity.Role", b =>
@@ -251,7 +254,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("Inventories", (string)null);
+                    b.ToTable("Inventories");
                 });
 
             modelBuilder.Entity("Domain.Entities.InventoryEntity.InventoryOperation", b =>
@@ -298,7 +301,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("InventoryOperations", (string)null);
+                    b.ToTable("InventoryOperations");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.ProductPicture", b =>
@@ -346,7 +349,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductPictures", (string)null);
+                    b.ToTable("ProductPictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.StorePicture", b =>
@@ -388,7 +391,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("StorePictures", (string)null);
+                    b.ToTable("StorePictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.TypePicture", b =>
@@ -430,7 +433,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("TypePictures", (string)null);
+                    b.ToTable("TypePictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Brand", b =>
@@ -475,7 +478,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Item", b =>
@@ -506,7 +509,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Item", (string)null);
+                    b.ToTable("Item");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Product", b =>
@@ -583,7 +586,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Type", b =>
@@ -636,7 +639,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ParentTypeId");
 
-                    b.ToTable("Types", (string)null);
+                    b.ToTable("Types");
                 });
 
             modelBuilder.Entity("Domain.Entities.StoreEntity.Off", b =>
@@ -681,7 +684,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("Offs", (string)null);
+                    b.ToTable("Offs");
                 });
 
             modelBuilder.Entity("Domain.Entities.StoreEntity.Store", b =>
@@ -721,7 +724,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Stores", (string)null);
+                    b.ToTable("Stores");
                 });
 
             modelBuilder.Entity("ItemProduct", b =>
@@ -736,7 +739,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("ItemProduct", (string)null);
+                    b.ToTable("ItemProduct");
                 });
 
             modelBuilder.Entity("ItemType", b =>
@@ -751,7 +754,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TypesId");
 
-                    b.ToTable("ItemType", (string)null);
+                    b.ToTable("ItemType");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

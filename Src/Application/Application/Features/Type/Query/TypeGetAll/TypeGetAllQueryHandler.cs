@@ -14,7 +14,7 @@ public class TypeGetAllQueryHandler:IRequestHandler<TypeGetAllQuery,PaginationDt
     #endregion
     public async Task<PaginationDto<TypeDto>> Handle(TypeGetAllQuery req, CancellationToken cancellationToken)
     {
-        var typeSearchDto = new TypeSearchDto(req.PageIndex,req.PageSize,req.Id,req.IsActive,req.Name,req.ParentTypeId,req.SortType);
+        var typeSearchDto = new TypeSearchDto(req.PageIndex,req.PageSize,req.Id,req.IsActive,req.Name,req.ParentTypeId,req.SortType,req.Slug);
         return await _typeRepository.TypeGetAllAsync(typeSearchDto, cancellationToken);
     }
 }

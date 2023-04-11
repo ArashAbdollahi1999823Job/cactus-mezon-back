@@ -5,7 +5,6 @@ using Domain.Entities.StoreEntity;
 namespace Domain.Entities.ProductEntity;
 public class Product :BaseEntity.BaseEntity
 {
-    #region Properties
     public string Name { get; set; }
     public string Slug { get; set; }
     public string Description { get; set; }
@@ -15,9 +14,7 @@ public class Product :BaseEntity.BaseEntity
     
     public long Score { get; set; }
     public int Count { get; set; }
-    #endregion
-
-
+    
     public Product(string name, string slug, string description, string metaDescription, decimal price, string summary, long inventoryId,  long typeId, long? brandId)
     {
         Name = name;
@@ -30,8 +27,6 @@ public class Product :BaseEntity.BaseEntity
         TypeId = typeId;
         BrandId = brandId;
     }
-
-    #region Rilations
     // has one off
     public Off Off { get; set; }
     public long? OffId { get; set; }
@@ -50,5 +45,4 @@ public class Product :BaseEntity.BaseEntity
     public List<Comment> Comments { get; set; }
     //has few items
     public List<Item> Items { get; set; }
-    #endregion
 }

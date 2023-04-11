@@ -15,10 +15,11 @@ public class ProductSearchDto
     public long BrandId { get; set; } = 0;
     public int Off { get; set; } = -1;
     public SortType SortType { get; set; } = SortType.Desc;
-    public Guid StoreId { get; set; } 
+    public Guid StoreId { get; set; }
+    public bool User { get; set; } = false;
 
     public ProductSearchDto(int pageIndex, int pageSize, long id, ActiveType isActive, string name, string slug
-        , decimal price, long inventoryId, long typeId, long brandId, int off, SortType sortType,Guid storeId)
+        , decimal price, long inventoryId, long typeId, long brandId, int off, SortType sortType,Guid storeId, bool user)
     {
         PageIndex = pageIndex;
         PageSize = pageSize;
@@ -33,10 +34,10 @@ public class ProductSearchDto
         Off = off;
         SortType = sortType;
         StoreId = storeId;
+        User = user;
     }
 
     public ProductSearchDto()
     {
-        
     }
 }

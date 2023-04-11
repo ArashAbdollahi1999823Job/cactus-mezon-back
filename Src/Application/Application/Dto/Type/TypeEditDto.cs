@@ -1,17 +1,17 @@
 ﻿namespace Application.Dto.Type;
-
 public class TypeEditDto
 {
     public long Id { get; set; }
     public long ParentTypeId { get; set; } = 0;
     public string Name { get; set; }
+    public string Slug { get; set; }
     public string Description { get; set; }
     public string MetaDescription { get; set; }
     public string Summary { get; set; }
     public bool IsActive { set; get; } 
     public bool IsDelete { get; set; } = false;
 
-    public TypeEditDto(long id, long parentTypeId, string name, string description, string metaDescription, string summary, bool isActive, bool isDelete)
+    public TypeEditDto(long id, long parentTypeId, string name, string description, string metaDescription, string summary, bool isActive, bool isDelete, string slug)
     {
         Id = id;
         ParentTypeId = parentTypeId;
@@ -21,10 +21,10 @@ public class TypeEditDto
         Summary = summary;
         IsActive = isActive;
         IsDelete = isDelete;
+        Slug = slug;
     }
 
     public TypeEditDto()
     {
-        
     }
 }

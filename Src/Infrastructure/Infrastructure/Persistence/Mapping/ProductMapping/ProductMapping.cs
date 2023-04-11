@@ -1,9 +1,7 @@
-﻿#region UsingAndNamespace
-using Domain.Entities.ProductEntity;
+﻿using Domain.Entities.ProductEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Infrastructure.Persistence.Mapping.ProductMapping;
-#endregion
 public class ProductMapping:IEntityTypeConfiguration<Product>
 {
     public void Configure(EntityTypeBuilder<Product> builder)

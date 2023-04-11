@@ -14,14 +14,9 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     IdentityUserLogin<string>, IdentityRoleClaim<string>, IdentityUserToken<string>>
 {
     #region Ctor
-
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-    {
-    }
-
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     #endregion
-
-    #region Properties
+    
     #region IdentityUser
 
     public DbSet<User> Users => Set<User>();
@@ -57,10 +52,8 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     public DbSet<Inventory> Inventories { get; set; }
     public DbSet<InventoryOperation> InventoryOperations { get; set; }
     #endregion
-    #endregion
 
     #region OnModelCreating
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -70,12 +63,11 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
         modelBuilder.Entity<Brand>().HasQueryFilter(x => x.IsDelete == false);
         modelBuilder.Entity<ProductPicture>().HasQueryFilter(x => x.IsDelete == false);
         modelBuilder.Entity<Address>().HasQueryFilter(x => x.IsDelete == false);
-
+        modelBuilder.Entity<Off>().HasQueryFilter(x => x.EndDate >DateTime.Now);
         modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims"); 
         modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins"); 
         modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
         modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
     }
-
     #endregion
 }

@@ -16,7 +16,7 @@ public class ProductGetAllQueryHandler:IRequestHandler<ProductGetAllQuery,Pagina
     public async Task<PaginationDto<ProductDto>> Handle(ProductGetAllQuery req, CancellationToken cancellationToken)
     {
         var productSearchDto = new ProductSearchDto(req.PageIndex, req.PageSize, req.Id, req.IsActive, req.Name,
-            req.Slug, req.Price, req.InventoryId, req.TypeId, req.BrandId, req.Off, req.SortType,req.StoreId);
+            req.Slug, req.Price, req.InventoryId, req.TypeId, req.BrandId, req.Off, req.SortType,req.StoreId,req.User);
         return await _productRepository.ProductGetAllAsync(productSearchDto, cancellationToken);
     }
 }

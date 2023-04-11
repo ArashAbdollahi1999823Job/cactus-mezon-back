@@ -3,7 +3,6 @@ using Application.Dto.Type;
 using Application.IContracts.IRepository;
 using Domain.Exceptions;
 using MediatR;
-
 namespace Application.Features.Type.Command.TypeEdit;
 public class TypeEditCommandHandler:IRequestHandler<TypeEditCommand,bool>
 {
@@ -19,7 +18,7 @@ public class TypeEditCommandHandler:IRequestHandler<TypeEditCommand,bool>
         var check = await _typeRepository.TypeExistAsync(req.Id, cancellationToken);
         if (check)
         {
-            var typeEditDto = new TypeEditDto(req.Id, req.ParentTypeId, req.Name, req.Description, req.MetaDescription, req.Summary, req.IsActive, req.IsDelete);
+            var typeEditDto = new TypeEditDto(req.Id, req.ParentTypeId, req.Name, req.Description, req.MetaDescription, req.Summary, req.IsActive, req.IsDelete,req.Slug);
             return await _typeRepository.TypeEditAsync(typeEditDto, cancellationToken);
         }
         throw new BadRequestEntityException(ApplicationMessages.TypeFailedEditOnHandle);
