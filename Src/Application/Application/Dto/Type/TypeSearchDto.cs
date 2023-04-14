@@ -10,9 +10,10 @@ public class TypeSearchDto
     public ActiveType IsActive { get; set; } = ActiveType.NotImportant;
     public string Name { get; set; } = null;
     public long ParentTypeId { get; set; } = -1;
+    public long JustParentTypeId { get; set; } = -1;
     public SortType SortType { get; set; } = SortType.Desc;
 
-    public TypeSearchDto(int pageIndex, int pageSize, long id, ActiveType isActive, string name, long parentTypeId, SortType sortType, string slug)
+    public TypeSearchDto(int pageIndex, int pageSize, long id, ActiveType isActive, string name, long parentTypeId, SortType sortType, string slug, long justParentTypeId)
     {
         PageIndex = pageIndex;
         PageSize = pageSize;
@@ -22,6 +23,7 @@ public class TypeSearchDto
         ParentTypeId = parentTypeId;
         SortType = sortType;
         Slug = slug;
+        JustParentTypeId = justParentTypeId;
     }
 
     public TypeSearchDto()

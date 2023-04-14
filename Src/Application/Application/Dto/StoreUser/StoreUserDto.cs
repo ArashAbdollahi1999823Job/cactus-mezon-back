@@ -4,7 +4,7 @@ using AutoMapper;
 namespace Application.Dto.StoreUser;
 public class StoreUserDto:IMapFrom<Domain.Entities.StoreEntity.Store>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string PhoneNumber { get; set; }

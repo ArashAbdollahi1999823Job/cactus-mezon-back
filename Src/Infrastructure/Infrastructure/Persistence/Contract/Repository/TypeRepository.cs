@@ -25,8 +25,10 @@ public class TypeRepository : ITypeRepository
     #region TypeGetAllAsync
     public async Task<PaginationDto<TypeDto>> TypeGetAllAsync(TypeSearchDto typeSearchDto, CancellationToken cancellationToken)
     {
-        var query = _context.Types.AsQueryable();
+        var query = _context.Types.AsQueryable().AsNoTracking();
+        
         if (!String.IsNullOrEmpty(typeSearchDto.Name)) query = query.Where(x => x.Name.Contains(typeSearchDto.Name));
+        if (!String.IsNullOrEmpty(typeSearchDto.Slug)) query = query.Where(x => x.Slug==typeSearchDto.Slug);
         if (typeSearchDto.IsActive != 0)
         {
             if (typeSearchDto.IsActive == ActiveType.Active) query = query.Where(x => x.IsActive == true);
@@ -36,12 +38,16 @@ public class TypeRepository : ITypeRepository
         if (typeSearchDto.ParentTypeId != -1)
         {
             if (typeSearchDto.ParentTypeId == 0) query = query.Where(x => x.ParentTypeId == null);
-            if (typeSearchDto.ParentTypeId != 0) query = query
-                .Where(x => x.Id == typeSearchDto.ParentTypeId 
-                            ||x.ParentType.Id==typeSearchDto.ParentTypeId 
-                            || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
-                            || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
-                            || x.ParentType.ParentType.ParentType.Id==typeSearchDto.ParentTypeId );
+            if (typeSearchDto.ParentTypeId != 0) query = query.Where(x => x.ParentType.Id==typeSearchDto.ParentTypeId 
+                                                                          || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
+                                                                          || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
+                                                                              || x.ParentType.ParentType.ParentType.Id==typeSearchDto.ParentTypeId );
+        }
+
+        if (typeSearchDto.JustParentTypeId != -1)
+        {
+            if (typeSearchDto.ParentTypeId == 0) query = query.Where(x => x.ParentTypeId == null);
+            if (typeSearchDto.ParentTypeId != 0) query = query.Where(x => x.ParentTypeId == typeSearchDto.JustParentTypeId);
         }
         var count = await query.CountAsync(cancellationToken);
         if (typeSearchDto.SortType == SortType.Desc)

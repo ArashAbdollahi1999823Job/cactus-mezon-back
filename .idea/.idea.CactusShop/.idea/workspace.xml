@@ -6,27 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/OffMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/TypePicture/TypePictureUserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductSearchDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeAddDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeEditDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeSearchDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/ProductGetAll/ProductGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Query/ProductGetAll/ProductGetAllQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeAdd/TypeAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeAdd/TypeAddCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeEdit/TypeEditCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeEdit/TypeEditCommandHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Query/TypeGetAll/TypeGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Query/TypeGetAll/TypeGetAllQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IOffRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IOffRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Type.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Type.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Off.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Off.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/ProductMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/ProductMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/OffMapping.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +100,9 @@
       <workItem from="1680780956185" duration="18534000" />
       <workItem from="1680889618632" duration="4708000" />
       <workItem from="1680941704057" duration="13567000" />
-      <workItem from="1681211244428" duration="3232000" />
+      <workItem from="1681211244428" duration="7196000" />
+      <workItem from="1681322634368" duration="14096000" />
+      <workItem from="1681405009966" duration="2543000" />
     </task>
     <servers />
   </component>
