@@ -64,6 +64,7 @@ public class ProductRepository:IProductRepository
             .Include(x=>x.Type)
             .Include(x=>x.Brand)
             .Include(x=>x.Off)
+            .Include(x=>x.Colors)
             .Include(x=>x.Inventory)
             .ThenInclude(x=>x.Store);
         var result = await query.Skip((productSearchDto.PageIndex - 1) * productSearchDto.PageSize).Take(productSearchDto.PageSize).ToListAsync(cancellationToken);

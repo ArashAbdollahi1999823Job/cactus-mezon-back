@@ -1,4 +1,5 @@
 ﻿using Application.Common.AutoMapping;
+using Application.Dto.Color;
 using Application.Dto.Off;
 using AutoMapper;
 
@@ -28,6 +29,8 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
     public OffDto Off { get; set; }
     public long OffId { get; set; }
 
+    public List<ColorDto> ColorsDto { get; set; }
+
 
 
     #region MappingProductDto
@@ -38,7 +41,9 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
             .ForMember(x => x.Inventory, c => c.MapFrom(v => v.Inventory.Name))
             .ForMember(x => x.Brand, c => c.MapFrom(v => v.Brand.Name))
             .ForMember(x => x.Type, c => c.MapFrom(v => v.Type.Name))
-            .ForMember(x => x.Off, c => c.MapFrom(v => v.Off));
+            .ForMember(x => x.Off, c => c.MapFrom(v => v.Off))
+            .ForMember(x => x.ColorsDto, c => c.MapFrom(v => v.Colors));
+        
     } 
     #endregion
 }

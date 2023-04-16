@@ -28,12 +28,12 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     #endregion
 
     #region Product
-
+    public DbSet<Color> Colors => Set<Color>();
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Brand> Brands => Set<Brand>();
     public DbSet<Type> Types => Set<Type>();
 
-    #endregion
+    #endregion #Product
 
     #region Pictures
 

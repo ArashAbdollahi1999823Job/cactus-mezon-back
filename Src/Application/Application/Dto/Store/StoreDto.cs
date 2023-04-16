@@ -1,8 +1,6 @@
-﻿#region UsingAndNamespace
-using Application.Common.AutoMapping;
+﻿using Application.Common.AutoMapping;
 using AutoMapper;
 namespace Application.Dto.Store;
-#endregion
 public class StoreDto:IMapFrom<Domain.Entities.StoreEntity.Store>
 {
 

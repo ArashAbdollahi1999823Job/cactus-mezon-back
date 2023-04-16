@@ -6,13 +6,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/TypePicture/TypePictureUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Color/ColorAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Color/ColorDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Color/ColorSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Color/Command/ColorAdd/ColorAddCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Color/Command/ColorAdd/ColorAddCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Color/Command/ColorDelete/ColorDeleteCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Color/Command/ColorDelete/ColorDeleteCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Color/Query/ColorGetAll/ColorGetAllQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Color/Query/ColorGetAll/ColorGetAllQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IColorRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Color.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ColorRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Color/ColorAdminController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/68ebaa35-6e54-4e68-ad40-e32e08309315.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Request/BaseRequestParameters.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Request/Pagination/BasePaginationParameters.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeSearchDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Query/TypeGetAll/TypeGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Query/TypeGetAll/TypeGetAllQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/OffMapping.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +121,7 @@
       <workItem from="1681211244428" duration="7196000" />
       <workItem from="1681322634368" duration="14096000" />
       <workItem from="1681405009966" duration="2543000" />
+      <workItem from="1681563911867" duration="9860000" />
     </task>
     <servers />
   </component>
