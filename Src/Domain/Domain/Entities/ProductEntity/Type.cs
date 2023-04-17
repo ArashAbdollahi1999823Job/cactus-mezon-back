@@ -19,7 +19,7 @@ public class Type:BaseEntity.BaseEntity
     //has few product
     public List<Product> Products { get; set; }
     //has few items
-    public List<Item> Items { get; set; }
+    public List<TypeItem> TypeItems { get; set; }
     //has few pictures
     public List<TypePicture> TypePictures { get; set; }
     // has one type

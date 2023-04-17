@@ -32,6 +32,8 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Brand> Brands => Set<Brand>();
     public DbSet<Type> Types => Set<Type>();
+    public DbSet<ProductItem> ProductItems { get; set; }
+    public DbSet<TypeItem> TypeItems { get; set; }
 
     #endregion #Product
 

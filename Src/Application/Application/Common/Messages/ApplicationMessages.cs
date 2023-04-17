@@ -106,6 +106,16 @@ public static class ApplicationMessages
     public const string ColorFailedDeleteOnHandle = "رنگ بندی حذف نشد!HandleError";
     #endregion
     
+    #region TypeItem
+    public const string TypeItemFailedEdit = "ادیت ایتم انجام نشد !";
+    public const string TypeItemFailedEditOnHandle = "ادیت ایتم انجان نشد ! HandleError";
+    public const string TypeItemNotFound = "ایتم بندی یافت نشد!";
+    public const string TypeItemFailedAdd = "ایتم بندی اضاف  نشد!";
+    public const string TypeItemFailedAddOnHandle = "ایتم بندی اضاف نشد!";
+    public const string TypeItemFailedDelete = "ایتم بندی حذف نشد!";
+    public const string TypeItemFailedDeleteOnHandle = "ایتم بندی حذف نشد!HandleError";
+    #endregion
+    
     #region ProductPicture
     public const string ProductPictureEditFailed = "ادیت عکس محصول انجام نشد !";
     public const string ProductPictureEditFailedOnHandle = "ادیت عکس محصول انجام نشد ! HandleError";

@@ -44,7 +44,7 @@ public class Product :BaseEntity.BaseEntity
     //has few comment
     public List<Comment> Comments { get; set; }
     //has few items
-    public List<Item> Items { get; set; }
+    public List<ProductItem> ProductItems { get; set; }
     // has few color
     public List<Color> Colors { get; set; }
 }

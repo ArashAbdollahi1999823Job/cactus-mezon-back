@@ -16888,7 +16888,7 @@
     </schema>
     <schema id="5575" parent="5513" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-04-16.14:14:32.230</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-04-17.01:47:52.267</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5576" parent="5513" name="guest">
@@ -16927,142 +16927,137 @@
       <ModifiedTimestamp>2023-04-08.02:00:25.613</ModifiedTimestamp>
       <ObjectId>50099219</ObjectId>
     </table>
-    <table id="5584" parent="5575" name="Item">
-      <CreatedTimestamp>2023-04-08.02:00:13.290</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:24.047</ModifiedTimestamp>
-      <ObjectId>1269579561</ObjectId>
-    </table>
-    <table id="5585" parent="5575" name="ItemProduct">
-      <CreatedTimestamp>2023-04-08.02:00:24.043</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:25.613</ModifiedTimestamp>
-      <ObjectId>114099447</ObjectId>
-    </table>
-    <table id="5586" parent="5575" name="ItemType">
-      <CreatedTimestamp>2023-04-08.02:00:13.817</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:25.613</ModifiedTimestamp>
-      <ObjectId>1461580245</ObjectId>
-    </table>
-    <table id="5587" parent="5575" name="Offs">
+    <table id="5584" parent="5575" name="Offs">
       <CreatedTimestamp>2023-04-08.02:00:19.220</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-11.20:25:08.003</ModifiedTimestamp>
       <ObjectId>1925581898</ObjectId>
     </table>
-    <table id="5588" parent="5575" name="ProductPictures">
+    <table id="5585" parent="5575" name="ProductItems">
+      <CreatedTimestamp>2023-04-17.01:29:38.563</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.620</ModifiedTimestamp>
+      <ObjectId>706101556</ObjectId>
+    </table>
+    <table id="5586" parent="5575" name="ProductPictures">
       <CreatedTimestamp>2023-04-08.02:00:24.050</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:25.617</ModifiedTimestamp>
       <ObjectId>178099675</ObjectId>
     </table>
-    <table id="5589" parent="5575" name="Products">
+    <table id="5587" parent="5575" name="Products">
       <CreatedTimestamp>2023-04-08.02:00:20.543</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-16.14:13:46.170</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.590</ModifiedTimestamp>
       <ObjectId>2021582240</ObjectId>
     </table>
-    <table id="5590" parent="5575" name="Role">
+    <table id="5588" parent="5575" name="Role">
       <CreatedTimestamp>2023-04-08.02:00:13.293</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.267</ModifiedTimestamp>
       <ObjectId>1301579675</ObjectId>
     </table>
-    <table id="5591" parent="5575" name="RoleClaims">
+    <table id="5589" parent="5575" name="RoleClaims">
       <CreatedTimestamp>2023-04-08.02:00:13.813</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.267</ModifiedTimestamp>
       <ObjectId>1413580074</ObjectId>
     </table>
-    <table id="5592" parent="5575" name="StorePictures">
+    <table id="5590" parent="5575" name="StorePictures">
       <CreatedTimestamp>2023-04-08.02:00:20.537</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.270</ModifiedTimestamp>
       <ObjectId>1973582069</ObjectId>
     </table>
-    <table id="5593" parent="5575" name="Stores">
+    <table id="5591" parent="5575" name="Stores">
       <CreatedTimestamp>2023-04-08.02:00:15.817</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.270</ModifiedTimestamp>
       <ObjectId>1621580815</ObjectId>
     </table>
-    <table id="5594" parent="5575" name="TypePictures">
+    <table id="5592" parent="5575" name="TypeItems">
+      <CreatedTimestamp>2023-04-17.01:29:38.600</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:47:13.327</ModifiedTimestamp>
+      <ObjectId>754101727</ObjectId>
+    </table>
+    <table id="5593" parent="5575" name="TypePictures">
       <CreatedTimestamp>2023-04-08.02:00:15.807</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.270</ModifiedTimestamp>
       <ObjectId>1525580473</ObjectId>
     </table>
-    <table id="5595" parent="5575" name="Types">
+    <table id="5594" parent="5575" name="Types">
       <CreatedTimestamp>2023-04-08.02:00:13.300</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-09.22:45:52.903</ModifiedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.610</ModifiedTimestamp>
       <ObjectId>1333579789</ObjectId>
     </table>
-    <table id="5596" parent="5575" name="UserClaims">
+    <table id="5595" parent="5575" name="UserClaims">
       <CreatedTimestamp>2023-04-08.02:00:17.600</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.273</ModifiedTimestamp>
       <ObjectId>1669580986</ObjectId>
     </table>
-    <table id="5597" parent="5575" name="UserLogins">
+    <table id="5596" parent="5575" name="UserLogins">
       <CreatedTimestamp>2023-04-08.02:00:17.607</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.277</ModifiedTimestamp>
       <ObjectId>1717581157</ObjectId>
     </table>
-    <table id="5598" parent="5575" name="UserRoles">
+    <table id="5597" parent="5575" name="UserRoles">
       <CreatedTimestamp>2023-04-08.02:00:17.613</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:27.277</ModifiedTimestamp>
       <ObjectId>1765581328</ObjectId>
     </table>
-    <table id="5599" parent="5575" name="UserTokens">
+    <table id="5598" parent="5575" name="UserTokens">
       <CreatedTimestamp>2023-04-08.02:00:19.210</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.210</ModifiedTimestamp>
       <ObjectId>1829581556</ObjectId>
     </table>
-    <table id="5600" parent="5575" name="Users">
+    <table id="5599" parent="5575" name="Users">
       <CreatedTimestamp>2023-04-08.02:00:13.810</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:28.507</ModifiedTimestamp>
       <ObjectId>1381579960</ObjectId>
     </table>
-    <table id="5601" parent="5575" name="__EFMigrationsHistory">
+    <table id="5600" parent="5575" name="__EFMigrationsHistory">
       <CreatedTimestamp>2023-04-08.02:00:12.777</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:12.777</ModifiedTimestamp>
       <ObjectId>1205579333</ObjectId>
     </table>
-    <column id="5602" parent="5578" name="Id">
+    <column id="5601" parent="5578" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5603" parent="5578" name="State">
+    <column id="5602" parent="5578" name="State">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5604" parent="5578" name="City">
+    <column id="5603" parent="5578" name="City">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5605" parent="5578" name="FullAddress">
+    <column id="5604" parent="5578" name="FullAddress">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5606" parent="5578" name="PostalCode">
+    <column id="5605" parent="5578" name="PostalCode">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5607" parent="5578" name="UserId">
+    <column id="5606" parent="5578" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5608" parent="5578" name="IsActive">
+    <column id="5607" parent="5578" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5609" parent="5578" name="IsDelete">
+    <column id="5608" parent="5578" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5610" parent="5578" name="LastModified">
+    <column id="5609" parent="5578" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5611" parent="5578" name="CreationDate">
+    <column id="5610" parent="5578" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <foreign-key id="5612" parent="5578" name="FK_Addresses_Users_UserId">
+    <foreign-key id="5611" parent="5578" name="FK_Addresses_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:15.813</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:15.813</ModifiedTimestamp>
@@ -17071,84 +17066,122 @@
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5613" parent="5578" name="PK_Addresses">
+    <index id="5612" parent="5578" name="PK_Addresses">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5614" parent="5578" name="IX_Addresses_UserId">
+    <index id="5613" parent="5578" name="IX_Addresses_UserId">
       <ColNames>UserId</ColNames>
       <Condition>[UserId] IS NOT NULL</Condition>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5615" parent="5578" name="PK_Addresses">
+    <key id="5614" parent="5578" name="PK_Addresses">
       <CreatedTimestamp>2023-04-08.02:00:15.813</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:15.813</ModifiedTimestamp>
       <ObjectId>1589580701</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Addresses</UnderlyingIndexName>
     </key>
-    <column id="5616" parent="5579" name="Id">
+    <column id="5615" parent="5579" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5617" parent="5579" name="Name">
+    <column id="5616" parent="5579" name="Name">
       <DasType>nvarchar(30 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5618" parent="5579" name="Description">
+    <column id="5617" parent="5579" name="Description">
       <DasType>nvarchar(500 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5619" parent="5579" name="MetaDescription">
+    <column id="5618" parent="5579" name="MetaDescription">
       <DasType>nvarchar(200 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5620" parent="5579" name="Summary">
+    <column id="5619" parent="5579" name="Summary">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5621" parent="5579" name="IsActive">
+    <column id="5620" parent="5579" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5622" parent="5579" name="IsDelete">
+    <column id="5621" parent="5579" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5623" parent="5579" name="LastModified">
+    <column id="5622" parent="5579" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5624" parent="5579" name="CreationDate">
+    <column id="5623" parent="5579" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <index id="5625" parent="5579" name="PK_Brands">
+    <index id="5624" parent="5579" name="PK_Brands">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5626" parent="5579" name="PK_Brands">
+    <key id="5625" parent="5579" name="PK_Brands">
       <CreatedTimestamp>2023-04-08.02:00:13.290</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.290</ModifiedTimestamp>
       <ObjectId>1253579504</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Brands</UnderlyingIndexName>
     </key>
-    <foreign-key id="5627" parent="5580" name="FK_Colors_Products_ProductId">
+    <column id="5626" parent="5580" name="Id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(21)</SequenceIdentity>
+    </column>
+    <column id="5627" parent="5580" name="Name">
+      <DasType>nvarchar(max)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5628" parent="5580" name="Value">
+      <DasType>nvarchar(max)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5629" parent="5580" name="ProductId">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="5630" parent="5580" name="IsActive">
+      <DasType>bit|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="5631" parent="5580" name="IsDelete">
+      <DasType>bit|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="5632" parent="5580" name="LastModified">
+      <DasType>datetime2|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="5633" parent="5580" name="CreationDate">
+      <DasType>datetime2|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="5634" parent="5580" name="FK_Colors_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2023-04-16.14:13:46.163</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-16.14:13:46.163</ModifiedTimestamp>
@@ -17158,66 +17191,66 @@
       <RefTableId>2021582240</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <index id="5628" parent="5580" name="PK_Colors">
+    <index id="5635" parent="5580" name="PK_Colors">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5629" parent="5580" name="IX_Colors_ProductId">
+    <index id="5636" parent="5580" name="IX_Colors_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5630" parent="5580" name="PK_Colors">
+    <key id="5637" parent="5580" name="PK_Colors">
       <CreatedTimestamp>2023-04-16.14:13:46.157</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-16.14:13:46.157</ModifiedTimestamp>
       <ObjectId>674101442</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Colors</UnderlyingIndexName>
     </key>
-    <column id="5631" parent="5581" name="Id">
+    <column id="5638" parent="5581" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5632" parent="5581" name="Description">
+    <column id="5639" parent="5581" name="Description">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5633" parent="5581" name="UserId">
+    <column id="5640" parent="5581" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5634" parent="5581" name="ProductId">
+    <column id="5641" parent="5581" name="ProductId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5635" parent="5581" name="UserAnswerId">
+    <column id="5642" parent="5581" name="UserAnswerId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5636" parent="5581" name="IsActive">
+    <column id="5643" parent="5581" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5637" parent="5581" name="IsDelete">
+    <column id="5644" parent="5581" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5638" parent="5581" name="LastModified">
+    <column id="5645" parent="5581" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5639" parent="5581" name="CreationDate">
+    <column id="5646" parent="5581" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <foreign-key id="5640" parent="5581" name="FK_Comment_Users_UserId">
+    <foreign-key id="5647" parent="5581" name="FK_Comment_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:22.323</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.323</ModifiedTimestamp>
@@ -17226,7 +17259,7 @@
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <foreign-key id="5641" parent="5581" name="FK_Comment_Products_ProductId">
+    <foreign-key id="5648" parent="5581" name="FK_Comment_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:22.323</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.323</ModifiedTimestamp>
@@ -17236,7 +17269,7 @@
       <RefTableId>2021582240</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <foreign-key id="5642" parent="5581" name="FK_Comment_Users_UserAnswerId">
+    <foreign-key id="5649" parent="5581" name="FK_Comment_Users_UserAnswerId">
       <ColNames>UserAnswerId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:22.323</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.323</ModifiedTimestamp>
@@ -17245,66 +17278,66 @@
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5643" parent="5581" name="PK_Comment">
+    <index id="5650" parent="5581" name="PK_Comment">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5644" parent="5581" name="IX_Comment_ProductId">
+    <index id="5651" parent="5581" name="IX_Comment_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>2</Position>
     </index>
-    <index id="5645" parent="5581" name="IX_Comment_UserAnswerId">
+    <index id="5652" parent="5581" name="IX_Comment_UserAnswerId">
       <ColNames>UserAnswerId</ColNames>
       <Position>3</Position>
     </index>
-    <index id="5646" parent="5581" name="IX_Comment_UserId">
+    <index id="5653" parent="5581" name="IX_Comment_UserId">
       <ColNames>UserId</ColNames>
       <Position>4</Position>
     </index>
-    <key id="5647" parent="5581" name="PK_Comment">
+    <key id="5654" parent="5581" name="PK_Comment">
       <CreatedTimestamp>2023-04-08.02:00:22.323</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.323</ModifiedTimestamp>
       <ObjectId>2133582639</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Comment</UnderlyingIndexName>
     </key>
-    <column id="5648" parent="5582" name="Id">
+    <column id="5655" parent="5582" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(7)</SequenceIdentity>
     </column>
-    <column id="5649" parent="5582" name="Name">
+    <column id="5656" parent="5582" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5650" parent="5582" name="StoreId">
+    <column id="5657" parent="5582" name="StoreId">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5651" parent="5582" name="IsActive">
+    <column id="5658" parent="5582" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5652" parent="5582" name="IsDelete">
+    <column id="5659" parent="5582" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5653" parent="5582" name="LastModified">
+    <column id="5660" parent="5582" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5654" parent="5582" name="CreationDate">
+    <column id="5661" parent="5582" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <foreign-key id="5655" parent="5582" name="FK_Inventories_Stores_StoreId">
+    <foreign-key id="5662" parent="5582" name="FK_Inventories_Stores_StoreId">
       <ColNames>StoreId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:19.217</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.217</ModifiedTimestamp>
@@ -17314,74 +17347,74 @@
       <RefTableId>1621580815</RefTableId>
       <RefTableName>Stores</RefTableName>
     </foreign-key>
-    <index id="5656" parent="5582" name="PK_Inventories">
+    <index id="5663" parent="5582" name="PK_Inventories">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5657" parent="5582" name="IX_Inventories_StoreId">
+    <index id="5664" parent="5582" name="IX_Inventories_StoreId">
       <ColNames>StoreId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5658" parent="5582" name="PK_Inventories">
+    <key id="5665" parent="5582" name="PK_Inventories">
       <CreatedTimestamp>2023-04-08.02:00:19.217</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.217</ModifiedTimestamp>
       <ObjectId>1893581784</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Inventories</UnderlyingIndexName>
     </key>
-    <column id="5659" parent="5583" name="Id">
+    <column id="5666" parent="5583" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(12)</SequenceIdentity>
     </column>
-    <column id="5660" parent="5583" name="Description">
+    <column id="5667" parent="5583" name="Description">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5661" parent="5583" name="Price">
+    <column id="5668" parent="5583" name="Price">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5662" parent="5583" name="Count">
+    <column id="5669" parent="5583" name="Count">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5663" parent="5583" name="InventoryOperationType">
+    <column id="5670" parent="5583" name="InventoryOperationType">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5664" parent="5583" name="ProductId">
+    <column id="5671" parent="5583" name="ProductId">
       <DasType>bigint|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5665" parent="5583" name="InventoryId">
+    <column id="5672" parent="5583" name="InventoryId">
       <DasType>bigint|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5666" parent="5583" name="IsActive">
+    <column id="5673" parent="5583" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5667" parent="5583" name="IsDelete">
+    <column id="5674" parent="5583" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5668" parent="5583" name="LastModified">
+    <column id="5675" parent="5583" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5669" parent="5583" name="CreationDate">
+    <column id="5676" parent="5583" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <foreign-key id="5670" parent="5583" name="FK_InventoryOperations_Products_ProductId">
+    <foreign-key id="5677" parent="5583" name="FK_InventoryOperations_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:22.330</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.330</ModifiedTimestamp>
@@ -17390,7 +17423,7 @@
       <RefTableId>2021582240</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <foreign-key id="5671" parent="5583" name="FK_InventoryOperations_Inventories_InventoryId">
+    <foreign-key id="5678" parent="5583" name="FK_InventoryOperations_Inventories_InventoryId">
       <ColNames>InventoryId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:22.330</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.330</ModifiedTimestamp>
@@ -17399,223 +17432,81 @@
       <RefTableId>1877581727</RefTableId>
       <RefTableName>Inventories</RefTableName>
     </foreign-key>
-    <index id="5672" parent="5583" name="PK_InventoryOperations">
+    <index id="5679" parent="5583" name="PK_InventoryOperations">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5673" parent="5583" name="IX_InventoryOperations_InventoryId">
+    <index id="5680" parent="5583" name="IX_InventoryOperations_InventoryId">
       <ColNames>InventoryId</ColNames>
       <Position>2</Position>
     </index>
-    <index id="5674" parent="5583" name="IX_InventoryOperations_ProductId">
+    <index id="5681" parent="5583" name="IX_InventoryOperations_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>3</Position>
     </index>
-    <key id="5675" parent="5583" name="PK_InventoryOperations">
+    <key id="5682" parent="5583" name="PK_InventoryOperations">
       <CreatedTimestamp>2023-04-08.02:00:22.330</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:22.330</ModifiedTimestamp>
       <ObjectId>66099276</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_InventoryOperations</UnderlyingIndexName>
     </key>
-    <column id="5676" parent="5584" name="Id">
+    <column id="5683" parent="5584" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(7)</SequenceIdentity>
     </column>
-    <column id="5677" parent="5584" name="Name">
+    <column id="5684" parent="5584" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5678" parent="5584" name="Value">
-      <DasType>nvarchar(max)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="5679" parent="5584" name="IsActive">
-      <DasType>bit|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="5680" parent="5584" name="IsDelete">
-      <DasType>bit|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="5681" parent="5584" name="LastModified">
-      <DasType>datetime2|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="5682" parent="5584" name="CreationDate">
-      <DasType>datetime2|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <index id="5683" parent="5584" name="PK_Item">
-      <Clustering>1</Clustering>
-      <ColNames>Id</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-    </index>
-    <key id="5684" parent="5584" name="PK_Item">
-      <CreatedTimestamp>2023-04-08.02:00:13.290</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:13.290</ModifiedTimestamp>
-      <ObjectId>1285579618</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK_Item</UnderlyingIndexName>
-    </key>
-    <column id="5685" parent="5585" name="ItemsId">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="5686" parent="5585" name="ProductsId">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="5687" parent="5585" name="FK_ItemProduct_Item_ItemsId">
-      <ColNames>ItemsId</ColNames>
-      <CreatedTimestamp>2023-04-08.02:00:24.047</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:24.047</ModifiedTimestamp>
-      <ObjectId>146099561</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1269579561</RefTableId>
-      <RefTableName>Item</RefTableName>
-    </foreign-key>
-    <foreign-key id="5688" parent="5585" name="FK_ItemProduct_Products_ProductsId">
-      <ColNames>ProductsId</ColNames>
-      <CreatedTimestamp>2023-04-08.02:00:24.047</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:24.047</ModifiedTimestamp>
-      <ObjectId>162099618</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>2021582240</RefTableId>
-      <RefTableName>Products</RefTableName>
-    </foreign-key>
-    <index id="5689" parent="5585" name="PK_ItemProduct">
-      <Clustering>1</Clustering>
-      <ColNames>ItemsId
-ProductsId</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-    </index>
-    <index id="5690" parent="5585" name="IX_ItemProduct_ProductsId">
-      <ColNames>ProductsId</ColNames>
-      <Position>2</Position>
-    </index>
-    <key id="5691" parent="5585" name="PK_ItemProduct">
-      <CreatedTimestamp>2023-04-08.02:00:24.047</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:24.047</ModifiedTimestamp>
-      <ObjectId>130099504</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK_ItemProduct</UnderlyingIndexName>
-    </key>
-    <column id="5692" parent="5586" name="ItemsId">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="5693" parent="5586" name="TypesId">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <foreign-key id="5694" parent="5586" name="FK_ItemType_Item_ItemsId">
-      <ColNames>ItemsId</ColNames>
-      <CreatedTimestamp>2023-04-08.02:00:13.820</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:13.820</ModifiedTimestamp>
-      <ObjectId>1493580359</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1269579561</RefTableId>
-      <RefTableName>Item</RefTableName>
-    </foreign-key>
-    <foreign-key id="5695" parent="5586" name="FK_ItemType_Types_TypesId">
-      <ColNames>TypesId</ColNames>
-      <CreatedTimestamp>2023-04-08.02:00:13.820</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:13.820</ModifiedTimestamp>
-      <ObjectId>1509580416</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1333579789</RefTableId>
-      <RefTableName>Types</RefTableName>
-    </foreign-key>
-    <index id="5696" parent="5586" name="PK_ItemType">
-      <Clustering>1</Clustering>
-      <ColNames>ItemsId
-TypesId</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-    </index>
-    <index id="5697" parent="5586" name="IX_ItemType_TypesId">
-      <ColNames>TypesId</ColNames>
-      <Position>2</Position>
-    </index>
-    <key id="5698" parent="5586" name="PK_ItemType">
-      <CreatedTimestamp>2023-04-08.02:00:13.820</CreatedTimestamp>
-      <ModifiedTimestamp>2023-04-08.02:00:13.820</ModifiedTimestamp>
-      <ObjectId>1477580302</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK_ItemType</UnderlyingIndexName>
-    </key>
-    <column id="5699" parent="5587" name="Id">
-      <DasType>bigint|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="5700" parent="5587" name="Name">
-      <DasType>nvarchar(max)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="5701" parent="5587" name="Description">
+    <column id="5685" parent="5584" name="Description">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5702" parent="5587" name="OffPercent">
+    <column id="5686" parent="5584" name="OffPercent">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5703" parent="5587" name="StartDate">
+    <column id="5687" parent="5584" name="StartDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5704" parent="5587" name="EndDate">
+    <column id="5688" parent="5584" name="EndDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5705" parent="5587" name="StoreId">
+    <column id="5689" parent="5584" name="StoreId">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5706" parent="5587" name="IsActive">
+    <column id="5690" parent="5584" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5707" parent="5587" name="IsDelete">
+    <column id="5691" parent="5584" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5708" parent="5587" name="LastModified">
+    <column id="5692" parent="5584" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5709" parent="5587" name="CreationDate">
+    <column id="5693" parent="5584" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <foreign-key id="5710" parent="5587" name="FK_Offs_Stores_StoreId">
+    <foreign-key id="5694" parent="5584" name="FK_Offs_Stores_StoreId">
       <ColNames>StoreId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:19.220</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.220</ModifiedTimestamp>
@@ -17625,74 +17516,120 @@ TypesId</ColNames>
       <RefTableId>1621580815</RefTableId>
       <RefTableName>Stores</RefTableName>
     </foreign-key>
-    <index id="5711" parent="5587" name="PK_Offs">
+    <index id="5695" parent="5584" name="PK_Offs">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5712" parent="5587" name="IX_Offs_StoreId">
+    <index id="5696" parent="5584" name="IX_Offs_StoreId">
       <ColNames>StoreId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5713" parent="5587" name="PK_Offs">
+    <key id="5697" parent="5584" name="PK_Offs">
       <CreatedTimestamp>2023-04-08.02:00:19.220</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.220</ModifiedTimestamp>
       <ObjectId>1941581955</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Offs</UnderlyingIndexName>
     </key>
-    <column id="5714" parent="5588" name="Id">
+    <column id="5698" parent="5585" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5715" parent="5588" name="PictureTitle">
+    <column id="5699" parent="5585" name="Name">
+      <DasType>nvarchar(max)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5700" parent="5585" name="Value">
+      <DasType>nvarchar(max)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="5701" parent="5585" name="ProductId">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="5702" parent="5585" name="FK_ProductItems_Products_ProductId">
+      <ColNames>ProductId</ColNames>
+      <CreatedTimestamp>2023-04-17.01:29:38.587</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.587</ModifiedTimestamp>
+      <ObjectId>738101670</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>2021582240</RefTableId>
+      <RefTableName>Products</RefTableName>
+    </foreign-key>
+    <index id="5703" parent="5585" name="PK_ProductItems">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="5704" parent="5585" name="IX_ProductItems_ProductId">
+      <ColNames>ProductId</ColNames>
+      <Position>2</Position>
+    </index>
+    <key id="5705" parent="5585" name="PK_ProductItems">
+      <CreatedTimestamp>2023-04-17.01:29:38.583</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.583</ModifiedTimestamp>
+      <ObjectId>722101613</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_ProductItems</UnderlyingIndexName>
+    </key>
+    <column id="5706" parent="5586" name="Id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(24)</SequenceIdentity>
+    </column>
+    <column id="5707" parent="5586" name="PictureTitle">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5716" parent="5588" name="PictureAlt">
+    <column id="5708" parent="5586" name="PictureAlt">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5717" parent="5588" name="PictureUrl">
+    <column id="5709" parent="5586" name="PictureUrl">
       <DasType>nvarchar(500 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5718" parent="5588" name="Sort">
+    <column id="5710" parent="5586" name="Sort">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5719" parent="5588" name="ProductId">
+    <column id="5711" parent="5586" name="ProductId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5720" parent="5588" name="IsActive">
+    <column id="5712" parent="5586" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5721" parent="5588" name="IsDelete">
+    <column id="5713" parent="5586" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5722" parent="5588" name="LastModified">
+    <column id="5714" parent="5586" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5723" parent="5588" name="CreationDate">
+    <column id="5715" parent="5586" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <foreign-key id="5724" parent="5588" name="FK_ProductPictures_Products_ProductId">
+    <foreign-key id="5716" parent="5586" name="FK_ProductPictures_Products_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:24.050</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:24.050</ModifiedTimestamp>
@@ -17702,106 +17639,106 @@ TypesId</ColNames>
       <RefTableId>2021582240</RefTableId>
       <RefTableName>Products</RefTableName>
     </foreign-key>
-    <index id="5725" parent="5588" name="PK_ProductPictures">
+    <index id="5717" parent="5586" name="PK_ProductPictures">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5726" parent="5588" name="IX_ProductPictures_ProductId">
+    <index id="5718" parent="5586" name="IX_ProductPictures_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5727" parent="5588" name="PK_ProductPictures">
+    <key id="5719" parent="5586" name="PK_ProductPictures">
       <CreatedTimestamp>2023-04-08.02:00:24.050</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:24.050</ModifiedTimestamp>
       <ObjectId>194099732</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ProductPictures</UnderlyingIndexName>
     </key>
-    <column id="5728" parent="5589" name="Id">
+    <column id="5720" parent="5587" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(23)</SequenceIdentity>
     </column>
-    <column id="5729" parent="5589" name="Name">
+    <column id="5721" parent="5587" name="Name">
       <DasType>nvarchar(30 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5730" parent="5589" name="Slug">
+    <column id="5722" parent="5587" name="Slug">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5731" parent="5589" name="Description">
+    <column id="5723" parent="5587" name="Description">
       <DasType>nvarchar(500 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5732" parent="5589" name="MetaDescription">
+    <column id="5724" parent="5587" name="MetaDescription">
       <DasType>nvarchar(200 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5733" parent="5589" name="Price">
+    <column id="5725" parent="5587" name="Price">
       <DasType>decimal(18,2)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5734" parent="5589" name="Summary">
+    <column id="5726" parent="5587" name="Summary">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5735" parent="5589" name="Score">
+    <column id="5727" parent="5587" name="Score">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5736" parent="5589" name="Count">
+    <column id="5728" parent="5587" name="Count">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5737" parent="5589" name="OffId">
+    <column id="5729" parent="5587" name="OffId">
       <DasType>bigint|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5738" parent="5589" name="InventoryId">
+    <column id="5730" parent="5587" name="InventoryId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="5739" parent="5589" name="TypeId">
+    <column id="5731" parent="5587" name="TypeId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="5740" parent="5589" name="BrandId">
+    <column id="5732" parent="5587" name="BrandId">
       <DasType>bigint|0s</DasType>
       <Position>13</Position>
     </column>
-    <column id="5741" parent="5589" name="IsActive">
+    <column id="5733" parent="5587" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>14</Position>
     </column>
-    <column id="5742" parent="5589" name="IsDelete">
+    <column id="5734" parent="5587" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
-    <column id="5743" parent="5589" name="LastModified">
+    <column id="5735" parent="5587" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>16</Position>
     </column>
-    <column id="5744" parent="5589" name="CreationDate">
+    <column id="5736" parent="5587" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>17</Position>
     </column>
-    <foreign-key id="5745" parent="5589" name="FK_Products_Offs_OffId">
+    <foreign-key id="5737" parent="5587" name="FK_Products_Offs_OffId">
       <ColNames>OffId</ColNames>
       <CreatedTimestamp>2023-04-11.20:25:08.003</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-11.20:25:08.003</ModifiedTimestamp>
@@ -17810,7 +17747,7 @@ TypesId</ColNames>
       <RefTableId>1925581898</RefTableId>
       <RefTableName>Offs</RefTableName>
     </foreign-key>
-    <foreign-key id="5746" parent="5589" name="FK_Products_Inventories_InventoryId">
+    <foreign-key id="5738" parent="5587" name="FK_Products_Inventories_InventoryId">
       <ColNames>InventoryId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:20.547</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:20.547</ModifiedTimestamp>
@@ -17820,7 +17757,7 @@ TypesId</ColNames>
       <RefTableId>1877581727</RefTableId>
       <RefTableName>Inventories</RefTableName>
     </foreign-key>
-    <foreign-key id="5747" parent="5589" name="FK_Products_Types_TypeId">
+    <foreign-key id="5739" parent="5587" name="FK_Products_Types_TypeId">
       <ColNames>TypeId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:20.550</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:20.550</ModifiedTimestamp>
@@ -17830,7 +17767,7 @@ TypesId</ColNames>
       <RefTableId>1333579789</RefTableId>
       <RefTableName>Types</RefTableName>
     </foreign-key>
-    <foreign-key id="5748" parent="5589" name="FK_Products_Brands_BrandId">
+    <foreign-key id="5740" parent="5587" name="FK_Products_Brands_BrandId">
       <ColNames>BrandId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:20.547</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:20.547</ModifiedTimestamp>
@@ -17839,92 +17776,92 @@ TypesId</ColNames>
       <RefTableId>1237579447</RefTableId>
       <RefTableName>Brands</RefTableName>
     </foreign-key>
-    <index id="5749" parent="5589" name="PK_Products">
+    <index id="5741" parent="5587" name="PK_Products">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5750" parent="5589" name="IX_Products_BrandId">
+    <index id="5742" parent="5587" name="IX_Products_BrandId">
       <ColNames>BrandId</ColNames>
       <Position>2</Position>
     </index>
-    <index id="5751" parent="5589" name="IX_Products_InventoryId">
+    <index id="5743" parent="5587" name="IX_Products_InventoryId">
       <ColNames>InventoryId</ColNames>
       <Position>3</Position>
     </index>
-    <index id="5752" parent="5589" name="IX_Products_OffId">
+    <index id="5744" parent="5587" name="IX_Products_OffId">
       <ColNames>OffId</ColNames>
       <Position>4</Position>
     </index>
-    <index id="5753" parent="5589" name="IX_Products_TypeId">
+    <index id="5745" parent="5587" name="IX_Products_TypeId">
       <ColNames>TypeId</ColNames>
       <Position>5</Position>
     </index>
-    <key id="5754" parent="5589" name="PK_Products">
+    <key id="5746" parent="5587" name="PK_Products">
       <CreatedTimestamp>2023-04-08.02:00:20.547</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:20.547</ModifiedTimestamp>
       <ObjectId>2037582297</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Products</UnderlyingIndexName>
     </key>
-    <column id="5755" parent="5590" name="Id">
+    <column id="5747" parent="5588" name="Id">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5756" parent="5590" name="Name">
+    <column id="5748" parent="5588" name="Name">
       <DasType>nvarchar(50 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5757" parent="5590" name="NormalizedName">
+    <column id="5749" parent="5588" name="NormalizedName">
       <DasType>nvarchar(256 char)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5758" parent="5590" name="ConcurrencyStamp">
+    <column id="5750" parent="5588" name="ConcurrencyStamp">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="5759" parent="5590" name="PK_Role">
+    <index id="5751" parent="5588" name="PK_Role">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5760" parent="5590" name="RoleNameIndex">
+    <index id="5752" parent="5588" name="RoleNameIndex">
       <ColNames>NormalizedName</ColNames>
       <Condition>[NormalizedName] IS NOT NULL</Condition>
       <Position>2</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5761" parent="5590" name="PK_Role">
+    <key id="5753" parent="5588" name="PK_Role">
       <CreatedTimestamp>2023-04-08.02:00:13.297</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.297</ModifiedTimestamp>
       <ObjectId>1317579732</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Role</UnderlyingIndexName>
     </key>
-    <column id="5762" parent="5591" name="Id">
+    <column id="5754" parent="5589" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5763" parent="5591" name="RoleId">
+    <column id="5755" parent="5589" name="RoleId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5764" parent="5591" name="ClaimType">
+    <column id="5756" parent="5589" name="ClaimType">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5765" parent="5591" name="ClaimValue">
+    <column id="5757" parent="5589" name="ClaimValue">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="5766" parent="5591" name="FK_RoleClaims_Role_RoleId">
+    <foreign-key id="5758" parent="5589" name="FK_RoleClaims_Role_RoleId">
       <ColNames>RoleId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:13.817</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.817</ModifiedTimestamp>
@@ -17934,71 +17871,71 @@ TypesId</ColNames>
       <RefTableId>1301579675</RefTableId>
       <RefTableName>Role</RefTableName>
     </foreign-key>
-    <index id="5767" parent="5591" name="PK_RoleClaims">
+    <index id="5759" parent="5589" name="PK_RoleClaims">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5768" parent="5591" name="IX_RoleClaims_RoleId">
+    <index id="5760" parent="5589" name="IX_RoleClaims_RoleId">
       <ColNames>RoleId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5769" parent="5591" name="PK_RoleClaims">
+    <key id="5761" parent="5589" name="PK_RoleClaims">
       <CreatedTimestamp>2023-04-08.02:00:13.817</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.817</ModifiedTimestamp>
       <ObjectId>1429580131</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_RoleClaims</UnderlyingIndexName>
     </key>
-    <column id="5770" parent="5592" name="Id">
+    <column id="5762" parent="5590" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(3)</SequenceIdentity>
     </column>
-    <column id="5771" parent="5592" name="PictureTitle">
+    <column id="5763" parent="5590" name="PictureTitle">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5772" parent="5592" name="PictureAlt">
+    <column id="5764" parent="5590" name="PictureAlt">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5773" parent="5592" name="PictureUrl">
+    <column id="5765" parent="5590" name="PictureUrl">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5774" parent="5592" name="Sort">
+    <column id="5766" parent="5590" name="Sort">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5775" parent="5592" name="StoreId">
+    <column id="5767" parent="5590" name="StoreId">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5776" parent="5592" name="IsActive">
+    <column id="5768" parent="5590" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5777" parent="5592" name="IsDelete">
+    <column id="5769" parent="5590" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5778" parent="5592" name="LastModified">
+    <column id="5770" parent="5590" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5779" parent="5592" name="CreationDate">
+    <column id="5771" parent="5590" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <foreign-key id="5780" parent="5592" name="FK_StorePictures_Stores_StoreId">
+    <foreign-key id="5772" parent="5590" name="FK_StorePictures_Stores_StoreId">
       <ColNames>StoreId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:20.540</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:20.540</ModifiedTimestamp>
@@ -18008,67 +17945,67 @@ TypesId</ColNames>
       <RefTableId>1621580815</RefTableId>
       <RefTableName>Stores</RefTableName>
     </foreign-key>
-    <index id="5781" parent="5592" name="PK_StorePictures">
+    <index id="5773" parent="5590" name="PK_StorePictures">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5782" parent="5592" name="IX_StorePictures_StoreId">
+    <index id="5774" parent="5590" name="IX_StorePictures_StoreId">
       <ColNames>StoreId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5783" parent="5592" name="PK_StorePictures">
+    <key id="5775" parent="5590" name="PK_StorePictures">
       <CreatedTimestamp>2023-04-08.02:00:20.540</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:20.540</ModifiedTimestamp>
       <ObjectId>1989582126</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_StorePictures</UnderlyingIndexName>
     </key>
-    <column id="5784" parent="5593" name="Id">
+    <column id="5776" parent="5591" name="Id">
       <DasType>uniqueidentifier|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5785" parent="5593" name="IsActive">
+    <column id="5777" parent="5591" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5786" parent="5593" name="LastModified">
+    <column id="5778" parent="5591" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5787" parent="5593" name="CreationDate">
+    <column id="5779" parent="5591" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5788" parent="5593" name="Name">
+    <column id="5780" parent="5591" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5789" parent="5593" name="Address">
+    <column id="5781" parent="5591" name="Address">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5790" parent="5593" name="PhoneNumber">
+    <column id="5782" parent="5591" name="PhoneNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="5791" parent="5593" name="MobileNumber">
+    <column id="5783" parent="5591" name="MobileNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5792" parent="5593" name="Description">
+    <column id="5784" parent="5591" name="Description">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5793" parent="5593" name="UserId">
+    <column id="5785" parent="5591" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <Position>10</Position>
     </column>
-    <foreign-key id="5794" parent="5593" name="FK_Stores_Users_UserId">
+    <foreign-key id="5786" parent="5591" name="FK_Stores_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:15.817</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:15.817</ModifiedTimestamp>
@@ -18077,71 +18014,113 @@ TypesId</ColNames>
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5795" parent="5593" name="PK_Stores">
+    <index id="5787" parent="5591" name="PK_Stores">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5796" parent="5593" name="IX_Stores_UserId">
+    <index id="5788" parent="5591" name="IX_Stores_UserId">
       <ColNames>UserId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5797" parent="5593" name="PK_Stores">
+    <key id="5789" parent="5591" name="PK_Stores">
       <CreatedTimestamp>2023-04-08.02:00:15.817</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:15.817</ModifiedTimestamp>
       <ObjectId>1637580872</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Stores</UnderlyingIndexName>
     </key>
-    <column id="5798" parent="5594" name="Id">
+    <column id="5790" parent="5592" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5799" parent="5594" name="PictureTitle">
+    <column id="5791" parent="5592" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5800" parent="5594" name="PictureAlt">
+    <column id="5792" parent="5592" name="TypeId">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <foreign-key id="5793" parent="5592" name="FK_TypeItems_Types_TypeId">
+      <ColNames>TypeId</ColNames>
+      <CreatedTimestamp>2023-04-17.01:29:38.607</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.607</ModifiedTimestamp>
+      <ObjectId>786101841</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1333579789</RefTableId>
+      <RefTableName>Types</RefTableName>
+    </foreign-key>
+    <index id="5794" parent="5592" name="PK_TypeItems">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="5795" parent="5592" name="IX_TypeItems_TypeId">
+      <ColNames>TypeId</ColNames>
+      <Position>2</Position>
+    </index>
+    <key id="5796" parent="5592" name="PK_TypeItems">
+      <CreatedTimestamp>2023-04-17.01:29:38.607</CreatedTimestamp>
+      <ModifiedTimestamp>2023-04-17.01:29:38.607</ModifiedTimestamp>
+      <ObjectId>770101784</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_TypeItems</UnderlyingIndexName>
+    </key>
+    <column id="5797" parent="5593" name="Id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(11)</SequenceIdentity>
+    </column>
+    <column id="5798" parent="5593" name="PictureTitle">
+      <DasType>nvarchar(max)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="5799" parent="5593" name="PictureAlt">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5801" parent="5594" name="PictureUrl">
+    <column id="5800" parent="5593" name="PictureUrl">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5802" parent="5594" name="Sort">
+    <column id="5801" parent="5593" name="Sort">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5803" parent="5594" name="TypeId">
+    <column id="5802" parent="5593" name="TypeId">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5804" parent="5594" name="IsActive">
+    <column id="5803" parent="5593" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5805" parent="5594" name="IsDelete">
+    <column id="5804" parent="5593" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5806" parent="5594" name="LastModified">
+    <column id="5805" parent="5593" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5807" parent="5594" name="CreationDate">
+    <column id="5806" parent="5593" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <foreign-key id="5808" parent="5594" name="FK_TypePictures_Types_TypeId">
+    <foreign-key id="5807" parent="5593" name="FK_TypePictures_Types_TypeId">
       <ColNames>TypeId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:15.810</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:15.810</ModifiedTimestamp>
@@ -18151,73 +18130,77 @@ TypesId</ColNames>
       <RefTableId>1333579789</RefTableId>
       <RefTableName>Types</RefTableName>
     </foreign-key>
-    <index id="5809" parent="5594" name="PK_TypePictures">
+    <index id="5808" parent="5593" name="PK_TypePictures">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5810" parent="5594" name="IX_TypePictures_TypeId">
+    <index id="5809" parent="5593" name="IX_TypePictures_TypeId">
       <ColNames>TypeId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5811" parent="5594" name="PK_TypePictures">
+    <key id="5810" parent="5593" name="PK_TypePictures">
       <CreatedTimestamp>2023-04-08.02:00:15.810</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:15.810</ModifiedTimestamp>
       <ObjectId>1541580530</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_TypePictures</UnderlyingIndexName>
     </key>
-    <column id="5812" parent="5595" name="Id">
+    <column id="5811" parent="5594" name="Id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(14)</SequenceIdentity>
     </column>
-    <column id="5813" parent="5595" name="Name">
+    <column id="5812" parent="5594" name="Name">
       <DasType>nvarchar(30 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5814" parent="5595" name="Description">
+    <column id="5813" parent="5594" name="Description">
       <DasType>nvarchar(500 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5815" parent="5595" name="MetaDescription">
+    <column id="5814" parent="5594" name="MetaDescription">
       <DasType>nvarchar(200 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5816" parent="5595" name="Summary">
+    <column id="5815" parent="5594" name="Summary">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5817" parent="5595" name="ParentTypeId">
+    <column id="5816" parent="5594" name="ParentTypeId">
       <DasType>bigint|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5818" parent="5595" name="IsActive">
+    <column id="5817" parent="5594" name="IsActive">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5819" parent="5595" name="IsDelete">
+    <column id="5818" parent="5594" name="IsDelete">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5820" parent="5595" name="LastModified">
+    <column id="5819" parent="5594" name="LastModified">
       <DasType>datetime2|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5821" parent="5595" name="CreationDate">
+    <column id="5820" parent="5594" name="CreationDate">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <foreign-key id="5822" parent="5595" name="FK_Types_Types_ParentTypeId">
+    <column id="5821" parent="5594" name="Slug">
+      <DasType>nvarchar(max)|0s</DasType>
+      <Position>11</Position>
+    </column>
+    <foreign-key id="5822" parent="5594" name="FK_Types_Types_ParentTypeId">
       <ColNames>ParentTypeId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:13.300</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.300</ModifiedTimestamp>
@@ -18226,43 +18209,43 @@ TypesId</ColNames>
       <RefTableId>1333579789</RefTableId>
       <RefTableName>Types</RefTableName>
     </foreign-key>
-    <index id="5823" parent="5595" name="PK_Types">
+    <index id="5823" parent="5594" name="PK_Types">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5824" parent="5595" name="IX_Types_ParentTypeId">
+    <index id="5824" parent="5594" name="IX_Types_ParentTypeId">
       <ColNames>ParentTypeId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5825" parent="5595" name="PK_Types">
+    <key id="5825" parent="5594" name="PK_Types">
       <CreatedTimestamp>2023-04-08.02:00:13.300</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.300</ModifiedTimestamp>
       <ObjectId>1349579846</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Types</UnderlyingIndexName>
     </key>
-    <column id="5826" parent="5596" name="Id">
+    <column id="5826" parent="5595" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5827" parent="5596" name="UserId">
+    <column id="5827" parent="5595" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5828" parent="5596" name="ClaimType">
+    <column id="5828" parent="5595" name="ClaimType">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5829" parent="5596" name="ClaimValue">
+    <column id="5829" parent="5595" name="ClaimValue">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="5830" parent="5596" name="FK_UserClaims_Users_UserId">
+    <foreign-key id="5830" parent="5595" name="FK_UserClaims_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:17.603</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.603</ModifiedTimestamp>
@@ -18272,43 +18255,43 @@ TypesId</ColNames>
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5831" parent="5596" name="PK_UserClaims">
+    <index id="5831" parent="5595" name="PK_UserClaims">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5832" parent="5596" name="IX_UserClaims_UserId">
+    <index id="5832" parent="5595" name="IX_UserClaims_UserId">
       <ColNames>UserId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5833" parent="5596" name="PK_UserClaims">
+    <key id="5833" parent="5595" name="PK_UserClaims">
       <CreatedTimestamp>2023-04-08.02:00:17.603</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.603</ModifiedTimestamp>
       <ObjectId>1685581043</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_UserClaims</UnderlyingIndexName>
     </key>
-    <column id="5834" parent="5597" name="LoginProvider">
+    <column id="5834" parent="5596" name="LoginProvider">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5835" parent="5597" name="ProviderKey">
+    <column id="5835" parent="5596" name="ProviderKey">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5836" parent="5597" name="ProviderDisplayName">
+    <column id="5836" parent="5596" name="ProviderDisplayName">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="5837" parent="5597" name="UserId">
+    <column id="5837" parent="5596" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="5838" parent="5597" name="FK_UserLogins_Users_UserId">
+    <foreign-key id="5838" parent="5596" name="FK_UserLogins_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:17.610</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.610</ModifiedTimestamp>
@@ -18318,35 +18301,35 @@ TypesId</ColNames>
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5839" parent="5597" name="PK_UserLogins">
+    <index id="5839" parent="5596" name="PK_UserLogins">
       <Clustering>1</Clustering>
       <ColNames>LoginProvider
 ProviderKey</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5840" parent="5597" name="IX_UserLogins_UserId">
+    <index id="5840" parent="5596" name="IX_UserLogins_UserId">
       <ColNames>UserId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5841" parent="5597" name="PK_UserLogins">
+    <key id="5841" parent="5596" name="PK_UserLogins">
       <CreatedTimestamp>2023-04-08.02:00:17.610</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.610</ModifiedTimestamp>
       <ObjectId>1733581214</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_UserLogins</UnderlyingIndexName>
     </key>
-    <column id="5842" parent="5598" name="UserId">
+    <column id="5842" parent="5597" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5843" parent="5598" name="RoleId">
+    <column id="5843" parent="5597" name="RoleId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="5844" parent="5598" name="FK_UserRoles_Users_UserId">
+    <foreign-key id="5844" parent="5597" name="FK_UserRoles_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:17.617</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.617</ModifiedTimestamp>
@@ -18356,7 +18339,7 @@ ProviderKey</ColNames>
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <foreign-key id="5845" parent="5598" name="FK_UserRoles_Role_RoleId">
+    <foreign-key id="5845" parent="5597" name="FK_UserRoles_Role_RoleId">
       <ColNames>RoleId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:17.617</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.617</ModifiedTimestamp>
@@ -18366,44 +18349,44 @@ ProviderKey</ColNames>
       <RefTableId>1301579675</RefTableId>
       <RefTableName>Role</RefTableName>
     </foreign-key>
-    <index id="5846" parent="5598" name="PK_UserRoles">
+    <index id="5846" parent="5597" name="PK_UserRoles">
       <Clustering>1</Clustering>
       <ColNames>UserId
 RoleId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5847" parent="5598" name="IX_UserRoles_RoleId">
+    <index id="5847" parent="5597" name="IX_UserRoles_RoleId">
       <ColNames>RoleId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5848" parent="5598" name="PK_UserRoles">
+    <key id="5848" parent="5597" name="PK_UserRoles">
       <CreatedTimestamp>2023-04-08.02:00:17.617</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:17.617</ModifiedTimestamp>
       <ObjectId>1781581385</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_UserRoles</UnderlyingIndexName>
     </key>
-    <column id="5849" parent="5599" name="UserId">
+    <column id="5849" parent="5598" name="UserId">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5850" parent="5599" name="LoginProvider">
+    <column id="5850" parent="5598" name="LoginProvider">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5851" parent="5599" name="Name">
+    <column id="5851" parent="5598" name="Name">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5852" parent="5599" name="Value">
+    <column id="5852" parent="5598" name="Value">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="5853" parent="5599" name="FK_UserTokens_Users_UserId">
+    <foreign-key id="5853" parent="5598" name="FK_UserTokens_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2023-04-08.02:00:19.213</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.213</ModifiedTimestamp>
@@ -18413,7 +18396,7 @@ RoleId</ColNames>
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5854" parent="5599" name="PK_UserTokens">
+    <index id="5854" parent="5598" name="PK_UserTokens">
       <Clustering>1</Clustering>
       <ColNames>UserId
 LoginProvider
@@ -18421,124 +18404,124 @@ Name</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5855" parent="5599" name="PK_UserTokens">
+    <key id="5855" parent="5598" name="PK_UserTokens">
       <CreatedTimestamp>2023-04-08.02:00:19.213</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:19.213</ModifiedTimestamp>
       <ObjectId>1845581613</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_UserTokens</UnderlyingIndexName>
     </key>
-    <column id="5856" parent="5600" name="Id">
+    <column id="5856" parent="5599" name="Id">
       <DasType>nvarchar(450 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5857" parent="5600" name="Password">
+    <column id="5857" parent="5599" name="Password">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="5858" parent="5600" name="UserName">
+    <column id="5858" parent="5599" name="UserName">
       <DasType>nvarchar(256 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5859" parent="5600" name="NormalizedUserName">
+    <column id="5859" parent="5599" name="NormalizedUserName">
       <DasType>nvarchar(256 char)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="5860" parent="5600" name="Email">
+    <column id="5860" parent="5599" name="Email">
       <DasType>nvarchar(256 char)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="5861" parent="5600" name="NormalizedEmail">
+    <column id="5861" parent="5599" name="NormalizedEmail">
       <DasType>nvarchar(256 char)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="5862" parent="5600" name="EmailConfirmed">
+    <column id="5862" parent="5599" name="EmailConfirmed">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5863" parent="5600" name="PasswordHash">
+    <column id="5863" parent="5599" name="PasswordHash">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>8</Position>
     </column>
-    <column id="5864" parent="5600" name="SecurityStamp">
+    <column id="5864" parent="5599" name="SecurityStamp">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>9</Position>
     </column>
-    <column id="5865" parent="5600" name="ConcurrencyStamp">
+    <column id="5865" parent="5599" name="ConcurrencyStamp">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>10</Position>
     </column>
-    <column id="5866" parent="5600" name="PhoneNumber">
+    <column id="5866" parent="5599" name="PhoneNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <Position>11</Position>
     </column>
-    <column id="5867" parent="5600" name="PhoneNumberConfirmed">
+    <column id="5867" parent="5599" name="PhoneNumberConfirmed">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="5868" parent="5600" name="TwoFactorEnabled">
+    <column id="5868" parent="5599" name="TwoFactorEnabled">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
-    <column id="5869" parent="5600" name="LockoutEnd">
+    <column id="5869" parent="5599" name="LockoutEnd">
       <DasType>datetimeoffset|0s</DasType>
       <Position>14</Position>
     </column>
-    <column id="5870" parent="5600" name="LockoutEnabled">
+    <column id="5870" parent="5599" name="LockoutEnabled">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
-    <column id="5871" parent="5600" name="AccessFailedCount">
+    <column id="5871" parent="5599" name="AccessFailedCount">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>16</Position>
     </column>
-    <index id="5872" parent="5600" name="PK_Users">
+    <index id="5872" parent="5599" name="PK_Users">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5873" parent="5600" name="EmailIndex">
+    <index id="5873" parent="5599" name="EmailIndex">
       <ColNames>NormalizedEmail</ColNames>
       <Position>2</Position>
     </index>
-    <index id="5874" parent="5600" name="UserNameIndex">
+    <index id="5874" parent="5599" name="UserNameIndex">
       <ColNames>NormalizedUserName</ColNames>
       <Condition>[NormalizedUserName] IS NOT NULL</Condition>
       <Position>3</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5875" parent="5600" name="PK_Users">
+    <key id="5875" parent="5599" name="PK_Users">
       <CreatedTimestamp>2023-04-08.02:00:13.810</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:13.810</ModifiedTimestamp>
       <ObjectId>1397580017</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Users</UnderlyingIndexName>
     </key>
-    <column id="5876" parent="5601" name="MigrationId">
+    <column id="5876" parent="5600" name="MigrationId">
       <DasType>nvarchar(150 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="5877" parent="5601" name="ProductVersion">
+    <column id="5877" parent="5600" name="ProductVersion">
       <DasType>nvarchar(32 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="5878" parent="5601" name="PK___EFMigrationsHistory">
+    <index id="5878" parent="5600" name="PK___EFMigrationsHistory">
       <Clustering>1</Clustering>
       <ColNames>MigrationId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5879" parent="5601" name="PK___EFMigrationsHistory">
+    <key id="5879" parent="5600" name="PK___EFMigrationsHistory">
       <CreatedTimestamp>2023-04-08.02:00:12.787</CreatedTimestamp>
       <ModifiedTimestamp>2023-04-08.02:00:12.787</ModifiedTimestamp>
       <ObjectId>1221579390</ObjectId>
