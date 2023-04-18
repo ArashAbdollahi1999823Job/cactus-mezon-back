@@ -14,7 +14,7 @@ public class ProductPictureGetAllQueryHandler:IRequestHandler<ProductPictureGetA
     #endregion
     public async Task<List<ProductPictureDto>> Handle(ProductPictureGetAllQuery req, CancellationToken cancellationToken)
     {
-        ProductPictureSearchDto productPictureSearchDto = new ProductPictureSearchDto(req.Id, req.ProductId,req.Sort);
+        ProductPictureSearchDto productPictureSearchDto = new ProductPictureSearchDto(req.Id, req.ProductId,req.Sort,req.StartRange,req.EndRange);
         return await _productPictureRepository.ProductPictureGetAllAsync(productPictureSearchDto, cancellationToken);
     }
 }

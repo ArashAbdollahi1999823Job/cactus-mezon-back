@@ -29,6 +29,11 @@ public class ProductPictureRepository : IProductPictureRepository
         var query = _context.ProductPictures.Include(x => x.Product).AsQueryable();
         if(productPictureSearchDto.Id>0)query = query.Where(x => x.Id == productPictureSearchDto.Id);
         if(productPictureSearchDto.Sort>0)query = query.Where(x => x.Sort == productPictureSearchDto.Sort);
+        if (productPictureSearchDto.StartRange > 0 && productPictureSearchDto.EndRange == 0) query = query.Where(x => x.Sort >= productPictureSearchDto.StartRange);
+        if (productPictureSearchDto.StartRange == 0 && productPictureSearchDto.EndRange > 0) query = query.Where(x => x.Sort <= productPictureSearchDto.EndRange);
+        if (productPictureSearchDto.StartRange > 0 && productPictureSearchDto.EndRange > 0) query = query.Where(x => x.Sort >= productPictureSearchDto.StartRange && x.Sort <= productPictureSearchDto.EndRange);
+        if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
+        if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
         if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<ProductPictureDto>>(result);

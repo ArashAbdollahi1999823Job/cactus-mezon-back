@@ -6,22 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductItem/ProductItemAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductItem/ProductItemDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductItem/ProductItemSearchDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductItem/Command/ProductItemAdd/ProductItemAddCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductItem/Command/ProductItemAdd/ProductItemAddCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductItem/Command/ProductItemDelete/ProductItemDeleteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductItem/Command/ProductItemDelete/ProductItemDeleteCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductItem/Query/ProductItemGetAll/ProductItemGetAllQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductItem/Query/ProductItemGetAll/ProductItemGetAllQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductItemRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductItemRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/ProductItem/ProductItemAdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/ProductItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/ProductItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductPicture/ProductPictureSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/ProductPicture/ProductPictureSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/ProductPicture/Query/ProductPictureGetAll/ProductPictureGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/ProductPicture/Query/ProductPictureGetAll/ProductPictureGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductPictureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductPictureRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن  صورتی زنانه/2023-04-14-13-55-56-پیراهنصورتی.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +103,7 @@
       <workItem from="1681211244428" duration="7196000" />
       <workItem from="1681322634368" duration="14096000" />
       <workItem from="1681405009966" duration="2543000" />
-      <workItem from="1681563911867" duration="25403000" />
+      <workItem from="1681563911867" duration="33221000" />
     </task>
     <servers />
   </component>
