@@ -1,7 +1,7 @@
 ﻿namespace Application.Dto.Type;
 public class TypeAddDto
 {
-    public long ParentTypeId { get; set; } = 0;
+    public Guid ParentTypeId { get; set; } 
     public string Name { get; set; }
     public string Description { get; set; }
     public string MetaDescription { get; set; }
@@ -9,7 +9,7 @@ public class TypeAddDto
     public string Slug { get; set; }
 
 
-    public TypeAddDto(long parentTypeId, string name, string description, string metaDescription, string summary, string slug)
+    public TypeAddDto(Guid parentTypeId, string name, string description, string metaDescription, string summary, string slug)
     {
         ParentTypeId = parentTypeId;
         Name = name;

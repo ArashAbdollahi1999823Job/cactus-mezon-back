@@ -5,7 +5,7 @@ namespace Application.Dto.Color;
 
 public class ColorDto:IMapFrom<Domain.Entities.ProductEntity.Color>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Value { get; set; }
 

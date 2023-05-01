@@ -2,9 +2,9 @@
 namespace Application.Features.Brand.Command.BrandDelete;
 public class BrandDeleteCommand:IRequest<bool>
 {
-    public long Id { set; get; }
+    public Guid Id { set; get; }
 
-    public BrandDeleteCommand(long id)
+    public BrandDeleteCommand(Guid id)
     {
         Id = id;
     }

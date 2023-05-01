@@ -3,9 +3,9 @@
 namespace Application.Features.Off.Command.OffDelete;
 public class OffDeleteCommand:IRequest<bool>
 {
-    public long Id { set; get; }
+    public Guid Id { set; get; }
 
-    public OffDeleteCommand(long id)
+    public OffDeleteCommand(Guid id)
     {
         Id = id;
     }

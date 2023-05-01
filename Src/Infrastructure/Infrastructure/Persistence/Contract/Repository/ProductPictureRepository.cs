@@ -27,14 +27,12 @@ public class ProductPictureRepository : IProductPictureRepository
     public async Task<List<ProductPictureDto>> ProductPictureGetAllAsync(ProductPictureSearchDto productPictureSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.ProductPictures.Include(x => x.Product).AsQueryable();
-        if(productPictureSearchDto.Id>0)query = query.Where(x => x.Id == productPictureSearchDto.Id);
-        if(productPictureSearchDto.Sort>0)query = query.Where(x => x.Sort == productPictureSearchDto.Sort);
+        if(productPictureSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.Id == productPictureSearchDto.Id);
+        if(productPictureSearchDto.Sort !=0)query = query.Where(x => x.Sort == productPictureSearchDto.Sort);
         if (productPictureSearchDto.StartRange > 0 && productPictureSearchDto.EndRange == 0) query = query.Where(x => x.Sort >= productPictureSearchDto.StartRange);
         if (productPictureSearchDto.StartRange == 0 && productPictureSearchDto.EndRange > 0) query = query.Where(x => x.Sort <= productPictureSearchDto.EndRange);
         if (productPictureSearchDto.StartRange > 0 && productPictureSearchDto.EndRange > 0) query = query.Where(x => x.Sort >= productPictureSearchDto.StartRange && x.Sort <= productPictureSearchDto.EndRange);
-        if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
-        if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
-        if(productPictureSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
+        if(productPictureSearchDto.ProductId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.ProductId == productPictureSearchDto.ProductId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<ProductPictureDto>>(result);
     }
@@ -43,7 +41,8 @@ public class ProductPictureRepository : IProductPictureRepository
     #region ProductPictureAddAsync
     public async Task<bool> ProductPictureAddAsync(ProductPictureAddDto productPictureAddDto,CancellationToken cancellationToken)
     {
-        var productPicture = new ProductPicture(productPictureAddDto.PictureTitle, productPictureAddDto.PictureAlt, productPictureAddDto.PictureUrlString, productPictureAddDto.Sort, productPictureAddDto.ProductId);
+        var productPicture = new ProductPicture(productPictureAddDto.PictureTitle, productPictureAddDto.PictureAlt, productPictureAddDto.PictureUrlString,
+            productPictureAddDto.Sort, productPictureAddDto.ProductId);
         await _context.ProductPictures.AddAsync(productPicture,cancellationToken);
         var check = await _context.SaveChangesAsync(cancellationToken);
         if (check > 0)
@@ -55,7 +54,7 @@ public class ProductPictureRepository : IProductPictureRepository
     #endregion
 
     #region ProductPictureGetById
-    public async Task<ProductPicture> ProductPictureGetByIdAsync(long id, CancellationToken cancellationToken)
+    public async Task<ProductPicture> ProductPictureGetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var productPicture = await _context.ProductPictures.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (productPicture == null) throw new BadHttpRequestException(ApplicationMessages.ProductPictureNotFound);
@@ -80,7 +79,7 @@ public class ProductPictureRepository : IProductPictureRepository
     #endregion
 
     #region ProductPictureDelete
-    public async Task<bool> ProductPictureDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ProductPictureDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check=await _context.ProductPictures.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -89,7 +88,7 @@ public class ProductPictureRepository : IProductPictureRepository
     #endregion
 
     #region ProductPictureExistAsync
-    public async Task<bool> ProductPictureExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ProductPictureExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.ProductPictures.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.ProductPictureNotFound);

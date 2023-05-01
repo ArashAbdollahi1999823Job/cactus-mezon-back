@@ -2,9 +2,9 @@
 namespace Application.Features.StoreUserPicture.Command.StoreUserPictureDelete;
 public class StoreUserPictureDeleteCommand:IRequest<bool>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public StoreUserPictureDeleteCommand(long id)
+    public StoreUserPictureDeleteCommand(Guid id)
     {
         Id = id;
     }

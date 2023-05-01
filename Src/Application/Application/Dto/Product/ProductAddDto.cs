@@ -10,11 +10,11 @@ public class ProductAddDto
     public string Summary { get; set; }
     
     
-    public long BrandId { get; set; }
-    public long TypeId { get; set; }
-    public long InventoryId { get; set; }
+    public Guid BrandId { get; set; }
+    public Guid TypeId { get; set; }
+    public Guid InventoryId { get; set; }
 
-    public ProductAddDto(string name, string slug, string description, string metaDescription, decimal price, string summary, long brandId, long typeId, long inventoryId)
+    public ProductAddDto(string name, string slug, string description, string metaDescription, decimal price, string summary, Guid brandId, Guid typeId, Guid inventoryId)
     {
         Name = name;
         Slug = slug;

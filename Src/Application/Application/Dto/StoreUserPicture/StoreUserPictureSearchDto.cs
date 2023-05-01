@@ -2,10 +2,10 @@
 
 public class StoreUserPictureSearchDto
 {
-    public long Id { get; set; } = 0;
+    public Guid Id { get; set; }
     public Guid StoreId { get; set; }
 
-    public StoreUserPictureSearchDto(long id, Guid storeId)
+    public StoreUserPictureSearchDto(Guid id, Guid storeId)
     {
         Id = id;
         StoreId = storeId;

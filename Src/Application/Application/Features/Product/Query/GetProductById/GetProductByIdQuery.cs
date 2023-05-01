@@ -1,7 +1,6 @@
 ﻿#region UsignAndNamespace
 
 using Application.Dto.Product;
-using Application.Dto.ProductDto;
 using MediatR;
 
 namespace Application.Features.Products.Queries.GetProductById;

@@ -3,8 +3,13 @@ using Domain.Entities.InventoryEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.StoreEntity;
 namespace Domain.Entities.ProductEntity;
-public class Product :BaseEntity.BaseEntity
+public class Product
 {
+    public Guid Id { get; set; }
+
+    public bool IsActive { get; set; } = true;
+    public DateTime? LastModified { get; set; }
+    public DateTime CreationDate { get; set; }
     public string Name { get; set; }
     public string Slug { get; set; }
     public string Description { get; set; }
@@ -15,7 +20,7 @@ public class Product :BaseEntity.BaseEntity
     public long Score { get; set; }
     public int Count { get; set; }
     
-    public Product(string name, string slug, string description, string metaDescription, decimal price, string summary, long inventoryId,  long typeId, long? brandId)
+    public Product(string name, string slug, string description, string metaDescription, decimal price, string summary, Guid inventoryId,  Guid typeId, Guid? brandId)
     {
         Name = name;
         Slug = slug;
@@ -27,24 +32,16 @@ public class Product :BaseEntity.BaseEntity
         TypeId = typeId;
         BrandId = brandId;
     }
-    // has one off
     public Off Off { get; set; }
-    public long? OffId { get; set; }
-    // has one inventory
-    public long InventoryId { get; set; }
+    public Guid? OffId { get; set; }
+    public Guid InventoryId { get; set; }
     public Inventory Inventory { get; set; }
-    //has one type
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
     public Type Type { get; set; }
-    //has one brand
-    public long? BrandId { get; set; }
+    public Guid? BrandId { get; set; }
     public Brand Brand { get; set; }
-    //has few pictures
     public List<ProductPicture> ProductPictures { get; set; }
-    //has few comment
     public List<Comment> Comments { get; set; }
-    //has few items
     public List<ProductItem> ProductItems { get; set; }
-    // has few color
     public List<Color> Colors { get; set; }
 }

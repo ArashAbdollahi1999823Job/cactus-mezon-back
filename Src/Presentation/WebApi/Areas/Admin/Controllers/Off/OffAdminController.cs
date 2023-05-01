@@ -34,8 +34,8 @@ namespace WebApi.Areas.Admin.Controllers.Off
         #endregion
 
         #region OffDeleteAsync
-        [HttpDelete("OffDelete/{id:long}")]
-        public async Task<ActionResult<bool>> OffDeleteAsync(long id,CancellationToken cancellationToken)
+        [HttpDelete("OffDelete/{id:guid}")]
+        public async Task<ActionResult<bool>> OffDeleteAsync(Guid id,CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new OffDeleteCommand(id), cancellationToken));
         }

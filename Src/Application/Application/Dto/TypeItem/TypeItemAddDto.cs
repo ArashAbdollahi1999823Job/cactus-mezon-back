@@ -4,9 +4,9 @@ public class TypeItemAddDto
 {
     public string Name { get; set; }
 
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
 
-    public TypeItemAddDto(string name, long typeId)
+    public TypeItemAddDto(string name, Guid typeId)
     {
         Name = name;
         TypeId = typeId;

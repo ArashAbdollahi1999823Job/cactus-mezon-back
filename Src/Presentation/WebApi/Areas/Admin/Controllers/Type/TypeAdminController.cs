@@ -34,8 +34,8 @@ public class TypeAdminController : BaseAdminController
     #endregion
     
     #region TypeDeleteAsync
-    [HttpDelete("TypeDelete/{id:long}")]
-    public async Task<ActionResult<bool>> TypeDeleteAsync([FromRoute] long id, CancellationToken cancellationToken)
+    [HttpDelete("TypeDelete/{id:guid}")]
+    public async Task<ActionResult<bool>> TypeDeleteAsync([FromRoute] Guid id, CancellationToken cancellationToken)
     {
         return Ok(await Mediator.Send(new TypeDeleteCommand(id), cancellationToken));
     }

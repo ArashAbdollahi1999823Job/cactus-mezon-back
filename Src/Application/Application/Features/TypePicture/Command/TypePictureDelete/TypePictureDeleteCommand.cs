@@ -3,9 +3,9 @@ namespace Application.Features.TypePicture.Command.TypePictureDelete;
 
 public class TypePictureDeleteCommand:IRequest<bool>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public TypePictureDeleteCommand(long id)
+    public TypePictureDeleteCommand(Guid id)
     {
         Id = id;
     }

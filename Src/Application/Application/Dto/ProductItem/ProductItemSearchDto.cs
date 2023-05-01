@@ -2,10 +2,10 @@
 
 public class ProductItemSearchDto
 {
-    public long Id { get; set; }
-    public long ProductId { get; set; }
+    public Guid Id { get; set; }
+    public Guid ProductId { get; set; }
 
-    public ProductItemSearchDto(long id, long productId)
+    public ProductItemSearchDto(Guid id, Guid productId)
     {
         Id = id;
         ProductId = productId;

@@ -4,7 +4,7 @@ namespace Application.Dto.Inventory;
 
 public class InventorySearchDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
 
     public Guid StoreId { get; set; }
@@ -12,7 +12,7 @@ public class InventorySearchDto
 
 
     
-    public InventorySearchDto(long id,Guid storeId,string name,ActiveType isActive)
+    public InventorySearchDto(Guid id,Guid storeId,string name,ActiveType isActive)
     {
         StoreId = storeId;
         Id = id;

@@ -34,8 +34,8 @@ public class ProductPictureAdminController : BaseAdminController
     #endregion
 
     #region ProductPictureDeleteAsync
-    [HttpDelete("ProductPictureDelete/{id:long}")]
-    public async Task<ActionResult<bool>> ProductPictureDeleteAsync([FromRoute] long id, CancellationToken cancellationToken)
+    [HttpDelete("ProductPictureDelete/{id:guid}")]
+    public async Task<ActionResult<bool>> ProductPictureDeleteAsync([FromRoute] Guid id, CancellationToken cancellationToken)
     {
         return Ok(await Mediator.Send(new ProductPictureDeleteCommand(id), cancellationToken));
     }

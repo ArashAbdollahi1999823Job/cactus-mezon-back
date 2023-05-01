@@ -7,7 +7,7 @@ public interface ITypeRepository
     public Task<PaginationDto<TypeDto>> TypeGetAllAsync(TypeSearchDto typeSearchDto,CancellationToken cancellationToken);
     public Task<bool> TypeEditAsync(TypeEditDto typeEditDto,CancellationToken cancellationToken);
     public Task<bool> TypeAddAsync(TypeAddDto typeAddDto,CancellationToken cancellationToken);
-    public Task<bool> TypeDeleteAsync(long id, CancellationToken cancellationToken);
-    public Task<bool> TypeExistAsync(long id, CancellationToken cancellationToken);
-    public Task<Type> TypeGetByIdAsync(long id,CancellationToken cancellationToken);
+    public Task<bool> TypeDeleteAsync(Guid id, CancellationToken cancellationToken);
+    public Task<bool> TypeExistAsync(Guid id, CancellationToken cancellationToken);
+    public Task<Type> TypeGetByIdAsync(Guid id,CancellationToken cancellationToken);
 }

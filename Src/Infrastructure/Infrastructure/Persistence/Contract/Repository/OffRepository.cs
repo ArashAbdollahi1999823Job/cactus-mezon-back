@@ -23,7 +23,7 @@ public class OffRepository:IOffRepository
     public async Task<List<OffDto>> OffGetAllAsync(OffSearchDto offSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.Offs.AsQueryable();
-        if (offSearchDto.Id > 0) query = query.Where(x => x.Id ==offSearchDto.Id);
+        if (offSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id ==offSearchDto.Id);
         if (offSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.StoreId ==offSearchDto.StoreId);
 
         var result = await query.ToListAsync(cancellationToken);
@@ -65,7 +65,7 @@ public class OffRepository:IOffRepository
     #endregion
     
     #region OffExistAsync
-    public async Task<bool> OffExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> OffExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Offs.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.OffNotFound);
@@ -74,7 +74,7 @@ public class OffRepository:IOffRepository
     #endregion
     
     #region OffDeleteAsync
-    public async Task<bool> OffDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> OffDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Offs.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
         if (check > 0) return true;

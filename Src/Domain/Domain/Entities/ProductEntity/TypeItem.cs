@@ -2,13 +2,13 @@
 
 public class TypeItem
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
 
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
     public Type Type { get; set; }
 
-    public TypeItem( string name, long typeId)
+    public TypeItem( string name, Guid typeId)
     {
         Name = name;
         TypeId = typeId;

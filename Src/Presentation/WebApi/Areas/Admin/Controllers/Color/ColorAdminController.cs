@@ -25,8 +25,8 @@ public class ColorAdminController : BaseAdminController
     #endregion
 
     #region ColorDeleteAsync
-    [HttpDelete("ColorDelete/{id:long}")]
-    public async Task<ActionResult<bool>> ColorDeleteAsync([FromRoute] long id, CancellationToken cancellationToken)
+    [HttpDelete("ColorDelete/{id:guid}")]
+    public async Task<ActionResult<bool>> ColorDeleteAsync([FromRoute] Guid id, CancellationToken cancellationToken)
     {
         return Ok(await Mediator.Send(new ColorDeleteCommand(id), cancellationToken));
     }

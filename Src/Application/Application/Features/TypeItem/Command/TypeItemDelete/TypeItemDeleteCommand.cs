@@ -4,9 +4,9 @@ namespace Application.Features.TypeItem.Command.TypeItemDelete;
 
 public class TypeItemDeleteCommand:IRequest<bool>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public TypeItemDeleteCommand(long id)
+    public TypeItemDeleteCommand(Guid id)
     {
         Id = id;
     }

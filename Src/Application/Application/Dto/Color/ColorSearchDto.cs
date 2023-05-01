@@ -2,10 +2,10 @@
 
 public class ColorSearchDto
 {
-    public long Id { get; set; }
-    public long ProductId { set; get; }
+    public Guid Id { get; set; }
+    public Guid ProductId { set; get; }
 
-    public ColorSearchDto(long id, long productId)
+    public ColorSearchDto(Guid id, Guid productId)
     {
         Id = id;
         ProductId = productId;

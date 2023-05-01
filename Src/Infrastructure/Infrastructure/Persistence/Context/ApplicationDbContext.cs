@@ -60,10 +60,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        modelBuilder.Entity<Product>().HasQueryFilter(x => x.IsDelete == false);
         modelBuilder.Entity<Type>().HasQueryFilter(x => x.IsDelete == false);
-        modelBuilder.Entity<Brand>().HasQueryFilter(x => x.IsDelete == false);
-        modelBuilder.Entity<ProductPicture>().HasQueryFilter(x => x.IsDelete == false);
         modelBuilder.Entity<Address>().HasQueryFilter(x => x.IsDelete == false);
         modelBuilder.Entity<Off>().HasQueryFilter(x => x.EndDate >DateTime.Now);
         modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims"); 

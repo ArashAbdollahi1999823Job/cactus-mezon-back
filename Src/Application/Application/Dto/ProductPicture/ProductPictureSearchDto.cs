@@ -2,13 +2,13 @@
 
 public class ProductPictureSearchDto
 {
-    public long Id { get; set; } = 0;
-    public long ProductId { get; set; } = 0;
+    public Guid Id { get; set; } 
+    public Guid ProductId { get; set; } 
     public int Sort { get; set; } = 0;
     public int StartRange { get; set; } = 0;
     public int EndRange { get; set; } = 0;
 
-    public ProductPictureSearchDto(long id, long productId, int sort, int startRange, int endRange)
+    public ProductPictureSearchDto(Guid id, Guid productId, int sort, int startRange, int endRange)
     {
         Id = id;
         ProductId = productId;

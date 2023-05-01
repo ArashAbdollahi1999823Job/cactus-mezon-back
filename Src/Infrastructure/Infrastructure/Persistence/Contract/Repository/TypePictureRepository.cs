@@ -26,8 +26,8 @@ public class TypePictureRepository : ITypePictureRepository
     public async Task<List<TypePictureDto>> TypePictureGetAllAsync(TypePictureSearchDto typePictureSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.TypePictures.Include(x => x.Type).AsQueryable();
-        if(typePictureSearchDto.Id>0)query = query.Where(x => x.Id == typePictureSearchDto.Id);
-        if(typePictureSearchDto.TypeId>0)query = query.Where(x => x.TypeId == typePictureSearchDto.TypeId);
+        if(typePictureSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.Id == typePictureSearchDto.Id);
+        if(typePictureSearchDto.TypeId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.TypeId == typePictureSearchDto.TypeId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<TypePictureDto>>(result);
     }
@@ -50,7 +50,7 @@ public class TypePictureRepository : ITypePictureRepository
 
     #region TypePictureGetById
 
-    public async Task<TypePicture> TypePictureGetByIdAsync(long id, CancellationToken cancellationToken)
+    public async Task<TypePicture> TypePictureGetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var typePicture = await _context.TypePictures.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (typePicture == null) throw new BadHttpRequestException(ApplicationMessages.TypePictureNotFound);
@@ -77,7 +77,7 @@ public class TypePictureRepository : ITypePictureRepository
     #endregion
 
     #region TypePictureDelete
-    public async Task<bool> TypePictureDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> TypePictureDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check=await _context.TypePictures.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -86,7 +86,7 @@ public class TypePictureRepository : ITypePictureRepository
     #endregion
 
     #region TypePictureExistAsync
-    public async Task<bool> TypePictureExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> TypePictureExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.TypePictures.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.TypePictureNotFound);

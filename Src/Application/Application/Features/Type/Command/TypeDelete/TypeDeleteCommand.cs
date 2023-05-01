@@ -3,9 +3,9 @@
 namespace Application.Features.Type.Command.TypeDelete;
 public class TypeDeleteCommand:IRequest<bool>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public TypeDeleteCommand(long id)
+    public TypeDeleteCommand(Guid id)
     {
         Id = id;
     }

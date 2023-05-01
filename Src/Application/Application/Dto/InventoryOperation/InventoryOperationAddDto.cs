@@ -9,9 +9,9 @@ public class InventoryOperationAddDto
     public int Count { get; set; }
     public string InventoryOperationType { get; set; }
 
-    public long ProductId { get; set; }
+    public Guid ProductId { get; set; }
 
-    public InventoryOperationAddDto(string description, long? price, int count, string inventoryOperationType, long productId)
+    public InventoryOperationAddDto(string description, long? price, int count, string inventoryOperationType, Guid productId)
     {
         Description = description;
         Price = price;

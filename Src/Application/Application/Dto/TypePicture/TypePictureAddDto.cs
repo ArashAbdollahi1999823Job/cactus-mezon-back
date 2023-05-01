@@ -7,9 +7,9 @@ public class TypePictureAddDto
     public IFormFile PictureUrl { get; set; }
     public string PictureUrlString { get; set; }
     public int Sort { get; set; }
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
 
-    public TypePictureAddDto(string pictureTitle, string pictureAlt, string pictureUrlString, int sort, long typeId)
+    public TypePictureAddDto(string pictureTitle, string pictureAlt, string pictureUrlString, int sort, Guid typeId)
     {
         PictureTitle = pictureTitle;
         PictureAlt = pictureAlt;

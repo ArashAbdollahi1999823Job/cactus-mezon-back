@@ -2,14 +2,17 @@
 
 namespace Domain.Entities.PictureEntity;
 
-public class StorePicture:BaseEntity.BaseEntity
+public class StorePicture
 {
-    #region Properties
+    public Guid Id { get; set; }
+
+    public bool IsActive { get; set; } = true;
+    public DateTime? LastModified { get; set; }
+    public DateTime CreationDate { get; set; }
     public string PictureTitle { get; set; }
     public string PictureAlt { get; set; }
     public string PictureUrl { get; set; }
     public int Sort { get; set; }
-    #endregion
 
     public StorePicture(string pictureTitle, string pictureAlt, string pictureUrl, int sort, Guid storeId)
     {
@@ -20,8 +23,6 @@ public class StorePicture:BaseEntity.BaseEntity
         StoreId = storeId;
     }
 
-    #region Relation
     public Store Store { get; set; }
     public Guid StoreId { get; set; }
-    #endregion
 }

@@ -2,10 +2,10 @@
 
 public class TypePictureSearchDto
 {
-    public long Id { get; set; } = 0;
-    public long TypeId { get; set; } = 0;
+    public Guid Id { get; set; } 
+    public Guid TypeId { get; set; } 
 
-    public TypePictureSearchDto(long id, long typeId)
+    public TypePictureSearchDto(Guid id, Guid typeId)
     {
         Id = id;
         TypeId = typeId;

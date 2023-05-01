@@ -1,7 +1,6 @@
 ﻿using Application.Dto.Base;
 using Application.Dto.Brand;
 using Application.Dto.Product;
-using Application.Dto.ProductDto;
 using Application.Features.Product.Query.ProductGetAll;
 using Application.IContracts.IRepository;
 using MediatR;

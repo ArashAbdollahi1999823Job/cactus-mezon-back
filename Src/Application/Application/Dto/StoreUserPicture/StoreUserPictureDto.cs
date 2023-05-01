@@ -6,7 +6,7 @@ using Domain.Entities.PictureEntity;
 namespace Application.Dto.StoreUserPicture;
 public class StoreUserPictureDto:IMapFrom<StorePicture>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string PictureTitle { get; set; }
     public string PictureAlt { get; set; }
     public string PictureUrl { get; set; }

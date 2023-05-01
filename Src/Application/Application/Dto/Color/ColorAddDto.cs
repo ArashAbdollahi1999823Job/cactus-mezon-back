@@ -4,9 +4,9 @@ public class ColorAddDto
 {
     public string Name { get; set; }
     public string Value { get; set; }
-    public long ProductId { set; get; }
+    public Guid ProductId { set; get; }
 
-    public ColorAddDto(string name, string value, long productId)
+    public ColorAddDto(string name, string value, Guid productId)
     {
         Name = name;
         Value = value;

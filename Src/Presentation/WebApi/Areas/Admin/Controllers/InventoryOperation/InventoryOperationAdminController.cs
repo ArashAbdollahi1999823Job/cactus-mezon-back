@@ -25,18 +25,10 @@ namespace WebApi.Areas.Admin.Controllers.InventoryOperation
             return Ok(await Mediator.Send(inventoryOperationAddCommand, cancellationToken));
         }
         #endregion
-        
-        /*#region InventoryOperationEditAsync
-        [HttpPut("InventoryOperationEdit")]
-        public async Task<ActionResult<InventoryOperationDto>> InventoryOperationEditAsync([FromBody] InventoryOperationEditCommand InventoryOperationEditCommand,CancellationToken cancellationToken)
-        {
-            return Ok(await  Mediator.Send(InventoryOperationEditCommand,cancellationToken));
-        }
-        #endregion*/
-        
+
         #region InventoryOperationDeleteAsync
-        [HttpDelete("InventoryOperationDelete/{id:long}")]
-        public async Task<ActionResult<bool>> InventoryOperationDeleteAsync(long id,CancellationToken cancellationToken)
+        [HttpDelete("InventoryOperationDelete/{id:guid}")]
+        public async Task<ActionResult<bool>> InventoryOperationDeleteAsync(Guid id,CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new InventoryOperationDeleteCommand(id), cancellationToken));
         }

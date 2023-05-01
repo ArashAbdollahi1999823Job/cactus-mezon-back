@@ -5,9 +5,9 @@ namespace Application.Dto.TypeItem;
 
 public class TypeItemDto:IMapFrom<Domain.Entities.ProductEntity.TypeItem>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
 
 
     public void Mapping(Profile profile)

@@ -43,9 +43,9 @@ public class InventoryOperationRepository:IInventoryOperationRepository
 
         if (inventoryOperationSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000")
             query = query.Where(x => x.Product.Inventory.StoreId == inventoryOperationSearchDto.StoreId);
-        if (inventoryOperationSearchDto.Id!=0) query = query.Where(x => x.Id==inventoryOperationSearchDto.Id);
-        if (inventoryOperationSearchDto.ProductId!=0) query = query.Where(x => x.ProductId==inventoryOperationSearchDto.ProductId);
-        if (inventoryOperationSearchDto.InventoryId!=0) query = query.Where(x => x.Product.InventoryId==inventoryOperationSearchDto.InventoryId);
+        if (inventoryOperationSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id==inventoryOperationSearchDto.Id);
+        if (inventoryOperationSearchDto.ProductId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.ProductId==inventoryOperationSearchDto.ProductId);
+        if (inventoryOperationSearchDto.InventoryId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Product.InventoryId==inventoryOperationSearchDto.InventoryId);
         if (inventoryOperationSearchDto.SortType == SortType.Desc) query = query.OrderByDescending(x => x.Id);
         if (inventoryOperationSearchDto.SortType == SortType.Asc) query = query.OrderBy(x => x.Id);
         var count =await query.CountAsync(cancellationToken);
@@ -63,7 +63,7 @@ public class InventoryOperationRepository:IInventoryOperationRepository
     #endregion
     
     #region InventoryOperationDeleteAsync
-    public async Task<bool> InventoryOperationDeleteAsync(long id,CancellationToken cancellationToken)
+    public async Task<bool> InventoryOperationDeleteAsync(Guid id,CancellationToken cancellationToken)
     {
         var check=await _context.InventoryOperations.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -75,8 +75,7 @@ public class InventoryOperationRepository:IInventoryOperationRepository
     public async Task<bool> InventoryOperationAddAsync(InventoryOperationAddDto inventoryOperationAddDto,CancellationToken cancellationToken)
     {
         var inventoryOperation = new InventoryOperation(inventoryOperationAddDto.Description,
-            inventoryOperationAddDto.Price,inventoryOperationAddDto.Count,inventoryOperationAddDto.InventoryOperationType.ToString()
-        ,inventoryOperationAddDto.ProductId);
+            inventoryOperationAddDto.Price,inventoryOperationAddDto.Count,inventoryOperationAddDto.InventoryOperationType.ToString(),inventoryOperationAddDto.ProductId);
          await _context.InventoryOperations.AddAsync(inventoryOperation, cancellationToken);
         var check =await _context.SaveChangesAsync(cancellationToken);
         if (check >0)
@@ -88,7 +87,7 @@ public class InventoryOperationRepository:IInventoryOperationRepository
     #endregion
     
     #region InventoryOperationExistAsync
-    public async Task<bool> InventoryOperationExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> InventoryOperationExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.InventoryOperations.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.InventoryOperationNotFound);

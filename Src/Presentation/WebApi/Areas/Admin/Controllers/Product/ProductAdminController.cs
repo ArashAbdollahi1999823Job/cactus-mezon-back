@@ -35,8 +35,8 @@ namespace WebApi.Areas.Admin.Controllers.Product
         #endregion
 
         #region ProductDeleteAsync
-        [HttpDelete("ProductDelete/{id:long}")]
-        public async Task<ActionResult<bool>> ProductDeleteAsync(long id,CancellationToken cancellationToken)
+        [HttpDelete("ProductDelete/{id:guid}")]
+        public async Task<ActionResult<bool>> ProductDeleteAsync(Guid id,CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new ProductDeleteCommand(id), cancellationToken));
         }

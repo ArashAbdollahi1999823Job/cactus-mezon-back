@@ -25,8 +25,8 @@ public class ColorRepository : IColorRepository
     public async Task<List<ColorDto>> ColorGetAllAsync(ColorSearchDto colorSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.Colors.AsQueryable().AsNoTracking();
-        if(colorSearchDto.Id>0)query = query.Where(x => x.Id == colorSearchDto.Id);
-        if(colorSearchDto.ProductId>0)query = query.Where(x => x.ProductId == colorSearchDto.ProductId);
+        if(colorSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.Id == colorSearchDto.Id);
+        if(colorSearchDto.ProductId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.ProductId == colorSearchDto.ProductId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<ColorDto>>(result);
     }
@@ -47,7 +47,7 @@ public class ColorRepository : IColorRepository
     #endregion
 
     #region ColorGetById
-    public async Task<Color> ColorGetByIdAsync(long id, CancellationToken cancellationToken)
+    public async Task<Color> ColorGetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var color = await _context.Colors.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (color == null) throw new BadHttpRequestException(ApplicationMessages.ColorNotFound);
@@ -57,7 +57,7 @@ public class ColorRepository : IColorRepository
     #endregion
 
     #region ColorDelete
-    public async Task<bool> ColorDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ColorDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check=await _context.Colors.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -66,7 +66,7 @@ public class ColorRepository : IColorRepository
     #endregion
 
     #region ColorExistAsync
-    public async Task<bool> ColorExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ColorExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Colors.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.ColorNotFound);

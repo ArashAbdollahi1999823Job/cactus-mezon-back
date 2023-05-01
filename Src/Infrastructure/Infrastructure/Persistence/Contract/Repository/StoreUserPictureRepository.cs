@@ -24,7 +24,7 @@ public class StoreUserPictureRepository : IStoreUserPictureRepository
     public async Task<List<StoreUserPictureDto>> StoreUserPictureGetAllAsync(StoreUserPictureSearchDto storeUserPictureSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.StorePictures.AsQueryable();
-        if(storeUserPictureSearchDto.Id>0)query = query.Where(x => x.Id == storeUserPictureSearchDto.Id);
+        if(storeUserPictureSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.Id == storeUserPictureSearchDto.Id);
         if(storeUserPictureSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.StoreId == storeUserPictureSearchDto.StoreId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<StoreUserPictureDto>>(result);
@@ -46,7 +46,7 @@ public class StoreUserPictureRepository : IStoreUserPictureRepository
     #endregion
 
     #region StoreUserPictureGetById
-    public async Task<StorePicture> StoreUserPictureGetByIdAsync(long id, CancellationToken cancellationToken)
+    public async Task<StorePicture> StoreUserPictureGetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var storePicture = await _context.StorePictures.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (storePicture == null) throw new BadHttpRequestException(ApplicationMessages.StoreUserPictureNotFound);
@@ -71,7 +71,7 @@ public class StoreUserPictureRepository : IStoreUserPictureRepository
     #endregion
 
     #region StoreUserPictureDelete
-    public async Task<bool> StoreUserPictureDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> StoreUserPictureDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check=await _context.StorePictures.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -80,7 +80,7 @@ public class StoreUserPictureRepository : IStoreUserPictureRepository
     #endregion
 
     #region StoreUserPictureExistAsync
-    public async Task<bool> StoreUserPictureExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> StoreUserPictureExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.StorePictures.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.StoreUserPictureNotFound);

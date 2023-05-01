@@ -37,8 +37,8 @@ namespace WebApi.Areas.Admin.Controllers.Inventory
         #endregion
         
         #region InventoryDeleteAsync
-        [HttpDelete("InventoryDelete/{id:long}")]
-        public async Task<ActionResult<bool>> InventoryDeleteAsync(long id,CancellationToken cancellationToken)
+        [HttpDelete("InventoryDelete/{id:guid}")]
+        public async Task<ActionResult<bool>> InventoryDeleteAsync(Guid id,CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new InventoryDeleteCommand(id), cancellationToken));
         }

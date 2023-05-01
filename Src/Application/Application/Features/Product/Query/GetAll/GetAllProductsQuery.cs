@@ -1,7 +1,6 @@
 ﻿#region UsignAndNamespace
 using Application.Dto.Base;
 using Application.Dto.Product;
-using Application.Dto.ProductDto;
 using Application.IContracts.IBehaviourPipe;
 using MediatR;
 namespace Application.Features.Products.Queries.GetAll;

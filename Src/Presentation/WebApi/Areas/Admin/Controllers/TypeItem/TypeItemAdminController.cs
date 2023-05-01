@@ -25,8 +25,8 @@ public class TypeItemAdminController : BaseAdminController
     #endregion
 
     #region TypeItemDeleteAsync
-    [HttpDelete("TypeItemDelete/{id:long}")]
-    public async Task<ActionResult<bool>> TypeItemDeleteAsync([FromRoute] long id, CancellationToken cancellationToken)
+    [HttpDelete("TypeItemDelete/{id:guid}")]
+    public async Task<ActionResult<bool>> TypeItemDeleteAsync([FromRoute] Guid id, CancellationToken cancellationToken)
     {
         return Ok(await Mediator.Send(new TypeItemDeleteCommand(id), cancellationToken));
     }

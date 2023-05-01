@@ -4,9 +4,9 @@ namespace Application.Features.Color.Command.ColorDelete;
 
 public class ColorDeleteCommand:IRequest<bool>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public ColorDeleteCommand(long id)
+    public ColorDeleteCommand(Guid id)
     {
         Id = id;
     }

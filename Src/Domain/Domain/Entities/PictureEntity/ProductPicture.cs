@@ -1,22 +1,19 @@
-﻿#region UsingAndNamespace
-
-using Domain.Entities.BaseEntity;
-using Domain.Entities.BaseEntity.Command;
-using Domain.Entities.ProductEntity;
-
+﻿using Domain.Entities.ProductEntity;
 namespace Domain.Entities.PictureEntity;
-#endregion
-public class ProductPicture : BaseEntity.BaseEntity
+public class ProductPicture
 {
-    #region Properties
+    public Guid Id { get; set; }
+
+    public bool IsActive { get; set; } = true;
+
+    public DateTime? LastModified { get; set; }
+    public DateTime CreationDate { get; set; }
     public string PictureTitle { get; set; }
     public string PictureAlt { get; set; }
     public string PictureUrl { get; set; }
     public int Sort { get; set; }
 
-    #endregion
-
-    public ProductPicture(string pictureTitle, string pictureAlt, string pictureUrl, int sort, long productId)
+    public ProductPicture(string pictureTitle, string pictureAlt, string pictureUrl, int sort, Guid productId)
     {
         PictureTitle = pictureTitle;
         PictureAlt = pictureAlt;
@@ -25,9 +22,7 @@ public class ProductPicture : BaseEntity.BaseEntity
         ProductId = productId;
     }
 
-    #region Relation
     public Product Product { get; set; }
-    public long ProductId { get; set; }
-    #endregion
+    public Guid ProductId { get; set; }
 }
 

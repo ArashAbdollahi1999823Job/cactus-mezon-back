@@ -2,9 +2,9 @@
 namespace Application.Features.InventoryOperation.Command.InventoryOperationDelete;
 public class InventoryOperationDeleteCommand:IRequest<bool>
 {
-    public InventoryOperationDeleteCommand(long id)
+    public InventoryOperationDeleteCommand(Guid id)
     {
         Id = id;
     }
-    public long Id { get; }
+    public Guid Id { get; }
 }

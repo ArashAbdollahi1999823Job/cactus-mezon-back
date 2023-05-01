@@ -36,8 +36,8 @@ namespace WebApi.Areas.Admin.Controllers.Brand
         #endregion
 
         #region BrandDeleteAsync
-        [HttpDelete("BrandDelete/{id:long}")]
-        public async Task<ActionResult<bool>> BrandDeleteAsync(long id,CancellationToken cancellationToken)
+        [HttpDelete("BrandDelete/{id:guid}")]
+        public async Task<ActionResult<bool>> BrandDeleteAsync(Guid id,CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(new BrandDeleteCommand(id), cancellationToken));
         }

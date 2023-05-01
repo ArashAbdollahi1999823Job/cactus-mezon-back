@@ -3,7 +3,6 @@ using Application.Common.Messages;
 using Application.Dto.Base;
 using Application.Dto.Brand;
 using Application.Dto.Product;
-using Application.Dto.ProductDto;
 using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
@@ -29,7 +28,7 @@ public class BrandRepository:IBrandRepository
     {
         var query = _context.Brands.AsQueryable();
         if (!String.IsNullOrEmpty(brandSearchDto.Name)) query = query.Where(x => x.Name.Contains(brandSearchDto.Name));
-        if (brandSearchDto.Id > 0) query = query.Where(x => x.Id ==brandSearchDto.Id);
+        if (brandSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id ==brandSearchDto.Id);
         var count = await query.CountAsync(cancellationToken);
         if (brandSearchDto.SortType == SortType.Desc)
         {
@@ -77,7 +76,7 @@ public class BrandRepository:IBrandRepository
     #endregion
     
     #region BrandExistAsync
-    public async Task<bool> BrandExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> BrandExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Brands.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.BrandNotFound);
@@ -86,7 +85,7 @@ public class BrandRepository:IBrandRepository
     #endregion
     
     #region BrandDeleteAsync
-    public async Task<bool> BrandDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> BrandDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Brands.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
         if (check > 0) return true;

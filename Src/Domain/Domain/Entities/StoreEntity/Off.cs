@@ -1,7 +1,11 @@
 ﻿using Domain.Entities.ProductEntity;
 namespace Domain.Entities.StoreEntity;
-public class Off:BaseEntity.BaseEntity
+public class Off
 {
+    public Guid Id { get; set; }
+    
+    public DateTime? LastModified { get; set; }
+    public DateTime CreationDate { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public int OffPercent { get; set; }

@@ -1,5 +1,4 @@
 ﻿using Application.Common.Messages;
-using Application.Features.ProductItem.Command.ProductItemDelete;
 using Application.IContracts.IRepository;
 using Domain.Exceptions;
 using MediatR;

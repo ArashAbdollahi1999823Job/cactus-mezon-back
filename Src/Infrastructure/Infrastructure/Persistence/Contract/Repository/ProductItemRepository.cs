@@ -25,8 +25,8 @@ public class ProductItemRepository : IProductItemRepository
     public async Task<List<ProductItemDto>> ProductItemGetAllAsync(ProductItemSearchDto productItemSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.ProductItems.AsQueryable().AsNoTracking();
-        if(productItemSearchDto.Id>0)query = query.Where(x => x.Id == productItemSearchDto.Id);
-        if(productItemSearchDto.ProductId>0)query = query.Where(x => x.ProductId == productItemSearchDto.ProductId);
+        if(productItemSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.Id == productItemSearchDto.Id);
+        if(productItemSearchDto.ProductId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.ProductId == productItemSearchDto.ProductId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<ProductItemDto>>(result);
     }
@@ -47,7 +47,7 @@ public class ProductItemRepository : IProductItemRepository
     #endregion
 
     #region ProductItemGetById
-    public async Task<ProductItem> ProductItemGetByIdAsync(long id, CancellationToken cancellationToken)
+    public async Task<ProductItem> ProductItemGetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var productItem = await _context.ProductItems.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (productItem == null) throw new BadHttpRequestException(ApplicationMessages.ProductItemNotFound);
@@ -57,7 +57,7 @@ public class ProductItemRepository : IProductItemRepository
     #endregion
 
     #region ProductItemDelete
-    public async Task<bool> ProductItemDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ProductItemDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check=await _context.ProductItems.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -66,7 +66,7 @@ public class ProductItemRepository : IProductItemRepository
     #endregion
 
     #region ProductItemExistAsync
-    public async Task<bool> ProductItemExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ProductItemExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.ProductItems.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.ProductItemNotFound);

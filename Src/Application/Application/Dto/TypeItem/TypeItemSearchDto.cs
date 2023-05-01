@@ -2,11 +2,11 @@
 
 public class TypeItemSearchDto
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
 
-    public TypeItemSearchDto(long id, long typeId)
+    public TypeItemSearchDto(Guid id, Guid typeId)
     {
         Id = id;
         TypeId = typeId;

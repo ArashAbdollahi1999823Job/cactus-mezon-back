@@ -34,20 +34,20 @@ public class TypeRepository : ITypeRepository
             if (typeSearchDto.IsActive == ActiveType.Active) query = query.Where(x => x.IsActive == true);
             if (typeSearchDto.IsActive == ActiveType.NotActive) query = query.Where(x => x.IsActive == false);
         }
-        if (typeSearchDto.Id > 0) query = query.Where(x => x.Id ==typeSearchDto.Id);
-        if (typeSearchDto.ParentTypeId != -1)
+        if (typeSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id ==typeSearchDto.Id);
+        if (typeSearchDto.ParentTypeId.ToString() !="00000000-0000-0000-0000-000000000001")
         {
-            if (typeSearchDto.ParentTypeId == 0) query = query.Where(x => x.ParentTypeId == null);
-            if (typeSearchDto.ParentTypeId != 0) query = query.Where(x => x.ParentType.Id==typeSearchDto.ParentTypeId 
+            if (typeSearchDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.ParentTypeId == null);
+            if (typeSearchDto.ParentTypeId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.ParentType.Id==typeSearchDto.ParentTypeId 
                                                                           || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
                                                                           || x.ParentType.ParentType.Id==typeSearchDto.ParentTypeId 
                                                                               || x.ParentType.ParentType.ParentType.Id==typeSearchDto.ParentTypeId );
         }
 
-        if (typeSearchDto.JustParentTypeId != -1)
+        if (typeSearchDto.JustParentTypeId.ToString() !="00000000-0000-0000-0000-000000000001")
         {
-            if (typeSearchDto.ParentTypeId == 0) query = query.Where(x => x.ParentTypeId == null);
-            if (typeSearchDto.ParentTypeId != 0) query = query.Where(x => x.ParentTypeId == typeSearchDto.JustParentTypeId);
+            if (typeSearchDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.ParentTypeId == null);
+            if (typeSearchDto.ParentTypeId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.ParentTypeId == typeSearchDto.JustParentTypeId);
         }
         var count = await query.CountAsync(cancellationToken);
         if (typeSearchDto.SortType == SortType.Desc)
@@ -68,7 +68,7 @@ public class TypeRepository : ITypeRepository
     #region TypeAddAsync
     public async Task<bool> TypeAddAsync(TypeAddDto typeAddDto, CancellationToken cancellationToken)
     {
-        var type = new Type(typeAddDto.Name, typeAddDto.Description, typeAddDto.MetaDescription, typeAddDto.Summary, typeAddDto.ParentTypeId == 0 ? null : typeAddDto.ParentTypeId,typeAddDto.Slug);
+        var type = new Type(typeAddDto.Name, typeAddDto.Description, typeAddDto.MetaDescription, typeAddDto.Summary, typeAddDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000" ? null : typeAddDto.ParentTypeId,typeAddDto.Slug);
         await _context.Types.AddAsync(type, cancellationToken);
         var check = await _context.SaveChangesAsync(cancellationToken);
         if (check > 0) return true;
@@ -90,7 +90,7 @@ public class TypeRepository : ITypeRepository
                     .SetProperty(x=>x.IsDelete,typeEditDto.IsDelete)
                     .SetProperty(x=>x.Slug,typeEditDto.Slug)
                     .SetProperty(x=>x.LastModified,DateTime.Now)
-                    .SetProperty(x=>x.ParentTypeId,typeEditDto.ParentTypeId==0 ? null : typeEditDto.ParentTypeId)
+                    .SetProperty(x=>x.ParentTypeId,typeEditDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000" ? null : typeEditDto.ParentTypeId)
                 , cancellationToken: cancellationToken);
         if (check > 0) return true;
         throw new BadRequestEntityException(ApplicationMessages.TypeFailedEdit);
@@ -98,7 +98,7 @@ public class TypeRepository : ITypeRepository
     #endregion
 
     #region TypeGetByIdAsync
-    public async Task<Type> TypeGetByIdAsync(long id,CancellationToken cancellationToken)
+    public async Task<Type> TypeGetByIdAsync(Guid id,CancellationToken cancellationToken)
     {
         var type = await _context.Types.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
         if (type == null) throw new NotFoundEntityException(ApplicationMessages.TypeNotFound);
@@ -107,7 +107,7 @@ public class TypeRepository : ITypeRepository
     #endregion
 
     #region TypeExistAsync
-    public async Task<bool> TypeExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> TypeExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Types.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.TypeNotFound);
@@ -116,7 +116,7 @@ public class TypeRepository : ITypeRepository
     #endregion
 
     #region TypeDeleteAsync
-    public async Task<bool> TypeDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> TypeDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Types.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
         if (check > 0) return true;

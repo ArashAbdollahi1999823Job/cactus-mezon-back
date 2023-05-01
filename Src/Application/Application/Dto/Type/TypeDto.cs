@@ -3,14 +3,14 @@ using AutoMapper;
 namespace Application.Dto.Type;
 public class TypeDto:IMapFrom<Domain.Entities.ProductEntity.Type>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Slug { get; set; }
     public string Description { get; set; }
     public string MetaDescription { get; set; }
     public string Summary { get; set; }
     public bool IsActive { get; set; }
-    public long? ParentTypeId { get; set; }
+    public Guid? ParentTypeId { get; set; }
     public string?  ParentType { get; set; }
     
     #region MappingTypeDto

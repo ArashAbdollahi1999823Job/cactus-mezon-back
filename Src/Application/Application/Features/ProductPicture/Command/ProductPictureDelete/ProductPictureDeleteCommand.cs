@@ -4,9 +4,9 @@ namespace Application.Features.ProductPicture.Command.ProductPictureDelete;
 
 public class ProductPictureDeleteCommand:IRequest<bool>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
 
-    public ProductPictureDeleteCommand(long id)
+    public ProductPictureDeleteCommand(Guid id)
     {
         Id = id;
     }

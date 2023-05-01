@@ -6,7 +6,7 @@ namespace Application.Dto.InventoryOperation;
 public class InventoryOperationDto:IMapFrom<Domain.Entities.InventoryEntity.InventoryOperation>
 {
 
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string? Description { get; set; }
     public long? Price{ get; set; }
     public int Count { get; set; }
@@ -15,7 +15,7 @@ public class InventoryOperationDto:IMapFrom<Domain.Entities.InventoryEntity.Inve
     public string Inventory { get; set; }
     public string Product { get; set; }
 
-    public long ProductId { get; set; }
+    public Guid ProductId { get; set; }
     
     
     #region MappingInventoryOperationDto

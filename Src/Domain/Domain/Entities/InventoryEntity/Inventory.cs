@@ -1,11 +1,12 @@
-﻿#region UsingAndNamespace
-using Domain.Entities.ProductEntity;
+﻿using Domain.Entities.ProductEntity;
 using Domain.Entities.StoreEntity;
-
 namespace Domain.Entities.InventoryEntity;
-#endregion
-public class Inventory:BaseEntity.BaseEntity
+public class Inventory
 {
+    public Guid Id { get; set; }
+    public bool IsActive { get; set; } = true;
+    public DateTime? LastModified { get; set; }
+    public DateTime CreationDate { get; set; }
     public string Name { get; set; }
 
 

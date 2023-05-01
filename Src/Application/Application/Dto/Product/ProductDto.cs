@@ -8,7 +8,7 @@ namespace Application.Dto.Product;
 
 public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
 {
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Slug { get; set; }
     public string Description { get; set; }
@@ -21,14 +21,14 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
     public string Store { get; set; }
     
     public string Type { get; set; }
-    public long TypeId { get; set; }
+    public Guid TypeId { get; set; }
 
     public string Brand { get; set; }
     public string Inventory { get; set; }
-    public long InventoryId { get; set; }
+    public Guid InventoryId { get; set; }
 
     public OffDto Off { get; set; }
-    public long OffId { get; set; }
+    public Guid OffId { get; set; }
 
     public List<ColorDto> ColorDtos { get; set; }
     public List<ProductItemDto> ProductItemDtos { get; set; }
@@ -46,7 +46,6 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
             .ForMember(x => x.Off, c => c.MapFrom(v => v.Off))
             .ForMember(x => x.ColorDtos, c => c.MapFrom(v => v.Colors))
             .ForMember(x => x.ProductItemDtos, c => c.MapFrom(v => v.ProductItems));
-        
     } 
     #endregion
 }

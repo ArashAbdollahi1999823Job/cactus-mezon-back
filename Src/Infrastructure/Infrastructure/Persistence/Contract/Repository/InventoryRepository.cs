@@ -41,7 +41,7 @@ public class InventoryRepository:IInventoryRepository
         var query = _context.Inventories.AsNoTracking().AsQueryable();
 
         if (!String.IsNullOrEmpty(inventorySearchDto.Name)) query = query.Where(x => x.Name.Contains(inventorySearchDto.Name));
-        if (inventorySearchDto.Id!=0) query = query.Where(x => x.Id==inventorySearchDto.Id);
+        if (inventorySearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id==inventorySearchDto.Id);
         if (inventorySearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.StoreId==inventorySearchDto.StoreId);
         if (inventorySearchDto.IsActive != 0)
         {
@@ -54,7 +54,7 @@ public class InventoryRepository:IInventoryRepository
     #endregion
 
     #region InventoryGetByIdAsync
-    public async Task<Inventory> InventoryGetByIdAsync(long id,CancellationToken cancellationToken)
+    public async Task<Inventory> InventoryGetByIdAsync(Guid id,CancellationToken cancellationToken)
     {
         var inventory = await _context.Inventories.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
         if (inventory == null) throw new NotFoundEntityException(ApplicationMessages.InventoryNotFound);
@@ -63,7 +63,7 @@ public class InventoryRepository:IInventoryRepository
     #endregion
     
     #region InventoryDeleteAsync
-    public async Task<bool> InventoryDeleteAsync(long id,CancellationToken cancellationToken)
+    public async Task<bool> InventoryDeleteAsync(Guid id,CancellationToken cancellationToken)
     {
         var check=await _context.Inventories.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -87,7 +87,7 @@ public class InventoryRepository:IInventoryRepository
     #endregion
     
     #region InventoryExistAsync
-    public async Task<bool> InventoryExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> InventoryExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Inventories.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.InventoryNotFound);

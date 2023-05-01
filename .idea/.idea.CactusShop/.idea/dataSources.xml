@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Mezon" uuid="68ebaa35-6e54-4e68-ad40-e32e08309315">
+    <data-source source="LOCAL" name="mezon" uuid="edae2081-5ce8-4f80-a878-126b84adbcfb">
       <driver-ref>sqlserver.localdb.jb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>

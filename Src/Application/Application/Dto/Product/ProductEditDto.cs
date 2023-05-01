@@ -8,16 +8,16 @@ public class ProductEditDto
     public string MetaDescription { get; set; }
     public decimal Price { get; set; }
     public string Summary { get; set; }
-    public long Id { get; set; }
+    public Guid Id { get; set; }
     public bool IsActive { get; set; }
 
 
-    public long BrandId { get; set; } = 0;
-    public long TypeId { get; set; }
-    public long InventoryId { get; set; }
-    public long OffId { get; set; }
+    public Guid BrandId { get; set; } 
+    public Guid TypeId { get; set; }
+    public Guid InventoryId { get; set; }
+    public Guid OffId { get; set; }
 
-    public ProductEditDto(string name, string slug, string description, string metaDescription, decimal price, string summary, long id, bool isActive, long brandId, long typeId, long inventoryId, long offId)
+    public ProductEditDto(string name, string slug, string description, string metaDescription, decimal price, string summary, Guid id, bool isActive, Guid brandId, Guid typeId, Guid inventoryId, Guid offId)
     {
         Name = name;
         Slug = slug;

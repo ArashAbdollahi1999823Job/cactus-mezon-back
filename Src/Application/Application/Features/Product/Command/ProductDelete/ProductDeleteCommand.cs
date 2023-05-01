@@ -4,9 +4,9 @@ namespace Application.Features.Product.Command.ProductDelete;
 
 public class ProductDeleteCommand:IRequest<bool>
 {
-    public long Id { set; get; }
+    public Guid Id { set; get; }
 
-    public ProductDeleteCommand(long id)
+    public ProductDeleteCommand(Guid id)
     {
         Id = id;
     }

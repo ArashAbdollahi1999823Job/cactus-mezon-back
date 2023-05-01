@@ -25,8 +25,8 @@ public class TypeItemRepository : ITypeItemRepository
     public async Task<List<TypeItemDto>> TypeItemGetAllAsync(TypeItemSearchDto typeItemSearchDto, CancellationToken cancellationToken)
     {
         var query = _context.TypeItems.AsQueryable().AsNoTracking();
-        if(typeItemSearchDto.Id>0)query = query.Where(x => x.Id == typeItemSearchDto.Id);
-        if(typeItemSearchDto.TypeId>0)query = query.Where(x => x.TypeId == typeItemSearchDto.TypeId);
+        if(typeItemSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.Id == typeItemSearchDto.Id);
+        if(typeItemSearchDto.TypeId.ToString() !="00000000-0000-0000-0000-000000000000")query = query.Where(x => x.TypeId == typeItemSearchDto.TypeId);
         var result = await query.ToListAsync(cancellationToken);
         return _mapper.Map<List<TypeItemDto>>(result);
     }
@@ -47,7 +47,7 @@ public class TypeItemRepository : ITypeItemRepository
     #endregion
 
     #region TypeItemGetById
-    public async Task<TypeItem> TypeItemGetByIdAsync(long id, CancellationToken cancellationToken)
+    public async Task<TypeItem> TypeItemGetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
         var typeItem = await _context.TypeItems.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         if (typeItem == null) throw new BadHttpRequestException(ApplicationMessages.TypeItemNotFound);
@@ -57,7 +57,7 @@ public class TypeItemRepository : ITypeItemRepository
     #endregion
 
     #region TypeItemDelete
-    public async Task<bool> TypeItemDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> TypeItemDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check=await _context.TypeItems.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
@@ -66,7 +66,7 @@ public class TypeItemRepository : ITypeItemRepository
     #endregion
 
     #region TypeItemExistAsync
-    public async Task<bool> TypeItemExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> TypeItemExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.TypeItems.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.TypeItemNotFound);

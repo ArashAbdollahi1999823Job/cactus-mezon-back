@@ -25,8 +25,8 @@ public class ProductItemAdminController : BaseAdminController
     #endregion
 
     #region ProductItemDeleteAsync
-    [HttpDelete("ProductItemDelete/{id:long}")]
-    public async Task<ActionResult<bool>> ProductItemDeleteAsync([FromRoute] long id, CancellationToken cancellationToken)
+    [HttpDelete("ProductItemDelete/{id:guid}")]
+    public async Task<ActionResult<bool>> ProductItemDeleteAsync([FromRoute] Guid id, CancellationToken cancellationToken)
     {
         return Ok(await Mediator.Send(new ProductItemDeleteCommand(id), cancellationToken));
     }

@@ -6,7 +6,6 @@ public interface ITypeItemRepository
 {
     public Task<bool> TypeItemAddAsync(TypeItemAddDto typeItemAddDto,CancellationToken cancellationToken);
     public Task<List<TypeItemDto>> TypeItemGetAllAsync(TypeItemSearchDto typeItemSearchDto, CancellationToken cancellationToken);
-    public Task<TypeItem> TypeItemGetByIdAsync(long id, CancellationToken cancellationToken);
-    public Task<bool> TypeItemExistAsync(long id,CancellationToken cancellationToken);
-    public Task<bool> TypeItemDeleteAsync(long id, CancellationToken cancellationToken);
+    public Task<bool> TypeItemExistAsync(Guid id,CancellationToken cancellationToken);
+    public Task<bool> TypeItemDeleteAsync(Guid id, CancellationToken cancellationToken);
 }

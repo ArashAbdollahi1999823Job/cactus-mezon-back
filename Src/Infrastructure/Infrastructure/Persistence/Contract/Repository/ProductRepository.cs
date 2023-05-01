@@ -2,7 +2,6 @@
 using Application.Common.Messages;
 using Application.Dto.Base;
 using Application.Dto.Product;
-using Application.Dto.ProductDto;
 using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
@@ -29,8 +28,8 @@ public class ProductRepository:IProductRepository
         var query = _context.Products.AsQueryable();
         if (!String.IsNullOrEmpty(productSearchDto.Name)) query = query.Where(x => x.Name.Contains(productSearchDto.Name));
         if (!String.IsNullOrEmpty(productSearchDto.Slug)) query = query.Where(x => x.Slug.Contains(productSearchDto.Slug));
-        if (productSearchDto.InventoryId != 0) query = query.Where(x => x.InventoryId == productSearchDto.InventoryId);
-        if (productSearchDto.BrandId != 0) query = query.Where(x => x.BrandId == productSearchDto.BrandId);
+        if (productSearchDto.InventoryId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.InventoryId == productSearchDto.InventoryId);
+        if (productSearchDto.BrandId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.BrandId == productSearchDto.BrandId);
         if (productSearchDto.Off != -1) query = query.Where(x => x.Off.OffPercent >= productSearchDto.Off);
         if (productSearchDto.Price != 0) query = query.Where(x => x.Price == productSearchDto.Price);
         if (productSearchDto.StoreId.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Inventory.StoreId == productSearchDto.StoreId);
@@ -40,10 +39,10 @@ public class ProductRepository:IProductRepository
             if (productSearchDto.IsActive == ActiveType.Active) query = query.Where(x => x.IsActive == true);
             if (productSearchDto.IsActive == ActiveType.NotActive) query = query.Where(x => x.IsActive == false);
         }
-        if (productSearchDto.Id > 0) query = query.Where(x => x.Id ==productSearchDto.Id);
-        if (productSearchDto.TypeId != -1)
+        if (productSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id ==productSearchDto.Id);
+        if (productSearchDto.TypeId.ToString() !="00000000-0000-0000-0000-000000000001")
         {
-            if (productSearchDto.TypeId != 0) query = query
+            if (productSearchDto.TypeId.ToString() !="00000000-0000-0000-0000-000000000000") query = query
                 .Where(x => x.Type.Id == productSearchDto.TypeId
                             ||x.Type.ParentType.Id==productSearchDto.TypeId
                             || x.Type.ParentType.ParentType.Id==productSearchDto.TypeId
@@ -79,7 +78,7 @@ public class ProductRepository:IProductRepository
     {
         var product = new Product(productAddDto.Name,productAddDto.Slug,productAddDto.Description,
             productAddDto.MetaDescription,productAddDto.Price,productAddDto.Summary,productAddDto.InventoryId
-            ,productAddDto.TypeId,productAddDto.BrandId == 0 ? null : productAddDto.BrandId);
+            ,productAddDto.TypeId,productAddDto.BrandId.ToString() =="00000000-0000-0000-0000-000000000000" ? null : productAddDto.BrandId);
         await _context.Products.AddAsync(product, cancellationToken);
         var check =await _context.SaveChangesAsync(cancellationToken);
         if (check >0)
@@ -106,8 +105,9 @@ public class ProductRepository:IProductRepository
                     .SetProperty(x=>x.LastModified,DateTime.Now)
                     .SetProperty(x=>x.TypeId,productEditDto.TypeId)
                     .SetProperty(x=>x.InventoryId,productEditDto.InventoryId)
-                    .SetProperty(x=>x.OffId,productEditDto.OffId ==0 ?null:productEditDto.OffId)
-                    .SetProperty(x=>x.BrandId,productEditDto.BrandId ==0 ? null:productEditDto.BrandId)
+                    .SetProperty(x=>x.BrandId,productEditDto.BrandId.ToString() =="00000000-0000-0000-0000-000000000000" ? null:productEditDto.BrandId)
+                    .SetProperty(x=>x.OffId,productEditDto.OffId.ToString() =="00000000-0000-0000-0000-000000000000" ? null:productEditDto.OffId)
+
                 , cancellationToken: cancellationToken);
         if (check > 0) return true;
         throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
@@ -115,7 +115,7 @@ public class ProductRepository:IProductRepository
     #endregion
     
     #region ProductExistAsync
-    public async Task<bool> ProductExistAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ProductExistAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Products.AsNoTracking().AnyAsync(x => x.Id == id, cancellationToken);
         if (!check) throw new NotFoundEntityException(ApplicationMessages.ProductNotFound);
@@ -124,7 +124,7 @@ public class ProductRepository:IProductRepository
     #endregion
     
     #region ProductDeleteAsync
-    public async Task<bool> ProductDeleteAsync(long id, CancellationToken cancellationToken)
+    public async Task<bool> ProductDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
         var check = await _context.Products.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
         if (check > 0) return true;
@@ -133,7 +133,7 @@ public class ProductRepository:IProductRepository
     #endregion
     
     #region ProductGetByIdAsync
-    public async Task<Product> ProductGetByIdAsync(long id,CancellationToken cancellationToken)
+    public async Task<Product> ProductGetByIdAsync(Guid id,CancellationToken cancellationToken)
     {
         var product = await _context.Products.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id,cancellationToken);
         if (product == null) throw new NotFoundEntityException(ApplicationMessages.ProductNotFound);
@@ -146,7 +146,7 @@ public class ProductRepository:IProductRepository
 
     #region ProductChangeCountAsync
 
-    public async Task<bool> ProductChangeCountAsync(int count, string inventoryOperationType, long productId,
+    public async Task<bool> ProductChangeCountAsync(int count, string inventoryOperationType, Guid productId,
         CancellationToken cancellationToken)
     {
         if (inventoryOperationType == "1" || inventoryOperationType == "4")
