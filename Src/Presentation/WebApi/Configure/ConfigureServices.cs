@@ -6,6 +6,8 @@ using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Contracts.Services;
 using WebApi.Extensions;
+using WebApi.SignalR;
+
 namespace WebApi.Configure;
 public static class ConfigureServices
 {
@@ -21,13 +23,15 @@ public static class ConfigureServices
             options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
             options.JsonSerializerOptions.WriteIndented = true;
         });
+        builder.Services.AddSignalR();
         #region SettingCorsPolicy
         builder.Services.AddCors(x =>
         {
             x.AddPolicy("CorsPolicy", policy =>
             {
                 policy.
-                    WithOrigins(builder.Configuration["FrontUrl:AddressHttp"] ?? string.Empty
+                    AllowCredentials()
+                    .WithOrigins(builder.Configuration["FrontUrl:AddressHttp"] ?? string.Empty
                         , builder.Configuration["FrontUrl:AddressHttps"] ?? string.Empty
                         ,builder.Configuration["FrontAdminUrl:AddressHttp"] ?? string.Empty
                         , builder.Configuration["FrontAdminUrl:AddressHttps"] ?? string.Empty)
@@ -43,6 +47,7 @@ public static class ConfigureServices
         #region ManualServices
         builder.Services.AddTransient<IFileUploader, FileUploader>();
         builder.Services.AddSingleton<ICurrentUserService, CurrentUserService>();
+        builder.Services.AddSingleton<PresenceTracker>();
         builder.Services.AddApplicationService();
         builder.Services.AddInfrastructureService(builder.Configuration);
         #endregion

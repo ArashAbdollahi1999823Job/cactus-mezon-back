@@ -2,6 +2,7 @@
 
 using WebApi.Extensions;
 using WebApi.Middlewares;
+using WebApi.SignalR;
 
 namespace WebApi.Configure;
 #endregion    
@@ -29,6 +30,10 @@ public static class ConfigureMiddleware
             areaName: "User",
             pattern: "Api/{area}/{controller=Home}/{action=Index}/{id?}");
         app.MapControllers();
+        app.UseEndpoints(endpoint =>
+        {
+            endpoint.MapHub<PresenceHub>("hubs/presence");
+        });
         app.UseStaticFiles();
         await app.RunAsync();
         return app;

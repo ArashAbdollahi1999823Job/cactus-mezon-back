@@ -84,7 +84,6 @@ public static class ConfigureServices
                 x.SaveToken = true; 
                 x.TokenValidationParameters = OptionsTokenValidationParameters(configuration);
                 x.Events = JwtOptionsEvents();
-                
             });
         #endregion
         services.AddScoped<IInventoryRepository, InventoryRepository>();
@@ -112,6 +111,18 @@ public static class ConfigureServices
     {
         return new JwtBearerEvents()
         {
+            OnMessageReceived = x =>
+            {
+                var accessToken = x.Request.Query["access_token"];
+                var path = x.HttpContext.Request.Path;
+                if (!String.IsNullOrEmpty(accessToken) && (path.StartsWithSegments("/hubs")))
+                {
+                    x.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            },
+            
+            
             OnAuthenticationFailed = x =>
             {
                 x.NoResult();
