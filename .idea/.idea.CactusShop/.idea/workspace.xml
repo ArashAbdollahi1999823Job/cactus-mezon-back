@@ -6,33 +6,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Message/MessageAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Message/MessageDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IChatRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IMessageRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Connection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Group.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Message.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ChatRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/MessageRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/GroupMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/MessageMapping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/ChatTracker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/CustomUserIdProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/IClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/UserPicture/UserPictureAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/UserPicture/UserPictureDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/UserPicture/UserPictureSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/UserPicture/Command/UserPictureAdd/UserPictureAddCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/UserPicture/Command/UserPictureAdd/UserPictureAddCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/UserPicture/Command/UserPictureDelete/UserPictureCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/UserPicture/Command/UserPictureDelete/UserPictureDeleteCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/UserPicture/Query/UserPictureGetAll/UserPictureGetAllQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/UserPicture/Query/UserPictureGetAll/UserPictureGetAllQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserPictureRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserPictureRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/UserPicture/UserPictureAdminController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/User/Query/UserGetAll/UserGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/User/Query/UserGetAll/UserGetAllQueryHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/PictureEntity/UserPicture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/PictureEntity/UserPicture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/MessageHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/ChatHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceTracker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +36,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/819fc499cd9f4377b115fbbaf7b47b3e708b0/07/68d8c2ee/Hub.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -137,7 +133,7 @@
       <workItem from="1683318036075" duration="24703000" />
       <workItem from="1683453082052" duration="34065000" />
       <workItem from="1683557213563" duration="4296000" />
-      <workItem from="1683564207734" duration="4416000" />
+      <workItem from="1683564207734" duration="14565000" />
     </task>
     <servers />
   </component>

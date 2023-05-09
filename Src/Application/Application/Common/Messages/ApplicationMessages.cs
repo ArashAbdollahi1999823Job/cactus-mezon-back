@@ -104,6 +104,16 @@ public static class ApplicationMessages
     public const string TypePictureFailedDeleteOnHandle = "عکس دسته بندی حذف نشد!HandleError";
     #endregion
     
+    #region UserPicture
+    public const string UserPictureFailedEdit = "ادیت عکس کاربر انجام نشد !";
+    public const string UserPictureFailedEditOnHandle = "ادیت عکس کاربر انجام نشد ! HandleError";
+    public const string UserPictureNotFound = "عکس کاربر بندی یافت نشد!";
+    public const string UserPictureFailedAdd = "عکس کاربر بندی اضاف  نشد!";
+    public const string UserPictureFailedAddOnHandle = "عکس کاربر بندی اضاف نشد!";
+    public const string UserPictureFailedDelete = "عکس کاربر بندی حذف نشد!";
+    public const string UserPictureFailedDeleteOnHandle = "عکس کاربر بندی حذف نشد!HandleError";
+    #endregion
+    
     #region Color
     public const string ColorFailedEdit = "ادیت رنگ انجام نشد !";
     public const string ColorFailedEditOnHandle = "ادیت رنگ انجان نشد ! HandleError";

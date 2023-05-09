@@ -37,6 +37,7 @@ public class UserGetAllQueryHandler : IRequestHandler<UserGetAllQuery, Paginatio
             {
                 var ali = await _userManager
                     .Users
+                    .Include(x=>x.UserPicture)
                     .Include(x => x.UserRoles)
                     .ThenInclude(x => x.Role)
                     .AsNoTracking()
@@ -68,7 +69,9 @@ public class UserGetAllQueryHandler : IRequestHandler<UserGetAllQuery, Paginatio
         #endregion
         
         #region GetUserWithoutRole
-        List<Domain.Entities.IdentityEntity.User> query2 =await _userManager.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).ToListAsync(cancellationToken);
+        List<Domain.Entities.IdentityEntity.User> query2 =await _userManager.Users
+            .Include(x=>x.UserPicture)            
+            .Include(x => x.UserRoles).ThenInclude(x => x.Role).ToListAsync(cancellationToken);
         if (!String.IsNullOrWhiteSpace(req.SearchPhoneNumber))
             query2 = query2.Where(x => x.PhoneNumber.Contains(req.SearchPhoneNumber)).ToList();
         if (!String.IsNullOrWhiteSpace(req.SearchUserName))

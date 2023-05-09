@@ -44,6 +44,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     public DbSet<ProductPicture> ProductPictures => Set<ProductPicture>();
     public DbSet<StorePicture> StorePictures => Set<StorePicture>();
     public DbSet<TypePicture> TypePictures => Set<TypePicture>();
+    public DbSet<UserPicture> UserPictures => Set<UserPicture>();
 
     #endregion
 

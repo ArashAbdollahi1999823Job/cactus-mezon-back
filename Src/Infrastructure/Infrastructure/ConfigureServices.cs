@@ -101,6 +101,7 @@ public static class ConfigureServices
         services.AddScoped<ITypeItemRepository, TypeItemRepository>();
         services.AddScoped<IProductItemRepository, ProductItemRepository>();
         services.AddScoped<ITypePictureRepository, TypePictureRepository>();
+        services.AddScoped<IUserPictureRepository, UserPictureRepository>();
         services.AddScoped<IColorRepository, ColorRepository>();
         services.AddScoped<IProductPictureRepository, ProductPictureRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
