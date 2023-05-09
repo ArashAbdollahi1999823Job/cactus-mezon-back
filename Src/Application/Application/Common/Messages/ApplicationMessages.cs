@@ -47,6 +47,14 @@ public static class ApplicationMessages
     public const string InventoryFailedEdit = "انبار ادیت نشد!";
     public const string InventoryFailedDeleteOnHandle = "انبار ادیت نشد!HendleError";
     #endregion
+    
+    #region Message
+    public const string MessageNotFound = "انبار پیدا نشد!";
+    public const string MessageAddFailed = "پیام ارسال نشد!";
+    public const string MessageFailedDelete = "انبار حذف نشد!";
+    public const string MessageFailedEdit = "انبار ادیت نشد!";
+    public const string MessageFailedDeleteOnHandle = "انبار ادیت نشد!HendleError";
+    #endregion
 
     #region StoreUser
     public const string StoreUserFailedEdit = "ادیت مغازه انجام نشد!";

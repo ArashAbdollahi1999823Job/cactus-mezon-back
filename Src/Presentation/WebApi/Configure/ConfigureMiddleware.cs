@@ -33,6 +33,7 @@ public static class ConfigureMiddleware
         app.UseEndpoints(endpoint =>
         {
             endpoint.MapHub<PresenceHub>("hubs/presence");
+            endpoint.MapHub<ChatHub>("hubs/chat");
         });
         app.UseStaticFiles();
         await app.RunAsync();

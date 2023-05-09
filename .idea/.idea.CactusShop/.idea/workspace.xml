@@ -6,20 +6,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/User/UserUserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/MessageHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceTracker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Message/MessageAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Message/MessageDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IChatRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IMessageRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Connection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Group.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Message.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ChatRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/MessageRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/GroupMapping.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/MessageMapping.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/ChatTracker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/CustomUserIdProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/IClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/MessageHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/ChatHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/PresenceTracker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/819fc499cd9f4377b115fbbaf7b47b3e708b0/07/68d8c2ee/Hub.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,27 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;HotReloadSettingsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\Arash\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Arash\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Arash\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Arash\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Arash\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Arash\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: IIS Express">
     <configuration name="WebApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" />
@@ -110,7 +133,11 @@
       <workItem from="1681845772795" duration="235000" />
       <workItem from="1681882048397" duration="9401000" />
       <workItem from="1681974835833" duration="6134000" />
-      <workItem from="1682359513903" duration="27571000" />
+      <workItem from="1682359513903" duration="93964000" />
+      <workItem from="1683318036075" duration="24703000" />
+      <workItem from="1683453082052" duration="34065000" />
+      <workItem from="1683557213563" duration="4296000" />
+      <workItem from="1683564207734" duration="4416000" />
     </task>
     <servers />
   </component>
@@ -139,5 +166,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
+using Domain.Entities.ChatEntity;
 using Domain.Entities.IdentityEntity;
 using Domain.Entities.InventoryEntity;
+using Domain.Entities.MessageEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.ProductEntity;
 using Domain.Entities.StoreEntity;
@@ -53,6 +55,12 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     #region Inventory
     public DbSet<Inventory> Inventories { get; set; }
     public DbSet<InventoryOperation> InventoryOperations { get; set; }
+    #endregion
+
+    #region Message
+    public DbSet<Message> Messages { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<Connection> Connections { get; set; }
     #endregion
 
     #region OnModelCreating

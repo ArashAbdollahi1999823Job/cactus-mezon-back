@@ -4,6 +4,7 @@ using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230504110131_stringUserIdInConnection")]
+    partial class stringUserIdInConnection
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,7 +34,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("ConnectionId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("GroupId")
+                    b.Property<Guid?>("GroupId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserId")
@@ -55,20 +58,10 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AskerId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ResponderId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("AskerId");
-
-                    b.HasIndex("ResponderId");
 
                     b.ToTable("Groups");
                 });
@@ -348,12 +341,6 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AskerId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("AskerPhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
@@ -366,17 +353,23 @@ namespace Infrastructure.Migrations
                     b.Property<string>("PictureUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ResponderId")
+                    b.Property<string>("ReceiverId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("ResponderPhoneNumber")
+                    b.Property<string>("ReceiverPhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SenderPhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AskerId");
+                    b.HasIndex("ReceiverId");
 
-                    b.HasIndex("ResponderId");
+                    b.HasIndex("SenderId");
 
                     b.ToTable("Messages");
                 });
@@ -900,34 +893,15 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.ChatEntity.Connection", b =>
                 {
-                    b.HasOne("Domain.Entities.ChatEntity.Group", "Group")
+                    b.HasOne("Domain.Entities.ChatEntity.Group", null)
                         .WithMany("Connections")
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GroupId");
 
                     b.HasOne("Domain.Entities.IdentityEntity.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
 
-                    b.Navigation("Group");
-
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Domain.Entities.ChatEntity.Group", b =>
-                {
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "Asker")
-                        .WithMany("GroupAsker")
-                        .HasForeignKey("AskerId");
-
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "Responder")
-                        .WithMany("GroupResponder")
-                        .HasForeignKey("ResponderId");
-
-                    b.Navigation("Asker");
-
-                    b.Navigation("Responder");
                 });
 
             modelBuilder.Entity("Domain.Entities.CommentEntity.Comment", b =>
@@ -1005,17 +979,17 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.MessageEntity.Message", b =>
                 {
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "Asker")
-                        .WithMany("MessagesSent")
-                        .HasForeignKey("AskerId");
-
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "Responder")
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "Receiver")
                         .WithMany("MessagesReceived")
-                        .HasForeignKey("ResponderId");
+                        .HasForeignKey("ReceiverId");
 
-                    b.Navigation("Asker");
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "Sender")
+                        .WithMany("MessagesSent")
+                        .HasForeignKey("SenderId");
 
-                    b.Navigation("Responder");
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.ProductPicture", b =>
@@ -1193,10 +1167,6 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.IdentityEntity.User", b =>
                 {
                     b.Navigation("Address");
-
-                    b.Navigation("GroupAsker");
-
-                    b.Navigation("GroupResponder");
 
                     b.Navigation("MessagesReceived");
 

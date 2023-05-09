@@ -48,6 +48,7 @@ public static class ConfigureServices
         builder.Services.AddTransient<IFileUploader, FileUploader>();
         builder.Services.AddSingleton<ICurrentUserService, CurrentUserService>();
         builder.Services.AddSingleton<PresenceTracker>();
+        builder.Services.AddSingleton<ChatTracker>();
         builder.Services.AddApplicationService();
         builder.Services.AddInfrastructureService(builder.Configuration);
         #endregion
