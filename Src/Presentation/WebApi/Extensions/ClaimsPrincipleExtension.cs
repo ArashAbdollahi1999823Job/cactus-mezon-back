@@ -1,9 +1,5 @@
-﻿#region UsingAndNamespace
-
-using System.Security.Claims;
-
+﻿using System.Security.Claims;
 namespace WebApi.Extensions;
-#endregion
 public static class ClaimsPrincipleExtension
 {
     public static string? GetUserId(this ClaimsPrincipal principal)

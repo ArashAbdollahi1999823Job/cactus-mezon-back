@@ -31,6 +31,7 @@ public class UserEditCommandHandler : IRequestHandler<UserEditCommand, bool>
         if (req.Password != null) user.Password = req.Password;
         if (req.PhoneNumber != null) user.PhoneNumber = req.PhoneNumber;
         if (req.Username != null) user.UserName = req.Username;
+        if (req.Description != null) user.Description = req.Description;
         var check = await _userManager.UpdateAsync(user);
         if (check.Succeeded) return true;
         throw new BadRequestEntityException(ApplicationMessages.UserFailedEdit);

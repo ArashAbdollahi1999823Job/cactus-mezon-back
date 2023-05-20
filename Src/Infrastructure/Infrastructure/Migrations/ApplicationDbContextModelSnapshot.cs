@@ -73,6 +73,53 @@ namespace Infrastructure.Migrations
                     b.ToTable("Groups");
                 });
 
+            modelBuilder.Entity("Domain.Entities.ChatEntity.Message", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AskerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AskerPhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("GroupId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PictureUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ResponderId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ResponderPhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AskerId");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("ResponderId");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("Domain.Entities.CommentEntity.Comment", b =>
                 {
                     b.Property<long>("Id")
@@ -343,45 +390,6 @@ namespace Infrastructure.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("InventoryOperations");
-                });
-
-            modelBuilder.Entity("Domain.Entities.MessageEntity.Message", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("AskerId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("AskerPhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsRead")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PictureUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ResponderId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ResponderPhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AskerId");
-
-                    b.HasIndex("ResponderId");
-
-                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.ProductPicture", b =>
@@ -954,6 +962,28 @@ namespace Infrastructure.Migrations
                     b.Navigation("Responder");
                 });
 
+            modelBuilder.Entity("Domain.Entities.ChatEntity.Message", b =>
+                {
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "Asker")
+                        .WithMany("MessagesSent")
+                        .HasForeignKey("AskerId");
+
+                    b.HasOne("Domain.Entities.ChatEntity.Group", "Group")
+                        .WithMany("Messages")
+                        .HasForeignKey("GroupId")
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "Responder")
+                        .WithMany("MessagesReceived")
+                        .HasForeignKey("ResponderId");
+
+                    b.Navigation("Asker");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Responder");
+                });
+
             modelBuilder.Entity("Domain.Entities.CommentEntity.Comment", b =>
                 {
                     b.HasOne("Domain.Entities.ProductEntity.Product", "Product")
@@ -1025,21 +1055,6 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("ProductId");
 
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Domain.Entities.MessageEntity.Message", b =>
-                {
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "Asker")
-                        .WithMany("MessagesSent")
-                        .HasForeignKey("AskerId");
-
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "Responder")
-                        .WithMany("MessagesReceived")
-                        .HasForeignKey("ResponderId");
-
-                    b.Navigation("Asker");
-
-                    b.Navigation("Responder");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.ProductPicture", b =>
@@ -1216,6 +1231,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.ChatEntity.Group", b =>
                 {
                     b.Navigation("Connections");
+
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("Domain.Entities.IdentityEntity.Role", b =>

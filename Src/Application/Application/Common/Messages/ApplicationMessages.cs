@@ -93,6 +93,24 @@ public static class ApplicationMessages
     public const string TypeFailedAdd = "دسته اضافه نشد!";
     public const string TypeNotFound = "دسته یافت نشد!";
     #endregion
+    
+    #region Connection
+    public const string ConnectionFailedEdit = "حذف اتصال انجام نشد !";
+    public const string ConnectionFailedEditOnHandle = "حذف اتصال انجام نشد ! HandleError";
+    public const string ConnectionFailedDelete = "حذف اتصال انجام نشد !";
+    public const string ConnectionFailedDeleteOnHandle = "حذف اتصال انجام نشد! HandleError";
+    public const string ConnectionFailedAdd = "اتصال اضافه نشد!";
+    public const string ConnectionNotFound = "اتصال یافت نشد!";
+    #endregion
+    
+    #region Group
+    public const string GroupFailedEdit = "حذف گروه انجام نشد !";
+    public const string GroupFailedEditOnHandle = "حذف گروه انجام نشد ! HandleError";
+    public const string GroupFailedDelete = "حذف گروه انجام نشد !";
+    public const string GroupFailedDeleteOnHandle = "حذف گروه انجام نشد! HandleError";
+    public const string GroupFailedAdd = "گروه اضافه نشد!";
+    public const string GroupNotFound = "گروه یافت نشد!";
+    #endregion
 
     #region TypePicture
     public const string TypePictureFailedEdit = "ادیت عکس دسته انجام نشد !";

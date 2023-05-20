@@ -1,9 +1,9 @@
 ﻿namespace WebApi.SignalR;
-
 public class ChatTracker
 {
     private readonly Dictionary<string, List<string>?> _onlineUsersInChat = new Dictionary<string, List<string>?>();
 
+    #region Connected
     public Task UserConnected(string phoneNumber, string connectionId)
     {
         lock (_onlineUsersInChat)
@@ -20,7 +20,9 @@ public class ChatTracker
 
         return Task.CompletedTask;
     }
+    #endregion
 
+    #region Disconnected
     public Task UserDisconnected(string phoneNumber, string connectionId)
     {
         lock (_onlineUsersInChat)
@@ -39,7 +41,9 @@ public class ChatTracker
 
         return Task.CompletedTask;
     }
+    #endregion
 
+    #region GetUserOnlineInChat
     public Task<string[]> GetOnlineUserInChat()
     {
         string[] userOnline;
@@ -48,15 +52,17 @@ public class ChatTracker
                 _onlineUsersInChat.OrderBy(x => x.Key).Select(x => x.Key).ToArray();
         return Task.FromResult(userOnline);
     }
+    #endregion
 
-    public Task<List<string>?> GetOnlineUserInChatEntire(string userResponderPhoneNumber)
+    #region GetConnectionsOnlineUserInChat
+    public Task<List<string>?> GetConnectionsOnlineUserInChat(string userResponderPhoneNumber)
     {
         lock (_onlineUsersInChat)
         {
-            List<string>? connection;
+            List<string>? connection=new List<string>();
             _onlineUsersInChat.TryGetValue(userResponderPhoneNumber,out connection );
             return Task.FromResult(connection);
         }
     }
-
+    #endregion
 }

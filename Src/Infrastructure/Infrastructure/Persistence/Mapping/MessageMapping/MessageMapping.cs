@@ -1,4 +1,4 @@
-﻿using Domain.Entities.MessageEntity;
+﻿using Domain.Entities.ChatEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -18,6 +18,11 @@ public class MessageMapping:IEntityTypeConfiguration<Message>
         builder.HasOne(x => x.Responder)
             .WithMany(x => x.MessagesReceived)
             .HasForeignKey(x=>x.ResponderId)
+            .OnDelete(DeleteBehavior.ClientSetNull);
+        
+        builder.HasOne(x => x.Group)
+            .WithMany(x => x.Messages)
+            .HasForeignKey(x=>x.GroupId)
             .OnDelete(DeleteBehavior.ClientSetNull);
     }
 }

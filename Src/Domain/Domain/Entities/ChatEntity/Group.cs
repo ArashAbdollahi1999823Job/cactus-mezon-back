@@ -15,6 +15,7 @@ public class Group
     public User Asker { get; set; }
 
     public ICollection<Connection> Connections { get; set; }
+    public ICollection<Message> Messages { get; set; }
 
     public Group( string name, string responderId, string askerId)
     {

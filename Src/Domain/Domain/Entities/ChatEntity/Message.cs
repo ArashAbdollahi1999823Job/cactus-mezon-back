@@ -1,6 +1,5 @@
 ﻿using Domain.Entities.IdentityEntity;
-
-namespace Domain.Entities.MessageEntity;
+namespace Domain.Entities.ChatEntity;
 
 public class Message
 {
@@ -11,15 +10,18 @@ public class Message
     public string Content { get; set; }
     public string PictureUrl { get; set; }
     public DateTime CreationDate { get; set; }
+    public string GroupName { get; set; }
     
     
     public string AskerId { get; set; }
     public User Asker { get; set; }
     public string ResponderId { get; set; }
     public User Responder { get; set; }
+    
+    public Guid GroupId { get; set; }
+    public Group Group { get; set; }
 
-    public Message( string askerPhoneNumber, string responderPhoneNumber, string content, string pictureUrl,
- string askerId, string responderId)
+    public Message( string askerPhoneNumber, string responderPhoneNumber, string content, string pictureUrl, string askerId, string responderId, Guid groupId, string groupName)
     {
         IsRead = false;
         AskerPhoneNumber = askerPhoneNumber;
@@ -29,5 +31,7 @@ public class Message
         CreationDate = DateTime.Now;
         AskerId = askerId;
         ResponderId = responderId;
+        GroupId = groupId;
+        GroupName = groupName;
     }
 }

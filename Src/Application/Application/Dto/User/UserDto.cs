@@ -10,6 +10,8 @@ public class UserDto : IMapFrom<Domain.Entities.IdentityEntity.User>
     public string Id { get; set; }
     public bool PhoneNumberConfirmed { get; set; }
     public string Password { get; set; }
+    public string Description { get; set; }
+
     public UserPictureDto UserPictureDto { set; get; }
 
 

@@ -2,7 +2,6 @@
 using Domain.Entities.ChatEntity;
 using Domain.Entities.IdentityEntity;
 using Domain.Entities.InventoryEntity;
-using Domain.Entities.MessageEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.ProductEntity;
 using Domain.Entities.StoreEntity;

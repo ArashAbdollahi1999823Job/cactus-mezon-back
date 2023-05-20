@@ -26,6 +26,7 @@ public class UserAddCommandHandler:IRequestHandler<UserAddCommand,bool>
            Password = req.Password,
            PhoneNumberConfirmed = req.PhoneNumberConfirmed,
            UserName = req.Username,
+           Description = req.Description
        };
        var checkAdd = await _userManager.CreateAsync(newUser,req.Password);
 

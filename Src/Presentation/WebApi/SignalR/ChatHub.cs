@@ -1,29 +1,45 @@
-﻿using Application.Dto.Message;
-using Application.Dto.User;
-using Application.IContracts.IRepository;
-using Domain.Entities.ChatEntity;
-using Domain.Entities.IdentityEntity;
-using Domain.Entities.MessageEntity;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.SignalR;
+using WebApi.Contracts.IRepository;
 using WebApi.Extensions;
-
 namespace WebApi.SignalR;
-
 public class ChatHub : Hub<IClient>
 {
-    #region Properties
+    #region CtorAndInjection
+    private readonly IConnectionRepository _connectionRepository;
+    private readonly ChatTracker _chatTracker;
+    public ChatHub(ChatTracker chatTracker, IConnectionRepository connectionRepository)
+    {
+        _chatTracker = chatTracker;
+        _connectionRepository = connectionRepository;
+    }
+    #endregion
+ 
+    #region Connected
+    public override async Task OnConnectedAsync()
+    {
+        await _chatTracker.UserConnected(Context.User.GetPhoneNumber(), Context.ConnectionId);
+    }
+    #endregion
 
+    #region Disconnected
+    public override async Task OnDisconnectedAsync(Exception? exception)
+    {
+        await _connectionRepository.ConnectionDeleteAsync(Context.ConnectionId);
+        await _chatTracker.UserDisconnected(Context.User.GetPhoneNumber(), Context.ConnectionId);
+        await base.OnDisconnectedAsync(exception);
+    }
+    #endregion
+    
+    
+    
+    /*#region Properties
     private string GroupName;
     private User UserAsker;
     private User UserResponder;
     private Connection Connection;
     private string ConnectionId;
     private Group Group;
-
     #endregion
-
     #region CtorAndInjection
 
     private readonly IChatRepository _chatRepository;
@@ -173,18 +189,18 @@ public class ChatHub : Hub<IClient>
     private async Task CreateGroupTool(string userResponderId, string userAskerId)
     {
         var groupExist = await _chatRepository.GroupExistAsync(GroupName);
-        switch (groupExist)
-        {
-            case true:
-                Group = await _chatRepository.GroupGetAsync(GroupName);
-                await CreateConnectionTool();
-                return;
-            case false:
-                Group = new Group(GroupName, userResponderId, userAskerId);
-                await _chatRepository.GroupAddAsync(Group);
-                await CreateConnectionTool();
-                break;
-        }
+            switch (groupExist)
+            {
+                case true:
+                    Group = await _chatRepository.GroupGetAsync(GroupName);
+                    await CreateConnectionTool();
+                    return;
+                case false:
+                    Group = new Group(GroupName, userResponderId, userAskerId);
+                    await _chatRepository.GroupAddAsync(Group);
+                    await CreateConnectionTool();
+                    break;
+            }
     }
 
     private static string? CreateGroupName(string userAskerPhoneNumber, string userResponderPhoneNumber)
@@ -195,5 +211,7 @@ public class ChatHub : Hub<IClient>
             : $"{userResponderPhoneNumber}-{userAskerPhoneNumber}";
     }
 
-    #endregion
+    #endregion*/
+    
+    
 }

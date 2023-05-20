@@ -1,14 +1,10 @@
 ﻿using Application.Common.Messages;
 using Application.Dto.ProductPicture;
-using Application.Dto.TypePicture;
-using Application.Features.TypePicture.Command.TypePictureAdd;
 using Application.IContracts.IRepository;
 using Application.IContracts.IServices;
 using Domain.Exceptions;
 using MediatR;
-
 namespace Application.Features.ProductPicture.Command.ProductPictureAdd;
-
 public class ProductPictureAddCommandHandler : IRequestHandler<ProductPictureAddCommand, bool>
 {
     #region CtorAndInjection
@@ -23,8 +19,6 @@ public class ProductPictureAddCommandHandler : IRequestHandler<ProductPictureAdd
         _fileUploader = fileUploader;
     }
     #endregion
-
-
     public async Task<bool> Handle(ProductPictureAddCommand req, CancellationToken cancellationToken)
     {
         string productName = _productRepository.ProductGetByIdAsync(req.ProductId, cancellationToken).Result.Name;

@@ -109,5 +109,13 @@ namespace Application.Common.Helpers
         {
             return $"{date.Year:0000}-{date.Month:00}-{date.Day:00}-{date.Hour:00}-{date.Minute:00}-{date.Second:00}";
         }
+        
+        public static string CreateGroupName(string userAskerPhoneNumber, string userResponderPhoneNumber)
+        {
+            var compare = string.CompareOrdinal(userAskerPhoneNumber, userResponderPhoneNumber) < 0;
+            return compare
+                ? $"{userAskerPhoneNumber}-{userResponderPhoneNumber}"
+                : $"{userResponderPhoneNumber}-{userAskerPhoneNumber}";
+        }
     }
 }

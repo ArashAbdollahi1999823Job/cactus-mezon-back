@@ -1,8 +1,10 @@
-﻿using Application.Dto.Message;
+﻿using Application.Dto.Chat.Message;
+
 namespace WebApi.SignalR;
 
 public interface IClient
 {
+    Task UpdateMessage();
     Task SetGroupName(string? groupName);
 
     Task ShowNewMessage(MessageDto messageDto);

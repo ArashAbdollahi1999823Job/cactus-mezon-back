@@ -66,7 +66,8 @@ public class ProductRepository:IProductRepository
             .Include(x=>x.Colors)
             .Include(x=>x.ProductItems)
             .Include(x=>x.Inventory)
-            .ThenInclude(x=>x.Store);
+            .ThenInclude(x=>x.Store)
+            .ThenInclude(x=>x.User);
         var result = await query.Skip((productSearchDto.PageIndex - 1) * productSearchDto.PageSize).Take(productSearchDto.PageSize).ToListAsync(cancellationToken);
         var data = _mapper.Map<List<ProductDto>>(result);
         return new PaginationDto<ProductDto>(productSearchDto.PageIndex, productSearchDto.PageSize, count, data);

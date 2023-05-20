@@ -1,10 +1,6 @@
-﻿#region UsingAndNamespace
-
-using Application.IContracts.IServices;
+﻿using Application.IContracts.IServices;
 using WebApi.Extensions;
-
 namespace WebApi.Contracts.Services;
-#endregion
 public class CurrentUserService:ICurrentUserService
 {
     #region CtorAndInjection

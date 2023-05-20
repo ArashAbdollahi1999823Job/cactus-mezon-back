@@ -1,8 +1,7 @@
 ﻿using Application.Common.Messages;
-using Application.Dto.Message;
 using Application.IContracts.IRepository;
 using AutoMapper;
-using Domain.Entities.MessageEntity;
+using Domain.Entities.ChatEntity;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +10,7 @@ namespace Infrastructure.Persistence.Contract.Repository;
 
 public class MessageRepository : IMessageRepository
 {
-    #region CtorAndInjection
+    /*#region CtorAndInjection
 
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
@@ -46,15 +45,5 @@ public class MessageRepository : IMessageRepository
         return _mapper.Map<List<Message>, List<MessageDto>>(query);
     }
 
-    public async Task TurnMessagesToRead(List<Message> messages, string askerPhoneNumber)
-    {
-        var messagesMe = messages.Where(x => x.IsRead == false && x.ResponderPhoneNumber == askerPhoneNumber)
-            .ToList();
-        if (messagesMe.Any())
-        {
-            messagesMe.ForEach(x => { x.IsRead = true; });
-            _context.Messages.UpdateRange(messages);
-            await _context.SaveChangesAsync();
-        }
-    }
+   */
 }

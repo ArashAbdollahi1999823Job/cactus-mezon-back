@@ -1,6 +1,4 @@
-﻿#region UsingAndNamespace
-namespace Application.IContracts.IServices;
-#endregion
+﻿namespace Application.IContracts.IServices;
 public interface ICurrentUserService
 {
     public string Id { get; }

@@ -19,6 +19,7 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
     public int Count { get; set; }
     public bool IsActive { get; set; }
     public string Store { get; set; }
+    public string SellerPhoneNumber { get; set; }
     
     public string Type { get; set; }
     public Guid TypeId { get; set; }
@@ -40,6 +41,7 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
     {
         profile.CreateMap<Domain.Entities.ProductEntity.Product, ProductDto>()
             .ForMember(x => x.Store, c => c.MapFrom(v => v.Inventory.Store.Name))
+            .ForMember(x => x.SellerPhoneNumber, c => c.MapFrom(v => v.Inventory.Store.User.PhoneNumber))
             .ForMember(x => x.Inventory, c => c.MapFrom(v => v.Inventory.Name))
             .ForMember(x => x.Brand, c => c.MapFrom(v => v.Brand.Name))
             .ForMember(x => x.Type, c => c.MapFrom(v => v.Type.Name))

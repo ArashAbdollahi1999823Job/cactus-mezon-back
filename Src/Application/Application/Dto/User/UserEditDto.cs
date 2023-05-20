@@ -8,8 +8,10 @@ public class UserEditDto
     public bool PhoneNumberConfirmed { get; set; }
     public string Password { get; set; }
     public List<string> Roles { set; get; }
+    public string Description { get; set; }
 
-    public UserEditDto(string username, string phoneNumber, string id, bool phoneNumberConfirmed, string password, List<string> roles)
+
+    public UserEditDto(string username, string phoneNumber, string id, bool phoneNumberConfirmed, string password, List<string> roles, string description)
     {
         Username = username;
         PhoneNumber = phoneNumber;
@@ -17,10 +19,10 @@ public class UserEditDto
         PhoneNumberConfirmed = phoneNumberConfirmed;
         Password = password;
         Roles = roles;
+        Description = description;
     }
 
     public UserEditDto()
     {
-        
     }
 }

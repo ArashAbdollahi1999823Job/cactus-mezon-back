@@ -1,5 +1,4 @@
 ﻿using Domain.Entities.ChatEntity;
-using Domain.Entities.MessageEntity;
 using Domain.Entities.PictureEntity;
 using Microsoft.AspNetCore.Identity;
 namespace Domain.Entities.IdentityEntity;
