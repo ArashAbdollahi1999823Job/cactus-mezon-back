@@ -6,7 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Brand/BrandUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/UserProductFavorite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IChatRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IMessageRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ChatRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/MessageRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Application/MessageApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Application/MessageApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/IRepository/IMessageRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/IRepository/IMessageRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Repository/MessageRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Repository/MessageRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/ChatHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/ChatHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/SignalR/IClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-19-21-47-10-کفش مردانه ۴.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-27-28-کفش مجلسی طرح دار زنانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-28-01-کفش مردانه ۴.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +146,13 @@
       <workItem from="1684226142632" duration="16455000" />
       <workItem from="1684267865500" duration="52897000" />
       <workItem from="1684566752779" duration="18464000" />
-      <workItem from="1684656632777" duration="2692000" />
+      <workItem from="1684656632777" duration="9950000" />
+      <workItem from="1684958659415" duration="233000" />
+      <workItem from="1685165996082" duration="429000" />
+      <workItem from="1685239930693" duration="2506000" />
+      <workItem from="1685249972166" duration="424000" />
+      <workItem from="1685349996335" duration="4122000" />
+      <workItem from="1685431253441" duration="1050000" />
     </task>
     <servers />
   </component>

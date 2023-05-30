@@ -35,6 +35,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     public DbSet<Type> Types => Set<Type>();
     public DbSet<ProductItem> ProductItems { get; set; }
     public DbSet<TypeItem> TypeItems { get; set; }
+    public DbSet<UserProductFavorite> UserProductFavorites { get; set; }
 
     #endregion #Product
 
@@ -75,6 +76,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
         modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins"); 
         modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
         modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
+        modelBuilder.Entity<UserProductFavorite>().HasKey(x=>new {x.ProductId,x.UserId});
     }
     #endregion
 }

@@ -1,5 +1,6 @@
 ﻿using Domain.Entities.ChatEntity;
 using Domain.Entities.PictureEntity;
+using Domain.Entities.ProductEntity;
 using Microsoft.AspNetCore.Identity;
 namespace Domain.Entities.IdentityEntity;
 
@@ -18,5 +19,6 @@ public class User:IdentityUser
     public ICollection<Message> MessagesReceived { get; set; }
     public ICollection<Group> GroupAsker { get; set; }
     public ICollection<Group> GroupResponder { get; set; }
+    public ICollection<UserProductFavorite> UserProductFavorites { get; set; }
     #endregion
 }

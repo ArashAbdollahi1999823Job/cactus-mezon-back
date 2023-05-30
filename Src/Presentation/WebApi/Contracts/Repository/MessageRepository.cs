@@ -32,7 +32,6 @@ public class MessageRepository : IMessageRepository
     #endregion
 
     #region MessageAddAsync
-
     public async Task<MessageDto> MessageAddAsync(MessageAddDto messageAddDto)
     {
         var message = new Message(messageAddDto.AskerPhoneNumber, messageAddDto.ResponderPhoneNumber,
@@ -48,7 +47,6 @@ public class MessageRepository : IMessageRepository
 
         throw new BadRequestEntityException(ApplicationMessages.MessageAddFailed);
     }
-
     #endregion
 
     #region MessageGetAllAsync
@@ -104,15 +102,6 @@ public class MessageRepository : IMessageRepository
     {
         await _presenceHub.Clients.Clients(userConnections).SendAsync("MessageUnReadUpdate");
     }
-    #endregion
-
-    #region PresenceMessageUpdateAsync
-
-    public async Task PresenceMessageUpdateAsync(List<string> userConnections)
-    {
-        await _presenceHub.Clients.Clients(userConnections).SendAsync("PresenceMessageUpdate");
-    }
-
     #endregion
 
     #region TurnMessageToReadAsync

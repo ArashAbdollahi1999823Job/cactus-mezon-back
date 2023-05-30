@@ -4,6 +4,7 @@ using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230521202550_favorite")]
+    partial class favorite
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -762,21 +765,6 @@ namespace Infrastructure.Migrations
                     b.ToTable("TypeItems");
                 });
 
-            modelBuilder.Entity("Domain.Entities.ProductEntity.UserProductFavorite", b =>
-                {
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("ProductId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserProductFavorites");
-                });
-
             modelBuilder.Entity("Domain.Entities.StoreEntity.Off", b =>
                 {
                     b.Property<Guid>("Id")
@@ -943,6 +931,21 @@ namespace Infrastructure.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("UserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("ProductUser", b =>
+                {
+                    b.Property<Guid>("ProductsFavoriteId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UsersFavoriteId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ProductsFavoriteId", "UsersFavoriteId");
+
+                    b.HasIndex("UsersFavoriteId");
+
+                    b.ToTable("ProductUser");
                 });
 
             modelBuilder.Entity("Domain.Entities.ChatEntity.Connection", b =>
@@ -1187,25 +1190,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("Type");
                 });
 
-            modelBuilder.Entity("Domain.Entities.ProductEntity.UserProductFavorite", b =>
-                {
-                    b.HasOne("Domain.Entities.ProductEntity.Product", "Product")
-                        .WithMany("UserProductFavorites")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.IdentityEntity.User", "User")
-                        .WithMany("UserProductFavorites")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Domain.Entities.StoreEntity.Off", b =>
                 {
                     b.HasOne("Domain.Entities.StoreEntity.Store", "Store")
@@ -1262,6 +1246,21 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ProductUser", b =>
+                {
+                    b.HasOne("Domain.Entities.ProductEntity.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsFavoriteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.IdentityEntity.User", null)
+                        .WithMany()
+                        .HasForeignKey("UsersFavoriteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Domain.Entities.ChatEntity.Group", b =>
                 {
                     b.Navigation("Connections");
@@ -1288,8 +1287,6 @@ namespace Infrastructure.Migrations
 
                     b.Navigation("UserPicture");
 
-                    b.Navigation("UserProductFavorites");
-
                     b.Navigation("UserRoles");
                 });
 
@@ -1314,8 +1311,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("ProductItems");
 
                     b.Navigation("ProductPictures");
-
-                    b.Navigation("UserProductFavorites");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Type", b =>

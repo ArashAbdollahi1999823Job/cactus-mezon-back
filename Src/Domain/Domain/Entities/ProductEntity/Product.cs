@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.CommentEntity;
+using Domain.Entities.IdentityEntity;
 using Domain.Entities.InventoryEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.StoreEntity;
@@ -44,4 +45,5 @@ public class Product
     public List<Comment> Comments { get; set; }
     public List<ProductItem> ProductItems { get; set; }
     public List<Color> Colors { get; set; }
+    public ICollection<UserProductFavorite> UserProductFavorites { get; set; }
 }

@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.Contracts.IApplication;
 using WebApi.Contracts.IRepository;
 using WebApi.SignalR;
-
 namespace WebApi.Contracts.Application;
 
 public class MessageApplication : IMessageApplication
@@ -136,14 +135,12 @@ public class MessageApplication : IMessageApplication
             {
                 if (userPresenceConnections?.Count > 0 && userPresenceConnections != null)
                 {
-                    await _messageRepository.PresenceMessageUpdateAsync(userPresenceConnections);
                     await _messageRepository.MessageUnReadUpdateAsync(userPresenceConnections);
                 }
             }
         }
         else if (userPresenceConnections?.Count > 0 && userPresenceConnections != null)
         {
-            await _messageRepository.PresenceMessageUpdateAsync(userPresenceConnections);
             await _messageRepository.MessageUnReadUpdateAsync(userPresenceConnections);
         }
     }
