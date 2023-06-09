@@ -10,10 +10,19 @@ public class GroupMapping:IEntityTypeConfiguration<Group>
     {
         builder.HasOne(x => x.Asker)
             .WithMany(x => x.GroupAsker)
-            .HasForeignKey(x => x.AskerId).OnDelete(DeleteBehavior.ClientSetNull);
-        
+            .HasForeignKey(x => x.AskerId)
+            .OnDelete(DeleteBehavior.ClientCascade)
+            .IsRequired(false);
+
         builder.HasOne(x => x.Responder)
             .WithMany(x => x.GroupResponder)
-            .HasForeignKey(x => x.ResponderId).OnDelete(DeleteBehavior.ClientSetNull);
+            .HasForeignKey(x => x.ResponderId)
+            .OnDelete(DeleteBehavior.ClientCascade)
+            .IsRequired(false);
+
+        builder.HasMany(x => x.Messages)
+            .WithOne(x => x.Group)
+            .HasForeignKey(x => x.GroupId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

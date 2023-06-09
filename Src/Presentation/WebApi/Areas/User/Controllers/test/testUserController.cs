@@ -1,21 +1,18 @@
-using Application.Dto.Base;
-using Application.Dto.User;
-using Application.Features.User.Command.UserAdd;
-using Application.Features.User.Command.UserDelete;
-using Application.Features.User.Command.UserEdit;
-using Application.Features.User.Query.UserGetAll;
 using Microsoft.AspNetCore.Mvc;
+using mpNuget;
 using WebApi.Areas.User.Controllers.Base;
 
-namespace WebApi.Areas.User.Controllers.User
+namespace WebApi.Areas.User.Controllers.test
 {
-    public class UserUserController : BaseUserController
+    public class TestUserController : BaseUserController
     {
         #region UserGetAllAsync
-        [HttpGet("UserGetAll")]
-        public async Task<ActionResult<PaginationDto<UserDto>>> UserGetAllAsync([FromQuery] UserGetAllQuery userGetAllQuery, CancellationToken cancellationToken)
+        [HttpGet("Test")]
+        public  IActionResult UserGetAllAsync( )
         {
-            return Ok(await Mediator.Send(userGetAllQuery, cancellationToken));
+            var rest = new RestClient("9178092254", "GCS84");
+           var result= rest.SendByBaseNumber("142654", "09178092254", 142654);
+            return Ok();
         }
         #endregion
     }

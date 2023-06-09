@@ -2,5 +2,5 @@
 
 public interface IFavoriteRepository
 {
-    
+    public Task<bool> FavoriteAddAsync(FavoriteAddDto favorireAddDto)
 }

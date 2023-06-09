@@ -100,11 +100,12 @@ public static class ConfigureServices
         services.AddScoped<IProductItemRepository, ProductItemRepository>();
         services.AddScoped<ITypePictureRepository, TypePictureRepository>();
         services.AddScoped<IUserPictureRepository, UserPictureRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IColorRepository, ColorRepository>();
         services.AddScoped<IProductPictureRepository, ProductPictureRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddTransient<ITokenService, TokenService>();
-
+        services.AddTransient<ISmsService, SmsService>();
         return services;
     }
 

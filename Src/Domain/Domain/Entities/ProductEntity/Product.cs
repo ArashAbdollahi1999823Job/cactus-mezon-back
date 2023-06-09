@@ -1,6 +1,4 @@
-﻿using Domain.Entities.CommentEntity;
-using Domain.Entities.IdentityEntity;
-using Domain.Entities.InventoryEntity;
+﻿using Domain.Entities.InventoryEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.StoreEntity;
 namespace Domain.Entities.ProductEntity;
@@ -42,7 +40,6 @@ public class Product
     public Guid? BrandId { get; set; }
     public Brand Brand { get; set; }
     public List<ProductPicture> ProductPictures { get; set; }
-    public List<Comment> Comments { get; set; }
     public List<ProductItem> ProductItems { get; set; }
     public List<Color> Colors { get; set; }
     public ICollection<UserProductFavorite> UserProductFavorites { get; set; }

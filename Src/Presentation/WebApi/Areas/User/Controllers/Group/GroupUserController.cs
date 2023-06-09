@@ -5,7 +5,7 @@ using WebApi.Areas.User.Controllers.Base;
 using WebApi.Contracts.IApplication;
 namespace WebApi.Areas.User.Controllers.Group
 {
-    [Authorize]
+   
     public class GroupUserController : BaseUserController
     {
         #region CtorAndInjectoin
@@ -29,6 +29,14 @@ namespace WebApi.Areas.User.Controllers.Group
         public async Task<ActionResult<List<GroupDto>>> GroupGetAllAsync([FromQuery] GroupSearchDto groupSearchDto)
         {
             return await _groupApplication.GroupGetAllAsync(groupSearchDto);
+        }
+        #endregion
+        
+        #region GroupDeleteAsync
+        [HttpDelete("GroupDelete/{groupName:}")]
+        public async Task<bool> GroupDeleteAsync(string groupName)
+        {
+            return await _groupApplication.GroupDeleteAsync(groupName);
         }
         #endregion
     }

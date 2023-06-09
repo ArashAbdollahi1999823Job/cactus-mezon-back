@@ -1,6 +1,9 @@
-﻿namespace Application.Features.Account.Commands.UserForget;
+﻿using Application.Dto.Identity;
+using MediatR;
 
-public class UserForgetCommand
+namespace Application.Features.Account.Commands.UserForget;
+
+public class UserForgetCommand:ForgetDto,IRequest<bool>
 {
     
 }

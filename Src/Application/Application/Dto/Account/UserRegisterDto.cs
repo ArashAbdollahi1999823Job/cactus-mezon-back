@@ -3,13 +3,13 @@
 public class UserRegister
 {
     public string PhoneNumber { get; set; }
-    public string Username { get; set; }
+    public string Name { get; set; }
     public string Password { get; set; }
 
-    public UserRegister(string phoneNumber, string username, string password)
+    public UserRegister(string phoneNumber, string name, string password)
     {
         PhoneNumber = phoneNumber;
-        Username = username;
+        Name = name;
         Password = password;
     }
 

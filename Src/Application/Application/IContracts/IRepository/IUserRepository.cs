@@ -1,6 +1,10 @@
-﻿namespace Application.IContracts.IRepository;
+﻿using Application.Dto.Base;
+using Application.Dto.User;
 
-public class IUserRepository
+namespace Application.IContracts.IRepository;
+
+public interface IUserRepository
 {
-    
+    public Task<bool> ExistUserByPhoneNumberAsync(string phoneNumber,CancellationToken cancellationToken);
+    public Task<PaginationDto<UserDto>> UserGetAllAsync(UserSearchDto userSearchDto,CancellationToken cancellationToken);
 }

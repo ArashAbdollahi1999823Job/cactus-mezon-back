@@ -19,9 +19,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     #endregion
     
     #region IdentityUser
-
     public DbSet<User> Users => Set<User>();
-    public DbSet<Address> Addresses => Set<Address>();
     public DbSet<Role> Roles => Set<Role>();
     
     public DbSet<UserRole> UserRoles { get; set; }
@@ -70,7 +68,6 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         modelBuilder.Entity<Type>().HasQueryFilter(x => x.IsDelete == false);
-        modelBuilder.Entity<Address>().HasQueryFilter(x => x.IsDelete == false);
         modelBuilder.Entity<Off>().HasQueryFilter(x => x.EndDate >DateTime.Now);
         modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims"); 
         modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins"); 

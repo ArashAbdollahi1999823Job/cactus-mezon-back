@@ -1,8 +1,11 @@
 ﻿using Application.Common.Helpers;
+using Application.Common.Messages;
 using Application.Dto.Chat.Group;
 using Application.Enums;
+using Application.IContracts.IRepository;
 using Application.IContracts.IServices;
 using Domain.Entities.ChatEntity;
+using Domain.Exceptions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +22,8 @@ public class GroupApplication:IGroupApplication
     private readonly IConnectionRepository _connectionRepository;
     private readonly IHubContext<ChatHub> _chatHub;
     private readonly ChatTracker _chatTracker;
-    private readonly IMessageRepository _messageRepository;
-    private readonly PresenceTracker _presenceTracker;
-    public GroupApplication(IGroupRepository groupRepository, UserManager<Domain.Entities.IdentityEntity.User> userManager, ICurrentUserService currentUserService, IConnectionRepository connectionRepository, IHubContext<ChatHub> chatHub, ChatTracker chatTracker, IMessageRepository messageRepository, PresenceTracker presenceTracker)
+    public GroupApplication(IGroupRepository groupRepository, UserManager<Domain.Entities.IdentityEntity.User> userManager,
+        ICurrentUserService currentUserService, IConnectionRepository connectionRepository, IHubContext<ChatHub> chatHub, ChatTracker chatTracker)
     {
         _groupRepository = groupRepository;
         _userManager = userManager;
@@ -29,8 +31,6 @@ public class GroupApplication:IGroupApplication
         _connectionRepository = connectionRepository;
         _chatHub = chatHub;
         _chatTracker = chatTracker;
-        _messageRepository = messageRepository;
-        _presenceTracker = presenceTracker;
     }
     #endregion
 
@@ -65,6 +65,15 @@ public class GroupApplication:IGroupApplication
     public async Task<List<GroupDto>> GroupGetAllAsync(GroupSearchDto groupSearchDto)
     {
       return  await _groupRepository.GroupGetAllAsync(groupSearchDto);
+    }
+    #endregion
+
+    #region GroupDeleteAsync
+    public async Task<bool> GroupDeleteAsync(string groupName)
+    {
+        var exist =await _groupRepository.GroupExistAsync(groupName);
+        if (exist)return await _groupRepository.GroupDeleteAsync(groupName);
+        throw new BadRequestEntityException(ApplicationMessages.GroupFailedDeleteOnHandle);
     }
     #endregion
 }

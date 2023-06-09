@@ -4,6 +4,7 @@ using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230603185956_addCodeToUser")]
+    partial class addCodeToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +49,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Connections", (string)null);
+                    b.ToTable("Connections");
                 });
 
             modelBuilder.Entity("Domain.Entities.ChatEntity.Group", b =>
@@ -70,7 +73,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ResponderId");
 
-                    b.ToTable("Groups", (string)null);
+                    b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("Domain.Entities.ChatEntity.Message", b =>
@@ -117,7 +120,97 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ResponderId");
 
-                    b.ToTable("Messages", (string)null);
+                    b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("Domain.Entities.CommentEntity.Comment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<Guid?>("ProductId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserAnswerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId1");
+
+                    b.HasIndex("UserAnswerId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comment");
+                });
+
+            modelBuilder.Entity("Domain.Entities.IdentityEntity.Address", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
+
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("Domain.Entities.IdentityEntity.Role", b =>
@@ -266,7 +359,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("Inventories", (string)null);
+                    b.ToTable("Inventories");
                 });
 
             modelBuilder.Entity("Domain.Entities.InventoryEntity.InventoryOperation", b =>
@@ -305,7 +398,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("InventoryOperations", (string)null);
+                    b.ToTable("InventoryOperations");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.ProductPicture", b =>
@@ -348,7 +441,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductPictures", (string)null);
+                    b.ToTable("ProductPictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.StorePicture", b =>
@@ -385,7 +478,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("StorePictures", (string)null);
+                    b.ToTable("StorePictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.TypePicture", b =>
@@ -425,7 +518,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("TypePictures", (string)null);
+                    b.ToTable("TypePictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.PictureEntity.UserPicture", b =>
@@ -446,7 +539,7 @@ namespace Infrastructure.Migrations
                         .IsUnique()
                         .HasFilter("[UserId] IS NOT NULL");
 
-                    b.ToTable("UserPictures", (string)null);
+                    b.ToTable("UserPictures");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Brand", b =>
@@ -483,7 +576,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands", (string)null);
+                    b.ToTable("Brands");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Color", b =>
@@ -511,7 +604,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Colors", (string)null);
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Product", b =>
@@ -583,7 +676,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.ProductItem", b =>
@@ -605,7 +698,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductItems", (string)null);
+                    b.ToTable("ProductItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.Type", b =>
@@ -656,7 +749,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ParentTypeId");
 
-                    b.ToTable("Types", (string)null);
+                    b.ToTable("Types");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.TypeItem", b =>
@@ -675,7 +768,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("TypeItems", (string)null);
+                    b.ToTable("TypeItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.ProductEntity.UserProductFavorite", b =>
@@ -690,7 +783,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserProductFavorites", (string)null);
+                    b.ToTable("UserProductFavorites");
                 });
 
             modelBuilder.Entity("Domain.Entities.StoreEntity.Off", b =>
@@ -727,7 +820,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StoreId");
 
-                    b.ToTable("Offs", (string)null);
+                    b.ToTable("Offs");
                 });
 
             modelBuilder.Entity("Domain.Entities.StoreEntity.Store", b =>
@@ -767,7 +860,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Stores", (string)null);
+                    b.ToTable("Stores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -914,6 +1007,36 @@ namespace Infrastructure.Migrations
                     b.Navigation("Group");
 
                     b.Navigation("Responder");
+                });
+
+            modelBuilder.Entity("Domain.Entities.CommentEntity.Comment", b =>
+                {
+                    b.HasOne("Domain.Entities.ProductEntity.Product", "Product")
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductId1");
+
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "UserAnswer")
+                        .WithMany()
+                        .HasForeignKey("UserAnswerId");
+
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+
+                    b.Navigation("UserAnswer");
+                });
+
+            modelBuilder.Entity("Domain.Entities.IdentityEntity.Address", b =>
+                {
+                    b.HasOne("Domain.Entities.IdentityEntity.User", "User")
+                        .WithOne("Address")
+                        .HasForeignKey("Domain.Entities.IdentityEntity.Address", "UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.IdentityEntity.UserRole", b =>
@@ -1163,6 +1286,8 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.IdentityEntity.User", b =>
                 {
+                    b.Navigation("Address");
+
                     b.Navigation("GroupAsker");
 
                     b.Navigation("GroupResponder");
@@ -1193,6 +1318,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.ProductEntity.Product", b =>
                 {
                     b.Navigation("Colors");
+
+                    b.Navigation("Comments");
 
                     b.Navigation("ProductItems");
 

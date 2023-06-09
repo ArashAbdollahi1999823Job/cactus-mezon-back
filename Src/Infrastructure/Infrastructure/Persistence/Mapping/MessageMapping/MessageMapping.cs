@@ -23,6 +23,6 @@ public class MessageMapping:IEntityTypeConfiguration<Message>
         builder.HasOne(x => x.Group)
             .WithMany(x => x.Messages)
             .HasForeignKey(x=>x.GroupId)
-            .OnDelete(DeleteBehavior.ClientSetNull);
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

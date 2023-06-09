@@ -2,6 +2,7 @@
 using Application.Dto.Chat.Group;
 using Application.Dto.Chat.Message;
 using Application.Enums;
+using Application.IContracts.IRepository;
 using Application.IContracts.IServices;
 using Domain.Entities.IdentityEntity;
 using Infrastructure.Persistence.Context;

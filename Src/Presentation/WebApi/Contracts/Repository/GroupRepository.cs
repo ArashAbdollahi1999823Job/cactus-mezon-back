@@ -1,6 +1,7 @@
 ﻿using Application.Common.Messages;
 using Application.Dto.Chat.Group;
 using Application.Enums;
+using Application.IContracts.IRepository;
 using AutoMapper;
 using Domain.Entities.ChatEntity;
 using Domain.Exceptions;
@@ -60,6 +61,15 @@ public class GroupRepository:IGroupRepository
     public async Task<bool> GroupExistAsync(string groupName)
     {
         return await _context.Groups.AnyAsync(x => x.Name == groupName);
+    }
+    #endregion
+
+    #region GroupDeleteAsync
+    public async Task<bool> GroupDeleteAsync(string groupName)
+    {
+      var check=await  _context.Groups.Where(x => x.Name == groupName).ExecuteDeleteAsync();
+      if (check > 0) return true;
+      throw new BadRequestEntityException(ApplicationMessages.GroupFailedDelete);
     }
     #endregion
 }

@@ -1,5 +1,7 @@
 using Application.Dto.Account;
-using Application.Dto.User;
+using Application.Features.Account.Commands.UserCode;
+using Application.Features.Account.Commands.UserDelete;
+using Application.Features.Account.Commands.UserForget;
 using Application.Features.Account.Commands.UserLogin;
 using Application.Features.Account.Commands.UserRegister;
 using Microsoft.AspNetCore.Mvc;
@@ -18,9 +20,33 @@ namespace WebApi.Areas.User.Controllers.Account
         
         #region UserRegister
         [HttpPost("UserRegister")]
-        public async Task<ActionResult<UserAuthorizeDto>> UserRegisterAsync([FromBody] UserRegisterCommand userRegisterCommand, CancellationToken cancellationToken)
+        public async Task<ActionResult<bool>> UserRegisterAsync([FromBody] UserRegisterCommand userRegisterCommand, CancellationToken cancellationToken)
         {
             return Ok(await Mediator.Send(userRegisterCommand, cancellationToken));
+        }
+        #endregion
+        
+        #region UserForget
+        [HttpPost("UserForget")]
+        public async Task<ActionResult<bool>> UserForgetAsync([FromBody] UserForgetCommand userForgetCommand, CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(userForgetCommand, cancellationToken));
+        }
+        #endregion
+        
+        #region UserCode
+        [HttpPost("UserCode")]
+        public async Task<ActionResult<UserAuthorizeDto>> UserCodeAsync([FromBody] UserCodeCommand userCodeCommand, CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(userCodeCommand, cancellationToken));
+        }
+        #endregion
+        
+        #region UserDeleteAsync
+        [HttpDelete("UserDelete/{phoneNumber}")]
+        public async Task<ActionResult<bool>> UserDeleteByPhoneNumberAsync([FromRoute] string phoneNumber, CancellationToken cancellationToken)
+        {
+            return Ok(await Mediator.Send(new UserDeleteByPhoneNumberCommand(phoneNumber), cancellationToken));
         }
         #endregion
     }

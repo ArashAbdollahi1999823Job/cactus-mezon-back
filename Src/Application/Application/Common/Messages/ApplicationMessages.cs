@@ -6,6 +6,14 @@ public static class ApplicationMessages
     #region Bakset
     public const string BasketNotFound = "سبد خرید شما یافت نشد!";
     #endregion
+
+    #region Auth
+    public const string ConfirmCodeIsWrong = "کد تایید اشتباه است !";
+    public const string ErrorInConfirmPhoneNumber = "خطا در تایید تلفن همراه!";
+    public const string Jwt500Error = "مشکلی در احراز ویت شما در سمت سرور رخ داده است لطفا مجدد تلاش کنید!";
+    public const string Jwt401Error = "شما هنوز احراز هویت نشده اید لطفا مجدد تلاش کنید!";
+    public const string Jwt403ErrorNotAccess = "شما به این بخش دسترسی ندارید لطفا ابتدا وارد سایت شوید!";
+    #endregion
     
     public const string FailedOperation = "عملیات موفقیت امیز نبود!";
     public const string FailedUploadPicture = "اپود عکس انجام نشد";
@@ -180,11 +188,6 @@ public static class ApplicationMessages
     public const string UserFailedDelete = "کاربر حذف نشد!";
     public const string UserFailedEdit = "ادیت مغازه انجام نشد!";
     #endregion
-
-    public const string Jwt500Error = "مشکلی در احراز ویت شما در سمت سرور رخ داده است لطفا مجدد تلاش کنید!";
-    public const string Jwt401Error = "شما هنوز احراز هویت نشده اید لطفا مجدد تلاش کنید!";
-    public const string Jwt403ErrorNotAccess = "شما به این بخش دسترسی ندارید لطفا ابتدا وارد سایت شوید!";
-
 
     public const string PleaseEnterPhone = "لطفا شماره همراه خود را وارد کنید!";
     public const string PleaseEnterUsername = "لطفا نام کاربری خود را وارد کنید!";

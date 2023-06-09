@@ -8,9 +8,11 @@ public class UserAddDto
     public string Password { get; set; }
     public List<string>? Roles { set; get; }
     public string Description { get; set; }
+    public string Name { get; set; }
+
 
     
-    public UserAddDto(string username, string phoneNumber, bool phoneNumberConfirmed, string password, List<string> roles, string description)
+    public UserAddDto(string username, string phoneNumber, bool phoneNumberConfirmed, string password, List<string> roles, string description, string name)
     {
         Username = username;
         PhoneNumber = phoneNumber;
@@ -18,6 +20,7 @@ public class UserAddDto
         Password = password;
         Roles = roles;
         Description = description;
+        Name = name;
     }
 
     public UserAddDto()
