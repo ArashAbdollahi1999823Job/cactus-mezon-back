@@ -6,63 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Identity/CodeDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Identity/ForgetDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Identity/RegisterReturnDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Sms/AuthSmsDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Sms/ForgetSmsDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserCode/UserCodeCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserCode/UserCodeCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserDelete/UserDeleteByPhoneNumberCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserDelete/UserDeleteByPhoneNumberCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserForget/UserForgetCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserForget/UserForgetCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IServices/ISmsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Services/SmsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/test/testUserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Favorite/FavoriteAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Favorite/FavoriteDeleteDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Favorite/FavoriteSearchDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteAdd/FavoriteAddCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteAdd/FavoriteAddCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteDelete/FavoriteDeleteCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteDelete/FavoriteDeleteCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Query/FavoriteGetAll/FavoriteGetAllQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Query/FavoriteGetAll/FavoriteGetAllQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/FavoriteRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Favorite/FavoriteUserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Account/UserRegisterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Account/UserRegisterDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Identity/AddressDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserAddDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/User/UserEditDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/CreateAddress/CreateAddressCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/CreateAddress/CreateAddressCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserRegister/UserRegisterCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserRegister/UserRegisterCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserRegister/UserRegisterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserRegister/UserRegisterCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Queries/GetAddress/GetAddressQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Queries/GetAddress/GetAddressQueryHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Validators/UserRegister/UserRegisterCommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Validators/UserRegister/UserRegisterCommandValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserAdd/UserAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserAdd/UserAddCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserDelete/UserDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserDelete/UserDeleteCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserEdit/UserEditCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserEdit/UserEditCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ChatEntity/Group.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/CommentEntity/Comment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/Address.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/FavoriteAddDto/FavoriteAddDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IFavoriteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IFavoriteRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/UserProductFavorite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/UserProductFavorite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/AddressMapping.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/UserMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/UserMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/GroupMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/GroupMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/MessageMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/MessageMapping/MessageMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Account/AccountUserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Account/AccountUserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Group/GroupUserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Group/GroupUserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Application/GroupApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Application/GroupApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Application/MessageApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Application/MessageApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/IApplication/IGroupApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/IApplication/IGroupApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/IRepository/IGroupRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IGroupRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Repository/GroupRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Repository/GroupRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +159,8 @@
       <workItem from="1686085214286" duration="640000" />
       <workItem from="1686123366088" duration="1134000" />
       <workItem from="1686197968464" duration="772000" />
-      <workItem from="1686210116003" duration="16979000" />
+      <workItem from="1686210116003" duration="30101000" />
+      <workItem from="1686399197205" duration="1498000" />
     </task>
     <servers />
   </component>

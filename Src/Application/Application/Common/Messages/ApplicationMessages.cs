@@ -102,6 +102,15 @@ public static class ApplicationMessages
     public const string TypeNotFound = "دسته یافت نشد!";
     #endregion
     
+    #region Favorite
+    public const string FavoriteFailedEdit = "حذف علاقه مندی انجام نشد !";
+    public const string FavoriteFailedEditOnHandle = "حذف علاقه مندی انجام نشد ! HandleError";
+    public const string FavoriteFailedDelete = "حذف علاقه مندی انجام نشد !";
+    public const string FavoriteFailedDeleteOnHandle = "حذف علاقه مندی انجام نشد! HandleError";
+    public const string FavoriteFailedAdd = "علاقه مندی اضافه نشد!";
+    public const string FavoriteNotFound = "علاقه مندی یافت نشد!";
+    #endregion
+    
     #region Connection
     public const string ConnectionFailedEdit = "حذف اتصال انجام نشد !";
     public const string ConnectionFailedEditOnHandle = "حذف اتصال انجام نشد ! HandleError";

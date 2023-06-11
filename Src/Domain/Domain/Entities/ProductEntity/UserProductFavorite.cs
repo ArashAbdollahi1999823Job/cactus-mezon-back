@@ -9,4 +9,10 @@ public class UserProductFavorite
 
     public Product Product { get; set; }
     public Guid ProductId { get; set; }
+
+    public UserProductFavorite( string userId, Guid productId)
+    {
+        UserId = userId;
+        ProductId = productId;
+    }
 }
