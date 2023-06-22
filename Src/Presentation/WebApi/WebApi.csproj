@@ -37,7 +37,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\User\Controllers\" />
-    <Folder Include="wwwroot" />
+    <Folder Include="wwwroot\Picture\Product\پراهن مردانه" />
   </ItemGroup>
 
   <ItemGroup>
@@ -94,6 +94,52 @@
     <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\مردانه\2023-04-13-14-49-40-مردانه۴.jpg" />
     <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\مردانه\2023-04-13-15-53-53-مردانه۶.jpg" />
     <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\مردانه\2023-04-13-16-13-25-مردانه۷.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09032510151-09174444444\09174444444\2023-05-19-21-47-10-کفش مردانه ۴.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09032510151-09174444444\09174444444\2023-05-20-22-27-28-کفش مجلسی طرح دار زنانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09032510151-09174444444\09174444444\2023-05-20-22-28-01-کفش مردانه ۴.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\ajskfklsjdflkasdj\2023-04-27-12-26-10-کفش مجلسی طرح دار زنانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\fsadfasf\2023-04-20-12-16-37-2023-04-14-13-45-50-شلوار اسلش زنانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\sdo%3bfjasl%3bdkfj\2023-04-23-20-54-43-magenta.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\دکولته طرح دار\2023-04-20-12-59-44-2023-04-14-13-51-28-پیراهن زنانه خادار.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\شلوار  کلاسیک\2023-04-20-11-50-21-2023-04-14-13-48-29-شلوار-زنانه2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\شلوار جین ذغالی\2023-04-20-14-31-12-2023-04-13-16-30-46-شلوار مردانه جین زغالی.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\شلوار جین زنانه\2023-04-20-12-14-27-2023-04-08-14-33-55-شلوار-زنانه-مات-سنتر004.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\شلوار کلاسیک\2023-04-20-14-27-40-2023-04-13-16-27-33-شلوار مشکی مردانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی بلند\2023-04-20-13-03-35-2023-04-18-12-24-14-پیراهن مشکی.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی بلند\2023-04-20-13-04-01-2023-04-18-12-24-14-پیراهن مشکی.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی بلند\2023-04-20-13-04-13-2023-04-18-12-21-27-پیراهنصورتی.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی بلند\2023-04-20-13-04-25-2023-04-18-12-22-45-پیراهنسبز.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی بلند\2023-04-20-13-04-36-2023-04-18-12-25-50-blue2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی بلند\2023-04-20-13-04-49-2023-04-18-12-26-48-magenta.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی فرانسوی\2023-04-20-13-15-01-2023-04-18-13-12-29-3.jpeg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی فرانسوی\2023-04-20-13-15-13-2023-04-18-13-12-29-3.jpeg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\مجلسی فرانسوی\2023-04-20-13-15-23-2023-04-18-13-12-18-1.jpeg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\نیم بوت\2023-04-20-14-38-12-2023-04-13-16-37-53-نیم بوت مشکی مردانه.jpeg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\پوتین بلند\2023-04-20-14-39-59-2023-04-08-00-07-56-بوت-مردانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\پیراهن لخه دار\2023-04-20-14-34-11-2023-04-08-13-19-07-پیراهن۱-سفید.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\پیراهن مردانه\2023-04-20-14-42-49-2023-04-13-16-06-09-پیراهن سبز مردانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\پیراهن مردانه\2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\کفش اسپرت\2023-04-20-14-45-34-2023-04-13-16-40-27-کفش اسپرت کرمی مردانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\کفش مجلسی طرح دار\2023-04-20-12-22-19-2023-04-14-13-40-52-کفش مجلسی طرح دار زنانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\کفش پاشنه دار مجلسی\2023-04-20-12-20-42-2023-04-14-13-37-54-کفشزنانه۱.jpeg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\کفش چرم مدل قدمی\2023-04-20-12-28-19-2023-04-14-14-00-11-کفش چرم زنانه.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\کفش چرم\2023-04-20-12-26-21-2023-04-08-14-44-18-کفش زنانه چرم.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Product\کفش چرمی\2023-04-20-14-36-08-2023-04-13-16-35-13-کفش مردانه چرم مشکی.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Store\چوگانی\2023-04-30-00-14-26-chogani.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\زنانه\2023-04-19-13-06-00-زنانه۱.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\زنانه\2023-04-19-13-06-17-زنانه۲.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\زنانه\2023-04-19-13-06-33-زنانه۳.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\مردانه\2023-04-19-11-27-38-مردانه۷.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\مردانه\2023-04-19-12-57-21-مردانه۴.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\Type\مردانه\2023-04-19-12-57-49-مردانه۶.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\User\ali\2023-05-10-00-59-25-sellerMan.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\User\Arash\2023-05-09-17-34-21-IMG_20210730_040011_169.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\User\laila\2023-05-09-22-29-52-admin.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\User\maryam\2023-05-10-01-02-28-sellerWomen2.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09171111111-09174444444\09174444444\2023-05-28-10-35-52-b10.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09171111111-09174444444\09174444444\2023-05-28-10-35-59-b10.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09171111111-09174444444\09174444444\2023-05-28-10-37-05-b10.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\Picture\group\09171111111-09178092254\09171111111\2023-06-17-16-23-28-IMG_20230617_114309_4.jpg" />
   </ItemGroup>
 
 </Project>

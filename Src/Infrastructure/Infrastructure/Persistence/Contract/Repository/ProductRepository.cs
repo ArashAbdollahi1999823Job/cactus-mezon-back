@@ -1,6 +1,7 @@
 ﻿using Application.Common.Enums;
 using Application.Common.Messages;
 using Application.Dto.Base;
+using Application.Dto.InventoryOperation;
 using Application.Dto.Product;
 using Application.Enums;
 using Application.IContracts.IRepository;
@@ -163,6 +164,32 @@ public class ProductRepository:IProductRepository
             var check = await _context.Products
                 .Where(x => x.Id == productId)
                 .ExecuteUpdateAsync(x => x.SetProperty(x => x.Count,a=>a.Count-count), cancellationToken);
+            if (check > 0) return true;
+            throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
+        }
+                
+                
+    }
+
+    #endregion
+    
+    #region ProductChangeCountDeleteOperationAsync
+
+    public async Task<bool> ProductChangeCountDeleteOperationAsync(InventoryOperationDto inventoryOperationDto,CancellationToken cancellationToken)
+    {
+        if (inventoryOperationDto.InventoryOperationType == "1" || inventoryOperationDto.InventoryOperationType == "4")
+        {
+            var check = await _context.Products
+                .Where(x => x.Id == inventoryOperationDto.ProductId)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.Count,a=>a.Count-inventoryOperationDto.Count), cancellationToken);
+            if (check > 0) return true;
+            throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
+        }
+        else
+        {
+            var check = await _context.Products
+                .Where(x => x.Id ==inventoryOperationDto.ProductId)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.Count,a=>a.Count+inventoryOperationDto.Count), cancellationToken);
             if (check > 0) return true;
             throw new BadRequestEntityException(ApplicationMessages.ProductEditFailed);
         }

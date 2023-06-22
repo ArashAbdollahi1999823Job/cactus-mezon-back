@@ -21,8 +21,7 @@ public class InventoryOperationAddCommandHandler:IRequestHandler<InventoryOperat
     public async Task<bool> Handle(InventoryOperationAddCommand req, CancellationToken cancellationToken)
     {
 
-        if (await _productRepository.ProductChangeCountAsync(req.Count,req.InventoryOperationType, req.ProductId,
-                cancellationToken))
+        if (await _productRepository.ProductChangeCountAsync(req.Count,req.InventoryOperationType, req.ProductId, cancellationToken))
         {
             var inventoryOperationAddDto = new InventoryOperationAddDto(req.Description,req.Price,req.Count,req.InventoryOperationType,req.ProductId);
             return await _inventoryOperationRepository.InventoryOperationAddAsync(inventoryOperationAddDto,cancellationToken);

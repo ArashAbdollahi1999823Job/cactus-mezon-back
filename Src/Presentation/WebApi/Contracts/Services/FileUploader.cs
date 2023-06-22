@@ -41,6 +41,14 @@ namespace WebApi.Contracts.Services
             var finalPath = _webHostEnvironment.WebRootPath+"/" + path;
             File.Delete(finalPath);
                var check= File.Exists(finalPath);
+               var numbersSlash = path.LastIndexOf("/", StringComparison.Ordinal);
+               var root = path.Substring(0, numbersSlash);
+               DirectoryInfo dir = new DirectoryInfo(_webHostEnvironment.WebRootPath+"/" + root);
+               int count = dir.GetFiles().Length;
+               if (count==0)
+               {
+                   dir.Delete();
+               }
                if (check) return false;
             return true;
         }

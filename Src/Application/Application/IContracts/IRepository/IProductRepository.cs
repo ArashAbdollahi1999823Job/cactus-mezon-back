@@ -1,4 +1,5 @@
 ﻿using Application.Dto.Base;
+using Application.Dto.InventoryOperation;
 using Application.Dto.Product;
 using Domain.Entities.ProductEntity;
 using Domain.Enums;
@@ -15,5 +16,7 @@ public interface IProductRepository
 
     public Task<bool> ProductChangeCountAsync(int count, string inventoryOperationType, Guid productId,
         CancellationToken cancellationToken);
+    
+    public Task<bool> ProductChangeCountDeleteOperationAsync(InventoryOperationDto inventoryOperationDto,CancellationToken cancellationToken);
 
 }

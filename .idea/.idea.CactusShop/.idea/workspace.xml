@@ -6,23 +6,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Favorite/FavoriteAddDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Favorite/FavoriteDeleteDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Favorite/FavoriteSearchDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteAdd/FavoriteAddCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteAdd/FavoriteAddCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteDelete/FavoriteDeleteCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Command/FavoriteDelete/FavoriteDeleteCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Query/FavoriteGetAll/FavoriteGetAllQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Favorite/Query/FavoriteGetAll/FavoriteGetAllQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/FavoriteRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Favorite/FavoriteUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/FallBack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-19-21-47-10-کفش مردانه ۴.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-28-01-کفش مردانه ۴.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-35-52-b10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-35-59-b10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-37-05-b10.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CactusShop.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CactusShop.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/FavoriteAddDto/FavoriteAddDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IFavoriteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IFavoriteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/UserProductFavorite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/UserProductFavorite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/PictureMapping/ProductPictureMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/PictureMapping/ProductPictureMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Services/FileUploader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Services/FileUploader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ajskfklsjdflkasdj/2023-04-27-12-26-10-کفش مجلسی طرح دار زنانه.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-27-28-کفش مجلسی طرح دار زنانه.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/fsadfasf/2023-04-20-12-16-37-2023-04-14-13-45-50-شلوار اسلش زنانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/sdo;fjasl;dkfj/2023-04-23-20-54-43-magenta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش مجلسی طرح دار/2023-04-20-12-22-19-2023-04-14-13-40-52-کفش مجلسی طرح دار زنانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09032510151/2023-05-30-12-30-28-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09032510151/2023-05-30-12-30-50-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09032510151/2023-05-30-12-31-47-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09173333333/2023-05-30-13-32-05-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-29-14-42-00-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-29-15-38-22-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +56,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbacbdf0ac764bbf95f817eb94d98ddb6600/e1/ae4bd986/KavenegarApi.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e034105c63a74abba809412ef649d2c76b880/09/f033fa33/UserManager`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/66efbec125c33fdfb3a1bec1ed20a19604e9735174ac7196e96ed9476726/Mediator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6879c9ed20391a5ccfea363be5964fbcfe4f1dfde9558aa84b36df6b6ec92c6/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6b89968f9be3c164dca4f9c1b73bdbc28bcf48b41293f4ddd5bfad26a4b46f9/Guid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7845fcc4c6e97e7a0812786262db174ec05f208cd3e814d0a7bf29d0d6ef5f/ConfigurationManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/816dbaba8a29ece3dd3dc326642858d27d2d19142f9a2109bb04617985ec9/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8aeca8dfcec95a81b42a28e5c138e1c321e89def3fed605511172a8beaec/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
@@ -62,6 +81,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -82,6 +102,26 @@
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: IIS Express">
+    <configuration name="Publish CactusShop to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="6432944004979574279" uuid_low="-6427492506833540148" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish WebApi to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish WebApi to folder (2)" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish WebApi to folder (3)" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish WebApi to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <method v="2" />
+    </configuration>
     <configuration name="WebApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -160,7 +200,15 @@
       <workItem from="1686123366088" duration="1134000" />
       <workItem from="1686197968464" duration="772000" />
       <workItem from="1686210116003" duration="30101000" />
-      <workItem from="1686399197205" duration="1498000" />
+      <workItem from="1686399197205" duration="19972000" />
+      <workItem from="1686486298551" duration="26157000" />
+      <workItem from="1686749054419" duration="6468000" />
+      <workItem from="1686852711373" duration="12512000" />
+      <workItem from="1687003065557" duration="9613000" />
+      <workItem from="1687066502535" duration="6901000" />
+      <workItem from="1687173752389" duration="2048000" />
+      <workItem from="1687416274807" duration="4001000" />
+      <workItem from="1687440359785" duration="1096000" />
     </task>
     <servers />
   </component>
@@ -175,19 +223,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Src/Presentation/WebApi/Areas/Admin/Controllers/Type/TypeAdminController.cs</url>
-          <line>38</line>
-          <properties documentPath="E:\ProjectsCactusShop\Back\CactusShop\Src\Presentation\WebApi\Areas\Admin\Controllers\Type\TypeAdminController.cs" initialLine="38" containingFunctionPresentation="method 'TypeDeleteAsync'">
-            <startOffsets>
-              <option value="1531" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1532" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserDelete/UserDeleteByPhoneNumberCommandHandler.cs</url>
           <line>25</line>
           <properties documentPath="E:\ProjectsCactusShop\Back\CactusShop\Src\Application\Application\Features\Account\Commands\UserDelete\UserDeleteByPhoneNumberCommandHandler.cs" initialLine="19" containingFunctionPresentation="method 'Handle'">
@@ -201,6 +236,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs</url>
+          <line>35</line>
+          <properties documentPath="E:\ProjectsCactusShop\Back\CactusShop\Src\Application\Application\Features\Product\Command\ProductDelete\ProductDeleteCommandHandler.cs" initialLine="35" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="1676" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1756" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -53,6 +53,7 @@ public static class ApplicationMessages
     public const string InventoryAddFailed = "انبار ساخته نشد!";
     public const string InventoryFailedDelete = "انبار حذف نشد!";
     public const string InventoryFailedEdit = "انبار ادیت نشد!";
+    public const string InventoryFailedDeleteHasProduct = "انبار حذف نشد!این انبار محصول دارد لطفا ابتدا محصول این انبار را حذف کنید. تعداد محصول:";
     public const string InventoryFailedDeleteOnHandle = "انبار ادیت نشد!HendleError";
     #endregion
     

@@ -1,11 +1,7 @@
-﻿#region UsingAndNamespace
-
-using Domain.Entities.PictureEntity;
+﻿using Domain.Entities.PictureEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
 namespace Infrastructure.Persistence.Mapping.PictureMapping;
-#endregion
 public class ProductPictureMapping : IEntityTypeConfiguration<ProductPicture>
 {
     public void Configure(EntityTypeBuilder<ProductPicture> builder)
@@ -17,7 +13,11 @@ public class ProductPictureMapping : IEntityTypeConfiguration<ProductPicture>
         #endregion
 
         #region Relations
-        builder.HasOne(x => x.Product).WithMany(x => x.ProductPictures).HasForeignKey(x => x.ProductId);
+        builder
+            .HasOne(x => x.Product)
+            .WithMany(x => x.ProductPictures)
+            .HasForeignKey(x => x.ProductId)
+            .OnDelete(DeleteBehavior.ClientCascade);
         #endregion
     }
 }
