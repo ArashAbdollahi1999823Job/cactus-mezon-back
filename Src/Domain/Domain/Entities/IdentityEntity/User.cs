@@ -1,6 +1,7 @@
 ﻿using Domain.Entities.ChatEntity;
 using Domain.Entities.PictureEntity;
 using Domain.Entities.ProductEntity;
+using Domain.Entities.StoreEntity;
 using Microsoft.AspNetCore.Identity;
 namespace Domain.Entities.IdentityEntity;
 
@@ -14,6 +15,7 @@ public class User:IdentityUser
     #endregion
 
     #region Relation
+    public Store? Store { get; set; }
     public UserPicture UserPicture { get; set; }
     public ICollection<UserRole> UserRoles { get; set; }
     public ICollection<Message> MessagesSent { get; set; }

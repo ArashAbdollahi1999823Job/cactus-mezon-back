@@ -23,5 +23,6 @@ public class UserMapping:IEntityTypeConfiguration<User>
             .WithOne(x => x.Responder)
             .HasForeignKey(x => x.ResponderId)
             .IsRequired(false);*/
+
     }
 }

@@ -1,12 +1,17 @@
 ﻿using Application.Common.Enums;
 using Application.Common.Messages;
 using Application.Dto.Base;
+using Application.Dto.Color;
 using Application.Dto.InventoryOperation;
 using Application.Dto.Product;
+using Application.Dto.ProductItem;
+using Application.Dto.ProductPicture;
 using Application.Enums;
 using Application.IContracts.IRepository;
+using Application.IContracts.IServices;
 using AutoMapper;
 using Domain.Entities.ProductEntity;
+using Domain.Enums;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -16,10 +21,20 @@ public class ProductRepository:IProductRepository
     #region CtorAndInjection
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
-    public ProductRepository(ApplicationDbContext context, IMapper mapper)
+    private readonly IProductPictureRepository _productPictureRepository;
+    private readonly IFileUploader _fileUploader;
+    private readonly IInventoryOperationRepository _inventoryOperationRepository;
+    private readonly IColorRepository _colorRepository;
+    private readonly IProductItemRepository _productItemRepository;
+    public ProductRepository(ApplicationDbContext context, IMapper mapper, IProductPictureRepository productPictureRepository, IFileUploader fileUploader, IInventoryOperationRepository inventoryOperationRepository, IColorRepository colorRepository, IProductItemRepository productItemRepository)
     {
         _context = context;
         _mapper = mapper;
+        _productPictureRepository = productPictureRepository;
+        _fileUploader = fileUploader;
+        _inventoryOperationRepository = inventoryOperationRepository;
+        _colorRepository = colorRepository;
+        _productItemRepository = productItemRepository;
     }
     #endregion
 
@@ -128,6 +143,51 @@ public class ProductRepository:IProductRepository
     #region ProductDeleteAsync
     public async Task<bool> ProductDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
+        
+        #region InventoryOperationDelete
+        var inventoryOperationSearchDto = new InventoryOperationSearchDto(
+            new Guid("00000000-0000-0000-0000-000000000000"), 1, 1000, 0, -1, InventoryOperationType.NotImportant,
+            id, new Guid("00000000-0000-0000-0000-000000000000"), SortType.Desc,
+            new Guid("00000000-0000-0000-0000-000000000000"));
+        var inventoryOperation =
+            await _inventoryOperationRepository.InventoryOperationGetAllAsync(inventoryOperationSearchDto,
+                cancellationToken);
+        
+        foreach (var inventoryOperationDto in inventoryOperation.Data)
+        {
+            await _inventoryOperationRepository.InventoryOperationDeleteAsync(inventoryOperationDto.Id, cancellationToken);
+        }
+        #endregion
+
+        #region ColorDelete
+        var colors = await _colorRepository.ColorGetAllAsync(
+            new ColorSearchDto(new Guid("00000000-0000-0000-0000-000000000000"), id), cancellationToken);
+        colors.ForEach(x =>
+        {
+            _colorRepository.ColorDeleteAsync(x.Id, cancellationToken);
+        });
+        #endregion
+
+        #region ItemDelete
+        var items = await _productItemRepository.ProductItemGetAllAsync(
+            new ProductItemSearchDto(new Guid("00000000-0000-0000-0000-000000000000"), id), cancellationToken);
+        
+        items.ForEach(x =>
+        {
+            _productItemRepository.ProductItemDeleteAsync(x.Id, cancellationToken);
+        });
+        #endregion
+
+        #region ProductPictureDelete
+        var productPictureSearchDto = new ProductPictureSearchDto(new Guid("00000000-0000-0000-0000-000000000000"), id, 1, 0, 100);
+        var productPictures = await _productPictureRepository.ProductPictureGetAllAsync(productPictureSearchDto,cancellationToken);
+        productPictures.ForEach(x =>
+        {
+            _fileUploader.Delete(x.PictureUrl);
+            _productPictureRepository.ProductPictureDeleteAsync(x.Id, cancellationToken);
+        });
+        #endregion
+        
         var check = await _context.Products.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
         if (check > 0) return true;
         throw new BadRequestEntityException(ApplicationMessages.ProductDeleteFailed);

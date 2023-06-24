@@ -6,39 +6,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/FallBack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-19-21-47-10-کفش مردانه ۴.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-28-01-کفش مردانه ۴.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-35-52-b10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-35-59-b10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-37-05-b10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/StoreMapping.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CactusShop.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CactusShop.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationAdd/InventoryOperationAddCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/InventoryOperation/Command/InventoryOperationDelete/InventoryOperationDeleteCommandHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserDelete/UserDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserDelete/UserDeleteCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Store.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/PictureMapping/ProductPictureMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/PictureMapping/ProductPictureMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Services/FileUploader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Contracts/Services/FileUploader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ajskfklsjdflkasdj/2023-04-27-12-26-10-کفش مجلسی طرح دار زنانه.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-27-28-کفش مجلسی طرح دار زنانه.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/fsadfasf/2023-04-20-12-16-37-2023-04-14-13-45-50-شلوار اسلش زنانه.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/sdo;fjasl;dkfj/2023-04-23-20-54-43-magenta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش مجلسی طرح دار/2023-04-20-12-22-19-2023-04-14-13-40-52-کفش مجلسی طرح دار زنانه.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09032510151/2023-05-30-12-30-28-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09032510151/2023-05-30-12-30-50-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09032510151/2023-05-30-12-31-47-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09173333333/09173333333/2023-05-30-13-32-05-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-29-14-42-00-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-29-15-38-22-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/UserMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/UserMapping.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +191,8 @@
       <workItem from="1687066502535" duration="6901000" />
       <workItem from="1687173752389" duration="2048000" />
       <workItem from="1687416274807" duration="4001000" />
-      <workItem from="1687440359785" duration="1096000" />
+      <workItem from="1687440359785" duration="6982000" />
+      <workItem from="1687514239741" duration="6821000" />
     </task>
     <servers />
   </component>
@@ -218,40 +202,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserDelete/UserDeleteByPhoneNumberCommandHandler.cs</url>
-          <line>25</line>
-          <properties documentPath="E:\ProjectsCactusShop\Back\CactusShop\Src\Application\Application\Features\Account\Commands\UserDelete\UserDeleteByPhoneNumberCommandHandler.cs" initialLine="19" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="1013" />
-              <option value="1072" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1142" />
-              <option value="1102" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs</url>
-          <line>35</line>
-          <properties documentPath="E:\ProjectsCactusShop\Back\CactusShop\Src\Application\Application\Features\Product\Command\ProductDelete\ProductDeleteCommandHandler.cs" initialLine="35" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="1676" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1756" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

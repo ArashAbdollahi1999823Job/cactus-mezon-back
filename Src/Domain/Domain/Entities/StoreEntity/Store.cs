@@ -43,5 +43,5 @@ public class Store
 
     // has one user
     public User User { get; set; }
-    public string UserId { get; set; }
+    public string? UserId { get; set; }
 }

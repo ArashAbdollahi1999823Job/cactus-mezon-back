@@ -1,7 +1,9 @@
 ﻿using Application.Common.Messages;
 using Application.Dto.Off;
+using Application.Dto.Product;
 using Application.IContracts.IRepository;
 using AutoMapper;
+using Domain.Entities.ProductEntity;
 using Domain.Entities.StoreEntity;
 using Domain.Exceptions;
 using Infrastructure.Persistence.Context;
@@ -76,6 +78,21 @@ public class OffRepository:IOffRepository
     #region OffDeleteAsync
     public async Task<bool> OffDeleteAsync(Guid id, CancellationToken cancellationToken)
     {
+        #region DeleteFromProduct
+
+        var products =await _context.Products.Where(x => x.OffId == id).ToListAsync(cancellationToken);
+        if (products.Count > 0)
+        {
+            foreach (var product in products)
+            {
+                await _context.Products.Where(x => x.Id == product.Id)
+                    .ExecuteUpdateAsync(x => x.SetProperty(x => x.OffId, null as Guid?), cancellationToken);
+            }
+        }
+        
+
+        #endregion
+        
         var check = await _context.Offs.Where(x => x.Id == id).ExecuteDeleteAsync(cancellationToken);
         if (check > 0) return true;
         throw new BadRequestEntityException(ApplicationMessages.OffDeleteFailed);

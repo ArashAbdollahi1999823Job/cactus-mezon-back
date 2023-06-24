@@ -1,32 +1,34 @@
-﻿using Application.Common.Messages;
+﻿using Application.Common.Enums;
+using Application.Common.Messages;
 using Application.Dto.Chat.Group;
+using Application.Dto.Favorite;
+using Application.Dto.Store;
+using Application.Dto.UserPicture;
 using Application.Enums;
 using Application.IContracts.IRepository;
+using Application.IContracts.IServices;
 using Domain.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+
 namespace Application.Features.User.Command.UserDelete;
-public class UserDeleteCommandHandler:IRequestHandler<UserDeleteCommand,bool>
+
+public class UserDeleteCommandHandler : IRequestHandler<UserDeleteCommand, bool>
 {
     #region CrorAndInjection
     private readonly UserManager<Domain.Entities.IdentityEntity.User> _userManager;
-    private readonly IGroupRepository _groupRepository;
-    public UserDeleteCommandHandler(UserManager<Domain.Entities.IdentityEntity.User> userManager, IGroupRepository groupRepository)
+    private readonly IUserRepository _userRepository;
+ 
+    public UserDeleteCommandHandler(UserManager<Domain.Entities.IdentityEntity.User> userManager, IUserRepository userRepository)
     {
         _userManager = userManager;
-        _groupRepository = groupRepository;
+        _userRepository = userRepository;
     }
     #endregion
     public async Task<bool> Handle(UserDeleteCommand req, CancellationToken cancellationToken)
     {
-        var user = await _userManager.FindByIdAsync(req.id);
-        if (user == null) throw new NotFoundEntityException(ApplicationMessages.UserNotFound);
-        var userGroups = await _groupRepository.GroupGetAllAsync(new GroupSearchDto(user.PhoneNumber,HasMessageType.NotImportant));
-        var result = await _userManager.DeleteAsync(user);
-        if (result.Succeeded)
-        {
-            return true;
-        }
+        return await _userRepository.UserDeleteAsync(req.id, cancellationToken);
+    
         throw new BadRequestEntityException(ApplicationMessages.UserFailedDelete);
     }
 }

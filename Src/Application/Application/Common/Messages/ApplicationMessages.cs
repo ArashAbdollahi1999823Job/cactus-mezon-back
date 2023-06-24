@@ -197,6 +197,7 @@ public static class ApplicationMessages
     public const string UserDuplicate = "شماره همراه قبلا ثبت نام شده است!";
     public const string UserFailedDelete = "کاربر حذف نشد!";
     public const string UserFailedEdit = "ادیت مغازه انجام نشد!";
+    public const string UserDeleteFailed = "کاربر حذف نشد!";
     #endregion
 
     public const string PleaseEnterPhone = "لطفا شماره همراه خود را وارد کنید!";

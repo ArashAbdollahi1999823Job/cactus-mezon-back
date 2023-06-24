@@ -1,5 +1,7 @@
-﻿using Application.Common.Messages;
+﻿using Application.Common.Enums;
+using Application.Common.Messages;
 using Application.Dto.Inventory;
+using Application.Dto.Product;
 using Application.Enums;
 using Application.IContracts.IRepository;
 using AutoMapper;
@@ -13,10 +15,12 @@ public class InventoryRepository:IInventoryRepository
     #region CtorAndInjection
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
-    public InventoryRepository(ApplicationDbContext context, IMapper mapper)
+    private readonly IProductRepository _productRepository;
+    public InventoryRepository(ApplicationDbContext context, IMapper mapper, IProductRepository productRepository)
     {
         _context = context;
         _mapper = mapper;
+        _productRepository = productRepository;
     }
     #endregion
 
@@ -65,6 +69,23 @@ public class InventoryRepository:IInventoryRepository
     #region InventoryDeleteAsync
     public async Task<bool> InventoryDeleteAsync(Guid id,CancellationToken cancellationToken)
     {
+        #region productDelete
+        var productSearchDto = new ProductSearchDto(
+            1, 1000, new Guid("00000000-0000-0000-0000-000000000000"), ActiveType.NotImportant,
+            null, null, 0, id, new Guid("00000000-0000-0000-0000-000000000000"),
+            new Guid("00000000-0000-0000-0000-000000000000"), -1, SortType.Desc,
+            new Guid("00000000-0000-0000-0000-000000000000"), false);
+        var productDtos =  _productRepository.ProductGetAllAsync(productSearchDto, cancellationToken).Result.Data;
+
+        if (productDtos.Any())
+        {
+            foreach (var productDto in productDtos)
+            {
+                await _productRepository.ProductDeleteAsync(productDto.Id,cancellationToken);
+            }
+        }
+        #endregion
+        
         var check=await _context.Inventories.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
         throw new BadRequestEntityException(ApplicationMessages.InventoryFailedDelete);

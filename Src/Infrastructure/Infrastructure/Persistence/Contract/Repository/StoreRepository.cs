@@ -1,6 +1,8 @@
 ﻿using Application.Common.Enums;
 using Application.Common.Messages;
 using Application.Dto.Base;
+using Application.Dto.Inventory;
+using Application.Dto.Off;
 using Application.Dto.Store;
 using Application.Enums;
 using Application.IContracts.IRepository;
@@ -16,10 +18,14 @@ public class StoreRepository:IStoreRepository
     #region CtorAndInjection
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
-    public StoreRepository(ApplicationDbContext context, IMapper mapper)
+    private readonly IInventoryRepository _inventoryRepository;
+    private readonly IOffRepository _offRepository;
+    public StoreRepository(ApplicationDbContext context, IMapper mapper, IInventoryRepository inventoryRepository, IOffRepository offRepository)
     {
         _context = context;
         _mapper = mapper;
+        _inventoryRepository = inventoryRepository;
+        _offRepository = offRepository;
     }
     #endregion
 
@@ -59,6 +65,27 @@ public class StoreRepository:IStoreRepository
     #region StoreDeleteAsync
     public async Task<bool> StoreDeleteAsync(Guid id,CancellationToken cancellationToken)
     {
+        #region inventoryDelete
+        var inventoryDtos = await _inventoryRepository.InventoryGetAllAsync(
+            new InventorySearchDto(new Guid("00000000-0000-0000-0000-000000000000"), id, null, ActiveType.NotImportant),
+            cancellationToken);
+        foreach (var inventoryDto in inventoryDtos)
+        {
+            await _inventoryRepository.InventoryDeleteAsync(inventoryDto.Id, cancellationToken);
+        }
+        #endregion
+
+        #region OffDelete
+        var offDtos = await _offRepository.OffGetAllAsync(new OffSearchDto(new Guid("00000000-0000-0000-0000-000000000000"), id),cancellationToken);
+        if (offDtos.Count>0)
+        {
+            foreach (var offDto in offDtos)
+            {
+              await  _offRepository.OffDeleteAsync(offDto.Id, cancellationToken);
+            }
+        }
+        #endregion
+
         var check=await _context.Stores.Where(x=>x.Id==id).ExecuteDeleteAsync(cancellationToken);
         if (check >0) return true;
         throw new BadRequestEntityException(ApplicationMessages.StoreFailedDelete);
