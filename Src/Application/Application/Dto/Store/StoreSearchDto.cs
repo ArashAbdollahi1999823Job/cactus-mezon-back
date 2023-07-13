@@ -14,8 +14,9 @@ public class StoreSearchDto
     public ActiveType ActiveType { get; set; } = ActiveType.NotImportant;
     public string UserId { get; set; } 
     public SortType SortType { get; set; } = SortType.Desc;
+    public string Slug { get; set; } 
     
-    public StoreSearchDto(Guid id, int pageIndex, int pageSize, string name, string phoneNumber, string mobileNumber, ActiveType activeType, string userId, SortType sortType)
+    public StoreSearchDto(Guid id, int pageIndex, int pageSize, string name, string phoneNumber, string mobileNumber, ActiveType activeType, string userId, SortType sortType, string slug)
     {
         Id = id;
         PageIndex = pageIndex;
@@ -26,10 +27,10 @@ public class StoreSearchDto
         ActiveType = activeType;
         UserId = userId;
         SortType = sortType;
+        Slug = slug;
     }
 
-    public StoreSearchDto()
+    public StoreSearchDto( )
     {
-        
     }
 }

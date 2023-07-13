@@ -13,6 +13,8 @@ public class StoreDto:IMapFrom<Domain.Entities.StoreEntity.Store>
     public bool IsActive { get; set; } 
     public string User { get; set; }
     public string UserId { get; set; }
+    public string SellerPhoneNumber { get; set; }
+    public string Slug { get; set; }
     
     
     #region MappingStoreDto
@@ -20,7 +22,8 @@ public class StoreDto:IMapFrom<Domain.Entities.StoreEntity.Store>
     {
         profile.CreateMap<Domain.Entities.StoreEntity.Store, StoreDto>()
             .ForMember(x => x.User, c => c.MapFrom(v => v.User.UserName))
-            .ForMember(x => x.UserId, c => c.MapFrom(v => v.User.Id));
+            .ForMember(x => x.UserId, c => c.MapFrom(v => v.User.Id))
+            .ForMember(x => x.SellerPhoneNumber, c => c.MapFrom(v => v.User.PhoneNumber));
     } 
     #endregion
 }

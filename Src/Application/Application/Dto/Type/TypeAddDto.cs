@@ -7,9 +7,10 @@ public class TypeAddDto
     public string MetaDescription { get; set; }
     public string Summary { get; set; }
     public string Slug { get; set; }
+    public int  Sort { set; get; }
 
 
-    public TypeAddDto(Guid parentTypeId, string name, string description, string metaDescription, string summary, string slug)
+    public TypeAddDto(Guid parentTypeId, string name, string description, string metaDescription, string summary, string slug, int sort)
     {
         ParentTypeId = parentTypeId;
         Name = name;
@@ -17,6 +18,7 @@ public class TypeAddDto
         MetaDescription = metaDescription;
         Summary = summary;
         Slug = slug;
+        Sort = sort;
     }
     public TypeAddDto()
     {

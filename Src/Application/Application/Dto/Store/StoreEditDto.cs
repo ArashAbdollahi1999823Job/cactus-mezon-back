@@ -10,8 +10,10 @@ public class StoreEditDto
     public string Description { get; set; }
     public bool IsActive { get; set; }
     public string UserId { get; set; }
+    public string Slug { get; set; }
 
-    public StoreEditDto(Guid id, string name, string address, string phoneNumber, string mobileNumber, string description, string userId,bool isActive)
+
+    public StoreEditDto(Guid id, string name, string address, string phoneNumber, string mobileNumber, string description, string userId,bool isActive, string slug)
     {
         Id = id;
         Name = name;
@@ -21,10 +23,10 @@ public class StoreEditDto
         Description = description;
         UserId = userId;
         IsActive = isActive;
+        Slug = slug;
     }
 
     public StoreEditDto()
     {
-        
     }
 }

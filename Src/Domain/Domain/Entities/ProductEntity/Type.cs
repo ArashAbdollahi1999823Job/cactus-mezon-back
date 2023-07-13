@@ -13,7 +13,8 @@ public class Type
     public string MetaDescription { get; set; }
     public string Summary { get; set; }
     public string Slug { get; set; }
-    public Type(string name, string description, string metaDescription, string summary, Guid? parentTypeId, string slug)
+    public int  Sort { get; set; }
+    public Type(string name, string description, string metaDescription, string summary, Guid? parentTypeId, string slug, int sort)
     {
         Name = name;
         Description = description;
@@ -21,6 +22,7 @@ public class Type
         Summary = summary;
         ParentTypeId = parentTypeId;
         Slug = slug;
+        Sort = sort;
     }
     //has few product
     public List<Product> Products { get; set; }

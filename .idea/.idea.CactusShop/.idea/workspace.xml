@@ -6,22 +6,252 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/ProductMapping/StoreMapping.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Store/StoreUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/StorePicture/StorePictureUserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/آنجل شلیسر اسنشیال مردانه/2023-07-12-19-55-22-1111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/آنجل شلیسر اسنشیال مردانه/2023-07-12-19-55-41-1111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/آنجل شلیسر اسنشیال مردانه/2023-07-12-19-56-16-11111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/آنجل شلیسر اسنشیال مردانه/2023-07-12-19-56-29-111111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/تل مو دخترانه/2023-07-12-23-04-52-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/تل مو دخترانه/2023-07-12-23-05-02-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/خط چشم/2023-07-12-23-16-03-110558665.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/خط چشم/2023-07-12-23-16-12-110558665.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دستبند استیل کارتیر زنانه/2023-07-12-22-08-22-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دستبند استیل کارتیر زنانه/2023-07-12-22-08-33-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دستبند استیل کارتیر زنانه/2023-07-12-22-08-46-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دستبند مردانه مونبلان چرم/2023-07-12-22-28-15-444 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دستبند مردانه مونبلان چرم/2023-07-12-22-28-29-444 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دیویدف د گیم/2023-07-12-20-13-35-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دیویدف د گیم/2023-07-12-20-13-52-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دیویدف د گیم/2023-07-12-20-14-02-1111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دیویدف د گیم/2023-07-12-20-15-09-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دیویدف د گیم/2023-07-12-20-15-22-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/رژ دخترانه/2023-07-12-23-14-50-5017874 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/رژ دخترانه/2023-07-12-23-15-00-5017874 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ریحانا نود/2023-07-12-20-23-02-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ریحانا نود/2023-07-12-20-23-14-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ریحانا نود/2023-07-12-20-23-27-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ریحانا نود/2023-07-12-20-23-45-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/سیگنورینا میستریوسا/2023-07-12-20-39-15-tuxpi.com.1689181464.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/سیگنورینا میستریوسا/2023-07-12-20-39-29-tuxpi.com.1689181464.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/سیگنورینا میستریوسا/2023-07-12-20-39-41-tuxpi.com.1689181579.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/سیگنورینا میستریوسا/2023-07-12-20-41-33-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/سیگنورینا میستریوسا/2023-07-12-20-41-49-1111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جیب کج/2023-06-30-19-06-55-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جیب کج/2023-06-30-19-07-08-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جیب کج/2023-06-30-19-08-02-3 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جیب کج/2023-06-30-19-08-36-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جین اسلش جذب مردانه/2023-06-30-19-15-31-جذباسلیم مردانه (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جین اسلش جذب مردانه/2023-06-30-19-15-45-جذباسلیم مردانه (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جین اسلش جذب مردانه/2023-06-30-19-16-17-jeans-man-skinny-3 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار زنانه اسپرت/2023-06-30-15-18-23-شلوارزن1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار زنانه اسپرت/2023-06-30-15-18-35-شلوارزن1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار پارچه ای راسته زنانه/2023-06-30-15-48-57-شلوار زن 3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار پارچه ای راسته زنانه/2023-06-30-15-49-11-شلوار زن 3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار پارچه ای زنانه/2023-06-30-15-45-58-شلوار زن 2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار پارچه ای زنانه/2023-06-30-15-46-10-شلوار زن 2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار پارچه ای مردانه/2023-06-30-19-12-22-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار پارچه ای مردانه/2023-06-30-19-12-33-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ماشین اصلاح فیلیپسS9911/11/2023-07-12-22-59-19-1260399.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/ماشین اصلاح فیلیپسS9911/11/2023-07-12-22-59-30-1260399.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/نیم بوت مردانه/2023-06-30-22-12-34-2023-04-20-14-38-12-2023-04-13-16-37-53-نیم بوت مشکی مردانه.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پوتین بلند مردانه/2023-06-30-22-14-27-2023-04-20-14-39-59-2023-04-08-00-07-56-بوت-مردانه.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن جین طرح دار/2023-06-30-14-05-08-shirt_model_914.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن جین طرح دار/2023-06-30-14-05-26-shirt_model_914.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن سرشانه پلیس/2023-06-30-15-11-23-پیراهن3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن سرشانه پلیس/2023-06-30-15-11-47-پیراهن3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن مردانه استین کوتاه حلقه/2023-06-30-22-25-52-مردانه1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن مردانه استین کوتاه حلقه/2023-06-30-22-26-03-مردانه1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن مردانه استین کوتاه حلقه/2023-06-30-22-26-14-پرهن1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن نخی مردانه/2023-06-30-22-49-57-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن نخی مردانه/2023-06-30-22-50-07-2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن کشی مردانه/2023-06-30-22-53-02-2023-04-20-14-42-49-2023-04-13-16-06-09-پیراهن سبز مردانه.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن کشی مردانه/2023-06-30-22-53-12-2023-04-20-14-42-49-2023-04-13-16-06-09-پیراهن سبز مردانه.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن کشی/2023-06-30-14-24-04-3VaIR4iQ6RiZxKjdsnBvWVEqhy6StCZsjZyfjKOZPoSe2DCeVX.jpg_512X512X70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن کشی/2023-06-30-14-24-25-3VaIR4iQ6RiZxKjdsnBvWVEqhy6StCZsjZyfjKOZPoSe2DCeVX.jpg_512X512X70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن یخه دار استین بلند/2023-06-30-22-47-34-2023-04-20-14-34-11-2023-04-08-13-19-07-پیراهن۱-سفید.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-30-14-22 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-31-52-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-32-06-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-32-42-22 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-33-56-33 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-34-08-33 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-35-00-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت شلوار مردانه/2023-06-30-22-35-10-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت و شلوار پاچه گشاد زنانه/2023-06-30-16-38-24-کتزن1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت و شلوار پاچه گشاد زنانه/2023-06-30-16-38-37-کتزن1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار زنانه ترک/2023-06-30-15-55-05-کت زن 2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار زنانه ترک/2023-06-30-15-55-25-کت زن 2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار زنانه ترک/2023-06-30-15-55-42-کت زن3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار زنانه ترک/2023-06-30-15-57-03-کت زن 5 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار زنانه ترک/2023-06-30-15-57-21-کت زن 6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار مدل هلینا زنانه/2023-06-30-16-45-28-کت3زن (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار مدل هلینا زنانه/2023-06-30-16-45-42-کت3زن (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کت وشلوار مدل هلینا زنانه/2023-06-30-16-46-48-کت3زن2 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش اسپرت/2023-06-30-22-16-13-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش اسپرت/2023-06-30-22-16-28-3.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش اسپرت/2023-06-30-22-16-41-2.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش مجلسی دخترانه/2023-06-30-17-00-32-کفش2زن.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش مجلسی دخترانه/2023-06-30-17-00-47-کفش2زن.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش نوجوان پاشنه بلند/2023-06-30-17-06-06-کفش33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش نوجوان پاشنه بلند/2023-06-30-17-06-16-کفش33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش نوجوان پاشنه بلند/2023-06-30-17-06-29-کفش32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش نوجوان پاشنه بلند/2023-06-30-17-06-42-عکسکفش3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش پاشنه دار مجلسی/2023-06-30-16-55-00-کفشدخترانه1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش پاشنه دار مجلسی/2023-06-30-16-55-13-کفشدخترانه1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش پاشنه دار مجلسی/2023-06-30-16-56-49-کفش دخترانه12 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/گردن بند تیغ/2023-07-12-22-31-34-2 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/گردن بند تیغ/2023-07-12-22-31-45-22 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/گردن بند تیغ/2023-07-12-22-32-21-2 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/گردنبند ست دونفره/2023-07-12-22-39-34-66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/گردنبند ست دونفره/2023-07-12-22-39-48-66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/sam/2023-07-12-22-04-31-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/sam/2023-07-12-22-04-44-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/ارکید/2023-07-12-19-07-13-333.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/ارکید/2023-07-12-20-06-58-333.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/درخشش زیبایی/2023-07-04-12-56-31-full-body-arm-shaper-girdle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/درخشش زیبایی/2023-07-04-12-57-01-full-body-arm-shaper-girdle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/مانگو/2023-06-30-12-49-55-mango_1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/مانگو/2023-06-30-12-50-27-mango_1 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/مانگو/2023-06-30-12-54-17-مانگو (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/مانگو/2023-06-30-12-57-49-mango-3 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/نوبشو/2023-07-12-22-55-51-2-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/نوبشو/2023-07-12-22-56-01-2-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/چوگانی/2023-06-30-19-03-08-2023-04-30-00-14-26-chogani.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/چوگانی/2023-06-30-19-03-23-چ2 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/چوگانی/2023-06-30-19-03-36-چ3 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/اکسسوی/2023-07-12-18-20-22-22 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/اکسسوی/2023-07-12-18-20-38-77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/اکسسوی/2023-07-12-18-21-36-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/اکسسوی/2023-07-12-18-24-18-66 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/اکسسوی/2023-07-12-18-26-22-11 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/زنانه/2023-06-30-13-04-04-2023-04-19-13-06-00-زنانه۱.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/زنانه/2023-06-30-13-12-47-2023-04-19-13-06-33-زنانه۳.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/زنانه/2023-06-30-13-13-15-زنانه.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/عطر و ادکلن/2023-07-12-12-42-48-عطر10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/عطر و ادکلن/2023-07-12-12-45-44-عطر1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/عطر و ادکلن/2023-07-12-13-02-41-عطر9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/عطر و ادکلن/2023-07-12-13-33-07-عطر4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/لوازم ارایشی و بهداشتی/2023-07-12-17-55-19-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/لوازم ارایشی و بهداشتی/2023-07-12-17-55-32-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/لوازم ارایشی و بهداشتی/2023-07-12-18-02-23-7 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/لوازم ارایشی و بهداشتی/2023-07-12-18-03-22-4 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/لوازم ارایشی و بهداشتی/2023-07-12-18-03-37-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-06-30-18-43-05-مردانه2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/پیراهن زنانه/2023-06-30-13-57-43-shirt_model_914.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/Arash/2023-06-30-12-25-36-IMG_20220620_085259 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/RezaAzizi/2023-07-12-21-48-10-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/ZahraSalimi/2023-06-30-23-03-01-2023-05-09-22-29-52-admin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/fatomeMoradi/2023-07-12-22-51-52-Pic_4297 (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/marzie/2023-07-12-21-57-22-tuxpi.com.1689186436.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09175607606/09175607606/2023-07-11-11-36-44-resize1683616167188.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09175607606/09175607606/2023-07-11-11-37-20-IMG_20230502_154832.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09175607606/09175607606/2023-07-11-11-37-52-resize1683616361528.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09925163581/09032510151/2023-07-04-13-12-22-full-body-arm-shaper-girdle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174243124/09174243124/2023-07-02-12-44-45-Screenshot_۲۰۲۳-۰۷-۰۱-۱۵-۳۴-۱۰-۱۱۷_com.instagram.android.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/edae2081-5ce8-4f80-a878-126b84adbcfb.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Common/Messages/ApplicationMessages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Inventory/Command/InventoryDelete/InventoryDeleteCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Product/Command/ProductDelete/ProductDeleteCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserDelete/UserDeleteCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/User/Command/UserDelete/UserDeleteCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Product/ProductDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreAddDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreEditDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Store/StoreSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUser/StoreUserEditDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUserPicture/StoreUserPictureSearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/StoreUserPicture/StoreUserPictureSearchDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeAddDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeEditDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Dto/Type/TypeEditDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Command/StoreAdd/StoreAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Command/StoreAdd/StoreAddCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Command/StoreEdit/StoreEditCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Command/StoreEdit/StoreEditCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Query/StoreGetAll/StoreGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Store/Query/StoreGetAll/StoreGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/StoreUser/Command/StoreUserEdit/StoreUserEditCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/StoreUser/Command/StoreUserEdit/StoreUserEditCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/StoreUserPicture/Query/StoreUserPictureGetAll/TypePictureGetAllQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/StoreUserPicture/Query/StoreUserPictureGetAll/TypePictureGetAllQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeAdd/TypeAddCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeAdd/TypeAddCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeEdit/TypeEditCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Type/Command/TypeEdit/TypeEditCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Type.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/ProductEntity/Type.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Store.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/StoreEntity/Store.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/InventoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/OffRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/ProductRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserPictureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserPictureRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/StoreUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/TypeRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/UserMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Mapping/IdentityMapping/UserMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/دکولته طرح دار/2023-04-20-12-59-44-2023-04-14-13-51-28-پیراهن زنانه خادار.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار  کلاسیک/2023-04-20-11-50-21-2023-04-14-13-48-29-شلوار-زنانه2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جین ذغالی/2023-04-20-14-31-12-2023-04-13-16-30-46-شلوار مردانه جین زغالی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار جین زنانه/2023-04-20-12-14-27-2023-04-08-14-33-55-شلوار-زنانه-مات-سنتر004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/شلوار کلاسیک/2023-04-20-14-27-40-2023-04-13-16-27-33-شلوار مشکی مردانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی بلند/2023-04-20-13-03-35-2023-04-18-12-24-14-پیراهن مشکی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی بلند/2023-04-20-13-04-01-2023-04-18-12-24-14-پیراهن مشکی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی بلند/2023-04-20-13-04-13-2023-04-18-12-21-27-پیراهنصورتی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی بلند/2023-04-20-13-04-25-2023-04-18-12-22-45-پیراهنسبز.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی بلند/2023-04-20-13-04-36-2023-04-18-12-25-50-blue2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی بلند/2023-04-20-13-04-49-2023-04-18-12-26-48-magenta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی فرانسوی/2023-04-20-13-15-01-2023-04-18-13-12-29-3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی فرانسوی/2023-04-20-13-15-13-2023-04-18-13-12-29-3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/مجلسی فرانسوی/2023-04-20-13-15-23-2023-04-18-13-12-18-1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/نیم بوت/2023-04-20-14-38-12-2023-04-13-16-37-53-نیم بوت مشکی مردانه.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/نیم بوت مردانه/2023-06-30-22-09-12-2023-04-20-14-38-12-2023-04-13-16-37-53-نیم بوت مشکی مردانه.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پوتین بلند/2023-04-20-14-39-59-2023-04-08-00-07-56-بوت-مردانه.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پوتین بلند مردانه/2023-06-30-22-14-16-2023-04-20-14-39-59-2023-04-08-00-07-56-بوت-مردانه.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن لخه دار/2023-04-20-14-34-11-2023-04-08-13-19-07-پیراهن۱-سفید.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن یخه دار استین بلند/2023-06-30-22-47-23-2023-04-20-14-34-11-2023-04-08-13-19-07-پیراهن۱-سفید.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن مردانه/2023-04-20-14-42-49-2023-04-13-16-06-09-پیراهن سبز مردانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/پیراهن مردانه/2023-04-20-14-44-07-2023-04-13-16-08-59-پیراهن مردانه طوسی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش اسپرت/2023-04-20-14-45-34-2023-04-13-16-40-27-کفش اسپرت کرمی مردانه.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش اسپرت/2023-06-30-22-16-00-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش پاشنه دار مجلسی/2023-04-20-12-20-42-2023-04-14-13-37-54-کفشزنانه۱.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش چرم مدل قدمی/2023-04-20-12-28-19-2023-04-14-14-00-11-کفش چرم زنانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش چرم/2023-04-20-12-26-21-2023-04-08-14-44-18-کفش زنانه چرم.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Product/کفش چرمی/2023-04-20-14-36-08-2023-04-13-16-35-13-کفش مردانه چرم مشکی.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/چوگانی/2023-04-30-00-14-26-chogani.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Store/چوگانی/2023-06-30-19-02-55-2023-04-30-00-14-26-chogani.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/زنانه/2023-04-19-13-06-00-زنانه۱.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/زنانه/2023-04-19-13-06-17-زنانه۲.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/زنانه/2023-04-19-13-06-33-زنانه۳.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-04-19-11-27-38-مردانه۷.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-06-30-18-42-47-2023-04-19-11-27-38-مردانه۷.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-04-19-12-57-21-مردانه۴.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-06-30-18-43-22-2023-04-19-12-57-21-مردانه۴.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-04-19-12-57-49-مردانه۶.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/Type/مردانه/2023-06-30-18-43-39-2023-04-19-12-57-49-مردانه۶.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/Arash/2023-05-09-17-34-21-IMG_20210730_040011_169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/ali/2023-05-10-00-59-25-sellerMan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/AliYousefpor/2023-06-30-23-03-25-2023-05-10-00-59-25-sellerMan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/laila/2023-05-09-22-29-52-admin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/maryam/2023-05-10-01-02-28-sellerWomen2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/User/Maryam/2023-06-30-12-34-28-2023-05-10-01-02-28-sellerWomen2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-19-21-47-10-کفش مردانه ۴.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-27-28-کفش مجلسی طرح دار زنانه.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09032510151-09174444444/09174444444/2023-05-20-22-28-01-کفش مردانه ۴.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-35-52-b10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-35-59-b10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/Picture/group/09171111111-09174444444/09174444444/2023-05-28-10-37-05-b10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/123.0f2bce88db50c047.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/274.1a9d81c3d323e445.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/495.f05850aa42ebec37.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/51.acda124c69336972.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/697.8a0116af69b6a9fc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/766.dfa26543279e7b3b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b-one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b9r.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/b9r.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/back/c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/assets/images/twoProduct.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/common.f2f2515dc9b024f4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/main.2ba0ba3e672a7077.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/runtime.eece121df81c7065.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/main.869db7ba0207e4b1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/runtime.bd315d6141c6caf7.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +277,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8aeca8dfcec95a81b42a28e5c138e1c321e89def3fed605511172a8beaec/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ba42fa83f66411607f71ed975b8e32754845f82070f9872d3b77d0a9c25de28/ClaimsPrincipal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/WebServiceWindowsFormSample (1)/WCFServiceSample/WCFServiceSample/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/serviceasp/serviceasp/ippanel-asp/sendSms.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -192,7 +420,17 @@
       <workItem from="1687173752389" duration="2048000" />
       <workItem from="1687416274807" duration="4001000" />
       <workItem from="1687440359785" duration="6982000" />
-      <workItem from="1687514239741" duration="6821000" />
+      <workItem from="1687514239741" duration="19626000" />
+      <workItem from="1687791871810" duration="2640000" />
+      <workItem from="1687857973547" duration="1329000" />
+      <workItem from="1687957338687" duration="532000" />
+      <workItem from="1688023874834" duration="21000" />
+      <workItem from="1688024667566" duration="562000" />
+      <workItem from="1688044134864" duration="7022000" />
+      <workItem from="1688071945365" duration="2332000" />
+      <workItem from="1688155778545" duration="686000" />
+      <workItem from="1688191846337" duration="2663000" />
+      <workItem from="1689240011154" duration="1504000" />
     </task>
     <servers />
   </component>

@@ -16,8 +16,9 @@ public class Store
     public string PhoneNumber { get; set; }
     public string MobileNumber { get; set; }
     public string Description { get; set; }
+    public string Slug { get; set; }
 
-    public Store(string name, string address, string phoneNumber, string mobileNumber, string description, string userId)
+    public Store(string name, string address, string phoneNumber, string mobileNumber, string description, string userId, string slug)
     {
         Name = name;
         Address = address;
@@ -25,15 +26,7 @@ public class Store
         MobileNumber = mobileNumber;
         Description = description;
         UserId = userId;
-    }
-    public void Edit(string name, string address, string phoneNumber, string mobileNumber, string description, string userId)
-    {
-        Name = name;
-        Address = address;
-        PhoneNumber = phoneNumber;
-        MobileNumber = mobileNumber;
-        Description = description;
-        UserId = userId;
+        Slug = slug;
     }
 
     //has few inventories

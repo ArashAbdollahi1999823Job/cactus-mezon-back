@@ -7,8 +7,9 @@ public class StoreUserEditDto
     public string PhoneNumber { get; set; }
     public string MobileNumber { get; set; }
     public string Description { get; set; }
+    public string Slug { get; set; }
 
-    public StoreUserEditDto(Guid id, string name, string address, string phoneNumber, string mobileNumber, string description)
+    public StoreUserEditDto(Guid id, string name, string address, string phoneNumber, string mobileNumber, string description, string slug)
     {
         Id = id;
         Name = name;
@@ -16,10 +17,10 @@ public class StoreUserEditDto
         PhoneNumber = phoneNumber;
         MobileNumber = mobileNumber;
         Description = description;
+        Slug = slug;
     }
 
     public StoreUserEditDto()
     {
-        
     }
 }

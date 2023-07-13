@@ -12,6 +12,7 @@ public class TypeDto:IMapFrom<Domain.Entities.ProductEntity.Type>
     public bool IsActive { get; set; }
     public Guid? ParentTypeId { get; set; }
     public string?  ParentType { get; set; }
+    public string Sort { get; set; }
     
     #region MappingTypeDto
     public void Mapping(Profile profile)

@@ -22,7 +22,7 @@ public class StoreUserEditCommandHandler:IRequestHandler<StoreUserEditCommand,bo
         var check =await _storeRepository.StoreExistAsync(req.Id, cancellationToken);
         if (check)
         {
-            var storeUserEditDto = new StoreUserEditDto(req.Id, req.Name, req.Address, req.PhoneNumber, req.MobileNumber, req.Description);
+            var storeUserEditDto = new StoreUserEditDto(req.Id, req.Name, req.Address, req.PhoneNumber, req.MobileNumber, req.Description,req.Slug);
             return await _storeUserRepository.StoreUserEditAsync(storeUserEditDto,cancellationToken);
         }
         throw new BadRequestEntityException(ApplicationMessages.StoreFailedEditOnHandle);

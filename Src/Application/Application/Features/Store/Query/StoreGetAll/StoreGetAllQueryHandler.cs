@@ -14,7 +14,7 @@ public class StoreGetAllQueryHandler:IRequestHandler<StoreGetAllQuery,Pagination
     #endregion
     public async Task<PaginationDto<StoreDto>> Handle(StoreGetAllQuery req, CancellationToken cancellationToken)
     {
-        var storeSearchDto = new StoreSearchDto(req.Id, req.PageIndex, req.PageSize, req.Name, req.PhoneNumber,req.MobileNumber, req.ActiveType, req.UserId, req.SortType);
+        var storeSearchDto = new StoreSearchDto(req.Id, req.PageIndex, req.PageSize, req.Name, req.PhoneNumber,req.MobileNumber, req.ActiveType, req.UserId, req.SortType,req.Slug);
         return await _storeRepository.StoreGetAllAsync(storeSearchDto, cancellationToken);
     }
 }

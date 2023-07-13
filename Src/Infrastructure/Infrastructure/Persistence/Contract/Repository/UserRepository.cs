@@ -138,13 +138,13 @@ public class UserRepository:IUserRepository
         
         #region StoreDelete
         var storeSearchDto = new StoreSearchDto(new Guid("00000000-0000-0000-0000-000000000000"), 1, 1000, null, null,
-            null, ActiveType.NotImportant, id, SortType.Desc);
+            null, ActiveType.NotImportant, id, SortType.Desc,null);
         var userStore = _storeRepository.StoreGetAllAsync(storeSearchDto, cancellationToken).Result.Data
             .FirstOrDefault();
         if (userStore!=null)
         {
             var storeEditDto = new StoreEditDto(userStore.Id, userStore.Name, userStore.Address, userStore.PhoneNumber,
-                userStore.MobileNumber, userStore.Description, null, userStore.IsActive);
+                userStore.MobileNumber, userStore.Description, null, userStore.IsActive,userStore.Slug);
             var check = await _storeRepository.StoreEditAsync(storeEditDto, cancellationToken);
         }
         #endregion

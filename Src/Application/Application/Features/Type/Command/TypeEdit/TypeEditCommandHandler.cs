@@ -18,7 +18,7 @@ public class TypeEditCommandHandler:IRequestHandler<TypeEditCommand,bool>
         var check = await _typeRepository.TypeExistAsync(req.Id, cancellationToken);
         if (check)
         {
-            var typeEditDto = new TypeEditDto(req.Id, req.ParentTypeId, req.Name, req.Description, req.MetaDescription, req.Summary, req.IsActive, req.IsDelete,req.Slug);
+            var typeEditDto = new TypeEditDto(req.Id, req.ParentTypeId, req.Name, req.Description, req.MetaDescription, req.Summary, req.IsActive, req.IsDelete,req.Slug,req.Sort);
             return await _typeRepository.TypeEditAsync(typeEditDto, cancellationToken);
         }
         throw new BadRequestEntityException(ApplicationMessages.TypeFailedEditOnHandle);

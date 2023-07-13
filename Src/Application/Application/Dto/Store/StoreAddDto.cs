@@ -9,9 +9,11 @@ public class StoreAddDto
     public string Description { get; set; }
     
     public string UserId { get; set; }
+    public string Slug { get; set; }
 
 
-    public StoreAddDto(string name, string address, string phoneNumber, string mobileNumber, string description, string userId)
+
+    public StoreAddDto(string name, string address, string phoneNumber, string mobileNumber, string description, string userId, string slug)
     {
         Name = name;
         Address = address;
@@ -19,10 +21,10 @@ public class StoreAddDto
         MobileNumber = mobileNumber;
         Description = description;
         UserId = userId;
+        Slug = slug;
     }
 
     public StoreAddDto()
     {
-        
     }
 }

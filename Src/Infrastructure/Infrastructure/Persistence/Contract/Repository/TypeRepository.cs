@@ -58,6 +58,8 @@ public class TypeRepository : ITypeRepository
         {
             query = query.OrderBy(x => x.Id);
         }
+
+        query = query.OrderBy(x => x.Sort);
         query = query.Include(x => x.ParentType);
         var result = await query.Skip((typeSearchDto.PageIndex - 1) * typeSearchDto.PageSize).Take(typeSearchDto.PageSize).ToListAsync(cancellationToken);
         var data = _mapper.Map<List<TypeDto>>(result);
@@ -68,7 +70,8 @@ public class TypeRepository : ITypeRepository
     #region TypeAddAsync
     public async Task<bool> TypeAddAsync(TypeAddDto typeAddDto, CancellationToken cancellationToken)
     {
-        var type = new Type(typeAddDto.Name, typeAddDto.Description, typeAddDto.MetaDescription, typeAddDto.Summary, typeAddDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000" ? null : typeAddDto.ParentTypeId,typeAddDto.Slug);
+        var type = new Type(typeAddDto.Name, typeAddDto.Description, typeAddDto.MetaDescription, typeAddDto.Summary,
+            typeAddDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000" ? null : typeAddDto.ParentTypeId,typeAddDto.Slug,typeAddDto.Sort);
         await _context.Types.AddAsync(type, cancellationToken);
         var check = await _context.SaveChangesAsync(cancellationToken);
         if (check > 0) return true;
@@ -90,6 +93,7 @@ public class TypeRepository : ITypeRepository
                     .SetProperty(x=>x.IsDelete,typeEditDto.IsDelete)
                     .SetProperty(x=>x.Slug,typeEditDto.Slug)
                     .SetProperty(x=>x.LastModified,DateTime.Now)
+                    .SetProperty(x=>x.Sort,typeEditDto.Sort)
                     .SetProperty(x=>x.ParentTypeId,typeEditDto.ParentTypeId.ToString() =="00000000-0000-0000-0000-000000000000" ? null : typeEditDto.ParentTypeId)
                 , cancellationToken: cancellationToken);
         if (check > 0) return true;

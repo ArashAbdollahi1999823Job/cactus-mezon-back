@@ -43,6 +43,7 @@ public class StoreUserRepository:IStoreUserRepository
                     .SetProperty(x=>x.MobileNumber,storeEditDto.MobileNumber)
                     .SetProperty(x=>x.PhoneNumber,storeEditDto.PhoneNumber)
                     .SetProperty(x=>x.LastModified,DateTime.Now)
+                    .SetProperty(x=>x.Slug,storeEditDto.Slug)
                 , cancellationToken: cancellationToken);
         if (check > 0) return true;
         throw new BadRequestEntityException(ApplicationMessages.StoreUserFailedEdit);

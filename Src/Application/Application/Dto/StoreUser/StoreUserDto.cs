@@ -14,6 +14,8 @@ public class StoreUserDto:IMapFrom<Domain.Entities.StoreEntity.Store>
     public string  User { get; set; }
     public string UserId { get; set; }
 
+    public string Slug { get; set; }
+
     public void Mapping(Profile profile)
     {
         profile.CreateMap<Domain.Entities.StoreEntity.Store, StoreUserDto>()

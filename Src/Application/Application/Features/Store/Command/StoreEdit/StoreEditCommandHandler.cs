@@ -18,7 +18,7 @@ public class StoreEditCommandHandler:IRequestHandler<StoreEditCommand,bool>
         var check =await _storeRepository.StoreExistAsync(req.Id, cancellationToken);
         if (check)
         {
-            var shopEditDto = new StoreEditDto(req.Id, req.Name, req.Address, req.PhoneNumber, req.MobileNumber, req.Description, req.UserId,req.IsActive);
+            var shopEditDto = new StoreEditDto(req.Id, req.Name, req.Address, req.PhoneNumber, req.MobileNumber, req.Description, req.UserId,req.IsActive,req.Slug);
             return await _storeRepository.StoreEditAsync(shopEditDto,cancellationToken);
         }
         throw new BadRequestEntityException(ApplicationMessages.StoreFailedEditOnHandle);

@@ -10,8 +10,9 @@ public class TypeEditDto
     public string Summary { get; set; }
     public bool IsActive { set; get; } 
     public bool IsDelete { get; set; } = false;
+    public int Sort { get; set; }
 
-    public TypeEditDto(Guid id, Guid parentTypeId, string name, string description, string metaDescription, string summary, bool isActive, bool isDelete, string slug)
+    public TypeEditDto(Guid id, Guid parentTypeId, string name, string description, string metaDescription, string summary, bool isActive, bool isDelete, string slug, int sort)
     {
         Id = id;
         ParentTypeId = parentTypeId;
@@ -22,6 +23,7 @@ public class TypeEditDto
         IsActive = isActive;
         IsDelete = isDelete;
         Slug = slug;
+        Sort = sort;
     }
 
     public TypeEditDto()

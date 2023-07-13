@@ -41,6 +41,8 @@ public class StoreRepository:IStoreRepository
         if (!String.IsNullOrEmpty(storeSearchDto.Name)) query = query.Where(x => x.Name.Contains(storeSearchDto.Name));
         if (!String.IsNullOrEmpty(storeSearchDto.MobileNumber)) query = query.Where(x => x.MobileNumber.Contains(storeSearchDto.MobileNumber));
         if (!String.IsNullOrEmpty(storeSearchDto.PhoneNumber)) query = query.Where(x => x.PhoneNumber.Contains(storeSearchDto.PhoneNumber));
+        if (!String.IsNullOrEmpty(storeSearchDto.Slug)) query = query.Where(x => x.Slug.Contains(storeSearchDto.Slug));
+
         
         if (!String.IsNullOrEmpty(storeSearchDto.UserId)) query = query.Where(x => x.UserId==storeSearchDto.UserId);
         if (storeSearchDto.Id.ToString() !="00000000-0000-0000-0000-000000000000") query = query.Where(x => x.Id==storeSearchDto.Id);
@@ -106,6 +108,7 @@ public class StoreRepository:IStoreRepository
                     .SetProperty(x=>x.IsActive,storeEditDto.IsActive)
                     .SetProperty(x=>x.LastModified,DateTime.Now)
                     .SetProperty(x=>x.UserId,storeEditDto.UserId)
+                    .SetProperty(x=>x.Slug,storeEditDto.Slug)
                 , cancellationToken: cancellationToken);
         if (check > 0) return true;
         throw new BadRequestEntityException(ApplicationMessages.StoreFailedEdit);
@@ -115,7 +118,7 @@ public class StoreRepository:IStoreRepository
     #region StoreAddAsync
     public async Task<bool> StoreAddAsync(StoreAddDto storeAddDto,CancellationToken cancellationToken)
     {
-        var store = new Store(storeAddDto.Name, storeAddDto.Address, storeAddDto.PhoneNumber, storeAddDto.MobileNumber, storeAddDto.Description, storeAddDto.UserId);
+        var store = new Store(storeAddDto.Name, storeAddDto.Address, storeAddDto.PhoneNumber, storeAddDto.MobileNumber, storeAddDto.Description, storeAddDto.UserId,storeAddDto.Slug);
          await _context.Stores.AddAsync(store, cancellationToken);
         var check =await _context.SaveChangesAsync(cancellationToken);
         if (check >0)

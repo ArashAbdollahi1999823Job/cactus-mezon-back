@@ -15,7 +15,7 @@ public class StoreAddCommandHandler:IRequestHandler<StoreAddCommand,bool>
     #endregion
     public async Task<bool> Handle(StoreAddCommand req, CancellationToken cancellationToken)
     {
-        var storeAddDto = new StoreAddDto(req.Name, req.Address, req.PhoneNumber, req.MobileNumber, req.Description, req.UserId);
+        var storeAddDto = new StoreAddDto(req.Name, req.Address, req.PhoneNumber, req.MobileNumber, req.Description, req.UserId,req.Slug);
         return await _storeRepository.StoreAddAsync(storeAddDto,cancellationToken);
         throw new BadRequestEntityException(ApplicationMessages.StoreFailedAddOnHandle);
     }
