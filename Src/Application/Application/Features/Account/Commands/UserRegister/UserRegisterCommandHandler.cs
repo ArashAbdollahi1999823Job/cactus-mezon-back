@@ -1,51 +1,52 @@
 ﻿using Application.Common.Messages;
+using Application.Dto.Account;
 using Application.Dto.Identity;
 using Application.Dto.Sms;
+using Application.IContracts.IRepository;
 using Application.IContracts.IServices;
 using AutoMapper;
+using Domain.Entities.IdentityEntity;
 using Domain.Enums;
 using Domain.Exceptions;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using mpNuget;
+using Newtonsoft.Json;
 
 namespace Application.Features.Account.Commands.UserRegister;
-public class UserRegisterCommandHandler:IRequestHandler<UserRegisterCommand,RegisterReturnDto>
+
+public class UserRegisterCommandHandler : IRequestHandler<UserRegisterCommand, RegisterReturnDto>
 {
     #region CtorAndInjection
+
     private readonly UserManager<Domain.Entities.IdentityEntity.User> _userManager;
     private readonly ISmsService _smsService;
-    public UserRegisterCommandHandler(UserManager<Domain.Entities.IdentityEntity.User> userManager, ISmsService smsService)
+    private readonly IUserVerifyRepository _userVerifyRepository;
+
+    public UserRegisterCommandHandler(UserManager<Domain.Entities.IdentityEntity.User> userManager,
+        ISmsService smsService, IUserVerifyRepository userVerifyRepository)
     {
         _userManager = userManager;
         _smsService = smsService;
+        _userVerifyRepository = userVerifyRepository;
     }
+
     #endregion
+
     public async Task<RegisterReturnDto> Handle(UserRegisterCommand req, CancellationToken cancellationToken)
     {
-        var checkUser = await _userManager.Users.AnyAsync(x => x.PhoneNumber == req.PhoneNumber,cancellationToken);
+        var checkUser = await _userManager.Users.AnyAsync(x => x.PhoneNumber == req.PhoneNumber, cancellationToken);
         if (checkUser) throw new BadRequestEntityException(ApplicationMessages.UserDuplicate);
-        var random = new Random();
-        var user = new Domain.Entities.IdentityEntity.User
-        {
-            UserName = req.PhoneNumber,
-            Code = random.Next(100000, 999999).ToString(),
-            Name = req.Name,
-            PhoneNumber = req.PhoneNumber,
-            Password = req.Password
-        };
 
-        var checkAddUser =await _userManager.CreateAsync(user, req.Password);
-        if (!checkAddUser.Succeeded) throw new BadRequestEntityException(ApplicationMessages.UserFailedAdd);
+        var userVerify = new UserVerify(req.Name, req.Password, req.PhoneNumber, new Random().Next(100000, 999999).ToString());
 
-        var roleAddCheck= await _userManager.AddToRoleAsync(user, RoleType.User.ToString());
-        if (!roleAddCheck.Succeeded) throw new BadRequestEntityException(roleAddCheck.Errors.FirstOrDefault()?.Description);
+        var check = await _userVerifyRepository.UserVerifyAdd(userVerify);
 
-        var authSmsDto = new AuthSmsDto(user.PhoneNumber, user.Code);
+        var authSmsDto = new AuthSmsDto(userVerify.PhoneNumber, userVerify.Code);
         await _smsService.AuthSmsSendAsync(authSmsDto);
 
-        return new RegisterReturnDto(){PhoneNumber = user.PhoneNumber};
-
+        return new RegisterReturnDto() { PhoneNumber = req.PhoneNumber };
     }
 }

@@ -22,6 +22,7 @@ public static class ConfigureServices
     
         #region OriginalServices
         ApiBehaviorOptions(builder);
+        builder.Services.AddMvc();
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerDocumentation();

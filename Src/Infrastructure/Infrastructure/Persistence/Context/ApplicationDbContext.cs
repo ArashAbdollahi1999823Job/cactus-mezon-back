@@ -23,6 +23,7 @@ public class ApplicationDbContext : IdentityDbContext<User, Role, string, Identi
     public DbSet<Role> Roles => Set<Role>();
     
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<UserVerify> UserVerifies { get; set; }
 
     #endregion
 

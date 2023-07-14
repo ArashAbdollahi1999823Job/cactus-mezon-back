@@ -19,7 +19,7 @@ public class SmsService:ISmsService
     public async Task<bool> AuthSmsSendAsync(AuthSmsDto authSmsDto)
     {
         _rest.SendByBaseNumber(authSmsDto.Code, authSmsDto.PhoneNumber,
-            _configuration.GetValue<int>("Setting:Sms:authCode"));
+            _configuration.GetValue<int>("Setting:Sms:AuthCode"));
 
         return true;
     }
@@ -29,7 +29,7 @@ public class SmsService:ISmsService
     public async Task<bool> ForgetSmsSendAsync(ForgetSmsDto forgetSmsDto)
     {
         _rest.SendByBaseNumber(forgetSmsDto.Password, forgetSmsDto.PhoneNumber,
-            _configuration.GetValue<int>("Setting:Sms:forgetCode"));
+            _configuration.GetValue<int>("Setting:Sms:ForgetCode"));
 
         return true;
     }

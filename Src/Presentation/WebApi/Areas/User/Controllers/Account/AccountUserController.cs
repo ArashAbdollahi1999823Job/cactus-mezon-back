@@ -1,9 +1,9 @@
 using Application.Dto.Account;
 using Application.Features.Account.Commands.UserCode;
-using Application.Features.Account.Commands.UserDelete;
 using Application.Features.Account.Commands.UserForget;
 using Application.Features.Account.Commands.UserLogin;
 using Application.Features.Account.Commands.UserRegister;
+using Application.Features.Account.Commands.UserVerifyDelete;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Areas.User.Controllers.Base;
 namespace WebApi.Areas.User.Controllers.Account
@@ -42,11 +42,11 @@ namespace WebApi.Areas.User.Controllers.Account
         }
         #endregion
         
-        #region UserDeleteAsync
-        [HttpDelete("UserDelete/{phoneNumber}")]
+        #region UserVerifyDeleteAsync
+        [HttpDelete("UserVerifyDelete/{phoneNumber}")]
         public async Task<ActionResult<bool>> UserDeleteByPhoneNumberAsync([FromRoute] string phoneNumber, CancellationToken cancellationToken)
         {
-            return Ok(await Mediator.Send(new UserDeleteByPhoneNumberCommand(phoneNumber), cancellationToken));
+            return Ok(await Mediator.Send(new UserVerifyDeleteByPhoneNumberCommand(phoneNumber), cancellationToken));
         }
         #endregion
     }
