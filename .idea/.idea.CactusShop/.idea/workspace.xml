@@ -6,23 +6,113 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1193b23e-fb6b-4539-9c2b-95decc241aaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Src/Application/Application/IContracts/IRepository/IUserVerifyRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Domain/Domain/Entities/IdentityEntity/UserVerify.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Repository/UserVerifyRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/4dfcbe84-8667-4389-9211-60d73c2261d5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/dataSources/4dfcbe84-8667-4389-9211-60d73c2261d5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CactusShop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserCode/UserCodeCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserCode/UserCodeCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserDelete/UserDeleteByPhoneNumberCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserVerifyDelete/UserVerifyDeleteByPhoneNumberCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserDelete/UserDeleteByPhoneNumberCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserVerifyDelete/UserVerifyDeleteByPhoneNumberCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserRegister/UserRegisterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Application/Application/Features/Account/Commands/UserRegister/UserRegisterCommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/ConfigureServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Services/SmsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Infrastructure/Infrastructure/Persistence/Contract/Services/SmsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Account/AccountUserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/Controllers/Account/AccountUserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/FallBack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Areas/User/FallBack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/Configure/ConfigureMiddleware.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/274.6c01085e4d8b6591.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/433.725d9378ab13debb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/495.63b3617c971c43ab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/51.7ae3667d162f6c69.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/565.e59552caad816433.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/697.a3bcc0f2267318fb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/766.5602422d894c1427.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/852.d5bb00b36d840533.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/common.adcaef1f0732b73d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-brands-400.0ad87b221b2a302b.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-brands-400.aaa8e2177da4fbb8.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-regular-400.0c4a336f909e1eaa.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-regular-400.f7cc78e99baa2bf5.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-solid-900.43a87668a828405a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-solid-900.71ed02b437225dbb.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-v4compatibility.2484748dc83e00c0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/fa-v4compatibility.3d89958eb70dfc25.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/main.a960d798a481c8d3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/polyfills.1619d48ea5923a3d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/runtime.fe024594534ad00d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/admin/styles.92f6de869b142dc8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/136.87180afff3193de4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/225.04274b97196cf547.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb.1a37d2b9bf645a75.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb.42d296f68d23b6fe.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb.48701cb2ff44e96c.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb.b9f03b092cecbe07.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Bold.20bfde1c565d9980.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Bold.469807114521cfef.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Bold.710d32749bdbb712.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Bold.fadf02f072532e6a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Light.31f014c929bbb872.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Light.b6d47866ae15f045.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Light.d44b53cd918df57b.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Light.f731cc42cd98e800.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Medium.00f1be5e62923fda.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Medium.6b1eff7cbe0a6c19.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Medium.cf47969b32ac2160.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_Medium.e85bef064a90a512.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_UltraLight.686c10849c310b21.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_UltraLight.85d683b46e5b01c0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_UltraLight.b1ec61bd2ddb18fa.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/IRANSansWeb_UltraLight.c58005c07df8bfc0.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/eot/IRANSansWeb.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/eot/IRANSansWeb_Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/eot/IRANSansWeb_Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/eot/IRANSansWeb_Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/eot/IRANSansWeb_UltraLight.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/ttf/IRANSansWeb.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/ttf/IRANSansWeb_Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/ttf/IRANSansWeb_Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/ttf/IRANSansWeb_Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/ttf/IRANSansWeb_UltraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff/IRANSansWeb.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff/IRANSansWeb_Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff/IRANSansWeb_Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff/IRANSansWeb_Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff/IRANSansWeb_UltraLight.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff2/IRANSansWeb.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff2/IRANSansWeb_Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff2/IRANSansWeb_Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff2/IRANSansWeb_Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/fonts/woff2/IRANSansWeb_UltraLight.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b-one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/b9r.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/back/c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/logo3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/twoProduct.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/images/userIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/styles/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/styles/practicalClass.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/assets/styles/practicalValue.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-brands-400.0ad87b221b2a302b.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-brands-400.aaa8e2177da4fbb8.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-regular-400.0c4a336f909e1eaa.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-regular-400.f7cc78e99baa2bf5.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-solid-900.43a87668a828405a.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-solid-900.71ed02b437225dbb.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-v4compatibility.2484748dc83e00c0.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/fa-v4compatibility.3d89958eb70dfc25.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/main.829a52415c70f8c3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/polyfills.9d44bfcfc8421de2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/runtime.5a5662c4468fb6fe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/scripts.f39b1d443d8b388d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Presentation/WebApi/wwwroot/cactus/styles.1b3b73c03dd08b4b.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,23 +175,27 @@
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: IIS Express">
     <configuration name="Publish CactusShop to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="6432944004979574279" uuid_low="-6427492506833540148" />
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/../../../publish" target_framework="net7.0" uuid_high="6432944004979574279" uuid_low="-6427492506833540148" />
       <method v="2" />
     </configuration>
     <configuration name="Publish WebApi to folder (1)" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/../../../publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
       <method v="2" />
     </configuration>
     <configuration name="Publish WebApi to folder (2)" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/../../../publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
       <method v="2" />
     </configuration>
     <configuration name="Publish WebApi to folder (3)" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/../../../publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish WebApi to folder (4)" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/../../../../Publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
       <method v="2" />
     </configuration>
     <configuration name="Publish WebApi to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$USER_HOME$/Downloads/publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/../../../publish" target_framework="net7.0" uuid_high="-4864587785339189759" uuid_low="-7029990956281460651" />
       <method v="2" />
     </configuration>
     <configuration name="WebApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -202,7 +296,14 @@
       <workItem from="1688155778545" duration="686000" />
       <workItem from="1688191846337" duration="2663000" />
       <workItem from="1689240011154" duration="13073000" />
-      <workItem from="1689324957411" duration="4555000" />
+      <workItem from="1689324957411" duration="5140000" />
+      <workItem from="1690630236857" duration="1660000" />
+      <workItem from="1690632922415" duration="20992000" />
+      <workItem from="1690715314779" duration="4260000" />
+      <workItem from="1690723776689" duration="11244000" />
+      <workItem from="1690892023767" duration="1503000" />
+      <workItem from="1690972064338" duration="250000" />
+      <workItem from="1690980468041" duration="1021000" />
     </task>
     <servers />
   </component>

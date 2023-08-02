@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /index/chat
+Disallow: /index/favorite
+Disallow: /admin/*
+Disallow:  /index/auth/register
+Disallow:  /index/auth/login
+Disallow:  /index/auth/forget
+Allow:  /
+Allow:  /index
+Allow:  /index/search
+Allow:  /index/store
+Sitemap: https://www.cactus-style.ir/sitemap.xml
