@@ -1,9 +1,7 @@
-﻿#region UsingAndNamespace
-using System.Text;
+﻿using System.Text;
 namespace Application.Helpers;
 using Microsoft.AspNetCore.Http;
 
-#endregion
 public class IdGenerator
 {
     public static string GenerateCacheKeyFromRequest(HttpRequest request)

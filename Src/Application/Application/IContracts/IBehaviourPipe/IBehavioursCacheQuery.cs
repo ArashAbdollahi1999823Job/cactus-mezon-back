@@ -1,8 +1,6 @@
-﻿#region UsingAndNamespace
-namespace Application.IContracts.IBehaviourPipe;
-#endregion
+﻿namespace Application.IContracts.IBehaviourPipe;
 public interface IBehavioursCacheQuery
 {
-    public int HoursSaveData { get; }
+    public int MinutesCache { get; set; }
 }
 

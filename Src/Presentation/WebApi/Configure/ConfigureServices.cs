@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using Application;
+using Application.Common.Helpers;
 using Application.IContracts.IRepository;
 using Application.IContracts.IServices;
 using Domain.Exceptions;
@@ -57,6 +58,7 @@ public static class ConfigureServices
 
         #region ManualServices
         builder.Services.AddTransient<IFileUploader, FileUploader>();
+        builder.Services.AddScoped<ISiteMapService,SiteMapService>();
         builder.Services.AddScoped<IGroupRepository, GroupRepository>();
         builder.Services.AddScoped<IGroupApplication, GroupApplication>();
         builder.Services.AddScoped<IMessageApplication, MessageApplication>();

@@ -23,6 +23,7 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
     public string SellerPhoneNumber { get; set; }
     
     public string Type { get; set; }
+    public string TypeSlug { get; set; }
     public Guid TypeId { get; set; }
 
     public string Brand { get; set; }
@@ -47,6 +48,7 @@ public class ProductDto:IMapFrom<Domain.Entities.ProductEntity.Product>
             .ForMember(x => x.Inventory, c => c.MapFrom(v => v.Inventory.Name))
             .ForMember(x => x.Brand, c => c.MapFrom(v => v.Brand.Name))
             .ForMember(x => x.Type, c => c.MapFrom(v => v.Type.Name))
+            .ForMember(x => x.TypeSlug, c => c.MapFrom(v => v.Type.Slug))
             .ForMember(x => x.Off, c => c.MapFrom(v => v.Off))
             .ForMember(x => x.ColorDtos, c => c.MapFrom(v => v.Colors))
             .ForMember(x => x.ProductItemDtos, c => c.MapFrom(v => v.ProductItems))
