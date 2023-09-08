@@ -34,4 +34,12 @@ public class SmsService:ISmsService
         return true;
     }
     #endregion
+
+    #region Notif
+    public async Task<bool> Notif(string responder)
+    {
+        _rest.SendByBaseNumber(responder,responder,_configuration.GetValue<int>("Setting:Sms:Notif"));
+        return true;
+    }
+    #endregion
 }

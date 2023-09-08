@@ -1,10 +1,8 @@
 ﻿using Application.Common.Enums;
 using Application.Common.Helpers;
-using Application.Common.Messages;
 using Application.Dto.Product;
 using Application.Enums;
 using Application.IContracts.IRepository;
-using Domain.Exceptions;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 

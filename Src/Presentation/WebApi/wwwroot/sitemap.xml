@@ -145,12 +145,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.cactus-style.ir/index/کفش-زنانه/کفش-پاشنه-دار-مجلسی-297</loc>
-    <lastmod>2023-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.cactus-style.ir/index/کت-و-شلوار-زنانه/کت-و-شلوار-پاچه-گشاد-زنانه-670</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>daily</changefreq>
@@ -200,18 +194,6 @@
   </url>
   <url>
     <loc>https://www.cactus-style.ir/index/پیراهن-زنانه/پیراهن-جین-طرح-دار-730</loc>
-    <lastmod>2023-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cactus-style.ir/index/پیراهن-مردانه/پیراهن-کشی-مردانه-877</loc>
-    <lastmod>2023-08-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.cactus-style.ir/index/پیراهن-مردانه/پیراهن-نخی-مردانه-429</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -387,6 +369,24 @@
   <url>
     <loc>https://www.cactus-style.ir/index/store/مانگو-686</loc>
     <lastmod>2023-08-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cactus-style.ir/index/پیراهن-مردانه/پیراهن-نخی-مردانه-429</loc>
+    <lastmod>2023-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cactus-style.ir/index/پیراهن-مردانه/پیراهن-کشی-مردانه-877</loc>
+    <lastmod>2023-08-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cactus-style.ir/index/کفش-زنانه/کفش-پاشنه-دار-مجلسی-297</loc>
+    <lastmod>2023-09-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>

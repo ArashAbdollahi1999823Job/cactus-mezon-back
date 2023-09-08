@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.Contracts.IApplication;
 using WebApi.Contracts.IRepository;
 using WebApi.SignalR;
+
 namespace WebApi.Contracts.Application;
 
 public class MessageApplication : IMessageApplication
@@ -26,11 +27,12 @@ public class MessageApplication : IMessageApplication
     private readonly PresenceTracker _presenceTracker;
     private readonly IConnectionRepository _connectionRepository;
     private readonly ApplicationDbContext _context;
+    private readonly ISmsService _smsService;
 
     public MessageApplication(IMessageRepository messageRepository, IFileUploader fileUploader,
         ICurrentUserService currentUserService, UserManager<User> userManager, IGroupRepository groupRepository,
         ChatTracker chatTracker, PresenceTracker presenceTracker, IConnectionRepository connectionRepository,
-        ApplicationDbContext context)
+        ApplicationDbContext context, ISmsService smsService)
     {
         _messageRepository = messageRepository;
         _fileUploader = fileUploader;
@@ -41,6 +43,7 @@ public class MessageApplication : IMessageApplication
         _presenceTracker = presenceTracker;
         _connectionRepository = connectionRepository;
         _context = context;
+        _smsService = smsService;
     }
 
     #endregion
@@ -62,6 +65,7 @@ public class MessageApplication : IMessageApplication
             var path = $"Picture/group/{messageAddDto.GroupName}/{messageAddDto.AskerPhoneNumber}";
             messageAddDto.PictureUrl = _fileUploader.Upload(messageAddDto.Picture, path);
         }
+
         var messageDto = await _messageRepository.MessageAddAsync(messageAddDto);
         await GroupUpdateAsync(userResponder.PhoneNumber);
         await MessageUpdateAsync(_currentUserService.PhoneNumber, groupDto.Name);
@@ -85,6 +89,7 @@ public class MessageApplication : IMessageApplication
     #endregion
 
     #region MessageGetAllAsync
+
     public async Task<PaginationDto<MessageDto>> MessageGetAllAsync(MessageSearchDto messageSearchDto)
     {
         var messageDto = await _messageRepository.MessageGetAllAsync(messageSearchDto);
@@ -92,18 +97,22 @@ public class MessageApplication : IMessageApplication
             .Where(x => x.IsRead == false && x.ResponderPhoneNumber == _currentUserService.PhoneNumber).ToList().Count;
         if (count > 0)
         {
-            var message = await _context.Messages.Where(x => x.IsRead == false && x.ResponderPhoneNumber == _currentUserService.PhoneNumber && x.GroupName == messageSearchDto.GroupName).ToListAsync();
-         
+            var message = await _context.Messages.Where(x =>
+                x.IsRead == false && x.ResponderPhoneNumber == _currentUserService.PhoneNumber &&
+                x.GroupName == messageSearchDto.GroupName).ToListAsync();
+
             await _messageRepository.TurnMessagesToRead(message, _currentUserService.PhoneNumber);
-           
-            var otherUserPhoneNumber = messageDto.Data.FirstOrDefault(x => x.AskerPhoneNumber != _currentUserService.PhoneNumber)?.AskerPhoneNumber;
-          
+
+            var otherUserPhoneNumber = messageDto.Data
+                .FirstOrDefault(x => x.AskerPhoneNumber != _currentUserService.PhoneNumber)?.AskerPhoneNumber;
+
             var userResponderChatConnection = await _chatTracker.GetConnectionsOnlineUserInChat(otherUserPhoneNumber);
-          
+
             if (userResponderChatConnection?.Count > 0)
                 await _messageRepository.ChatMessageUpdateAsync(userResponderChatConnection);
-            
-            var userAskerPresenceConnection = await _presenceTracker.GetOnlineUserEntire(_currentUserService.PhoneNumber);
+
+            var userAskerPresenceConnection =
+                await _presenceTracker.GetOnlineUserEntire(_currentUserService.PhoneNumber);
             if (userAskerPresenceConnection?.Count > 0)
                 await _messageRepository.MessageUnReadUpdateAsync(userAskerPresenceConnection);
         }
@@ -112,20 +121,23 @@ public class MessageApplication : IMessageApplication
     }
 
     #endregion
-    
+
     #region MessageGetAllJustAsync
+
     public async Task<PaginationDto<MessageDto>> MessageGetAllJustAsync(MessageSearchDto messageSearchDto)
     {
         return await _messageRepository.MessageGetAllAsync(messageSearchDto);
     }
+
     #endregion
 
     #region MessageUpdateAsync
+
     public async Task MessageUpdateAsync(string userPhoneNumber, string groupName)
     {
         var userChatConnections = await _chatTracker.GetConnectionsOnlineUserInChat(userPhoneNumber);
         var userPresenceConnections = await _presenceTracker.GetOnlineUserEntire(userPhoneNumber);
-        if (userChatConnections?.Count > 0 && userChatConnections != null)
+        if (userChatConnections?.Count > 0)
         {
             var checkUserInGroup = await _connectionRepository.UserInGroup(groupName, userChatConnections);
             if (checkUserInGroup)
@@ -134,15 +146,19 @@ public class MessageApplication : IMessageApplication
             }
             else
             {
-                if (userPresenceConnections?.Count > 0 && userPresenceConnections != null)
+                if (userPresenceConnections?.Count > 0)
                 {
                     await _messageRepository.MessageUnReadUpdateAsync(userPresenceConnections);
                 }
             }
         }
-        else if (userPresenceConnections?.Count > 0 && userPresenceConnections != null)
+        else if (userPresenceConnections?.Count > 0)
         {
             await _messageRepository.MessageUnReadUpdateAsync(userPresenceConnections);
+        }
+        else
+        {
+            await _smsService.Notif(userPhoneNumber);
         }
     }
 

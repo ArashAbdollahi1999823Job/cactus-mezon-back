@@ -23,7 +23,7 @@ public static class ConfigureMiddleware
         app.UseStaticFiles();
         app.UseEndpoints(endpoint =>
         {
-            endpoint.MapFallbackToController("Index", "FallBack");
+            endpoint.MapFallbackToController("Index", "FallBack");  
             endpoint.MapHub<PresenceHub>("hubs/presence");
             endpoint.MapHub<ChatHub>("hubs/chat");
             endpoint.MapAreaControllerRoute(
